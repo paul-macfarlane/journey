@@ -1,5 +1,11 @@
 ---
+interface Test {
+  message: string;
+}
 
+const { message }: Test = {
+  message: "Testing Tailwind Integration w/ bold",
+};
 ---
 
 <html lang="en">
@@ -11,6 +17,6 @@
     <title>Astro</title>
   </head>
   <body>
-    <p class="font-bold">Testing Tailwind Integration w/ bold</p>
+    <p class="font-bold">{message}</p>
   </body>
 </html>
