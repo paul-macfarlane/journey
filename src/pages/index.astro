@@ -1,22 +1,7 @@
 ---
-interface Test {
-  message: string;
-}
-
-const { message }: Test = {
-  message: "Testing Tailwind Integration w/ bold",
-};
+import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <p class="font-bold">{message}</p>
-  </body>
-</html>
+<MainLayout title="Home">
+  <p class="font-bold">Some content for home page</p>
+</MainLayout>
