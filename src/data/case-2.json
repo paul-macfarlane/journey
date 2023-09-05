@@ -31,7 +31,7 @@
             }
         ],
         "images": [
-            "./images/detainee-handbook-pablo-allison-undocumented-press-9781999379742-5.jpeg"
+            "/src/assets/images/detainee-handbook-pablo-allison-undocumented-press-9781999379742-5.jpeg"
         ],
         "next": null
     },
@@ -61,7 +61,7 @@
             }
         ],
         "images": [
-            "./images/Adelanto-Immigration-Detention-ICE-1020x678.jpg"
+            "/src/assets/images/Adelanto-Immigration-Detention-ICE-1020x678.jpg"
         ],
         "next": null
     },
@@ -88,7 +88,7 @@
             }
         ],
         "images": [
-            "./images/blog16-norcal_immigration_detention_center_phone-1160x768.jpg"
+            "/src/assets/images/blog16-norcal_immigration_detention_center_phone-1160x768.jpg"
         ],
         "next": null
     },
@@ -245,7 +245,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/202100401-unaccompanied-minors-1.jpg"
+            "/src/assets/images/202100401-unaccompanied-minors-1.jpg"
         ],
         "next": {
             "name": "Day 1 in Detention",
@@ -263,7 +263,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/20191204-adelanto.jpg"
+            "/src/assets/images/20191204-adelanto.jpg"
         ],
         "next": {
             "name": "Detention Day 2",
@@ -313,7 +313,7 @@
             }
         ],
         "images": [
-            "./images/detention-web-jan2020-ap.png"
+            "/src/assets/images/detention-web-jan2020-ap.png"
         ],
         "next": null
     },
@@ -495,7 +495,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/rawImage.jpg"
+            "/src/assets/images/rawImage.jpg"
         ],
         "next": {
             "name": "Trafficking?",
@@ -522,7 +522,7 @@
             }
         ],
         "images": [
-            "./images/rawImage.jpg"
+            "/src/assets/images/rawImage.jpg"
         ],
         "next": null
     },
@@ -557,7 +557,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/sub-solitary-articleLarge.jpg"
+            "/src/assets/images/sub-solitary-articleLarge.jpg"
         ],
         "next": {
             "name": "Solitary Confinement",
@@ -684,7 +684,7 @@
             }
         ],
         "images": [
-            "./images/20200331_RS_GT62853287RM1630x932.jpg"
+            "/src/assets/images/20200331_RS_GT62853287RM1630x932.jpg"
         ],
         "next": null
     },
@@ -840,7 +840,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/detention-web-jan2020-ap.png"
+            "/src/assets/images/detention-web-jan2020-ap.png"
         ],
         "next": null
     },
@@ -972,7 +972,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/00childlabor-hearthside3-superJumbo.jpg"
+            "/src/assets/images/00childlabor-hearthside3-superJumbo.jpg"
         ],
         "next": {
             "name": "Cheetos",
@@ -1007,7 +1007,7 @@
             }
         ],
         "images": [
-            "./images/00childlabor-hearthside2-superJumbo.jpg"
+            "/src/assets/images/00childlabor-hearthside2-superJumbo.jpg"
         ],
         "next": null
     },
@@ -1242,7 +1242,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/homeless-1--scaled.jpg"
+            "/src/assets/images/homeless-1--scaled.jpg"
         ],
         "next": null
     },
@@ -1313,7 +1313,7 @@
         ],
         "decisions": [],
         "images": [
-            "./images/ICE-SERVICE-HEALTH-CORP.jpg.webp"
+            "/src/assets/images/ICE-SERVICE-HEALTH-CORP.jpg.webp"
         ],
         "next": null
     },

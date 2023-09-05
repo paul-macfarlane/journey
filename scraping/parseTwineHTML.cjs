@@ -10,7 +10,8 @@ const axios = require("axios");
 
 const inputDir = "./twineHTML";
 const outputDir = "../src/data";
-const imageDir = "../src/assets/images";
+const imageBaseDir = "/src/assets/images";
+const imageDir = `../${imageBaseDir}`;
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
@@ -29,7 +30,7 @@ const downloadImage = async (url) => {
   const imageFilename = path.basename(new URL(decodedUrl).pathname);
   const imagePath = path.join(imageDir, imageFilename);
   fs.writeFileSync(imagePath, response.data);
-  return `./images/${imageFilename}`;
+  return `${imageBaseDir}/${imageFilename}`;
 };
 
 const filenames = fs.readdirSync(inputDir);
