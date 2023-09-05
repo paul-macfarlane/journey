@@ -1,0 +1,698 @@
+[
+    {
+        "id": "1",
+        "name": "The Horses",
+        "paragraphs": [
+            "Ten years ago, on your seventeenth birthday, you set out to the United States seeking opportunity. Your grandmother, who had cared for you her whole life, was no longer able to make a living, and you felt a responsibility to pick up her financial burden. You knew that your aunt lived somewhere in New York, and though you had never met her, you hoped that you could stay with her. She sponsored you upon your arrival, and though she was supposed to help you seek asylum, the government lost contact with her. To this day, you remain without legal status. Today, on your twenty-seventh birthday, the only people you want to celebrate with are your friends who help you maintain the horses."
+        ],
+        "decisions": [],
+        "images": [
+            "https://static01.nyt.com/images/2019/07/26/nyregion/26marylou-01/merlin_158407269_77e4911a-4a58-45db-80b2-0243d1182254-superJumbo.jpg?quality=75&auto=webp"
+        ],
+        "next": {
+            "name": "HHS",
+            "pid": "8"
+        }
+    },
+    {
+        "id": "2",
+        "name": "911",
+        "paragraphs": [
+            "You feel your lips go dry and your head spinning while your friend calls 9-1-1. The person who picks up the phone does not speak Spanish, but your friend manages to tell them the location of the emergency.",
+            "Within a few minutes, an ambulence and two police cars arrive at the entrance to the Backstretch of the Racetrack -- yards away from the cafeteria. A police officer in a black uniform approaches you. You feel your heart start to beat more quickly. He reminds you of the scary ICE agents who you dealt with years ago.",
+            "You worry if you speak Spanish to them that they might treat you differently. But you're nervous that your English may sound foreign, too.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Speak to the officer in Spanish",
+                "name": "Spanish",
+                "pid": "4"
+            },
+            {
+                "text": "Speak to the officer in English",
+                "name": "English",
+                "pid": "5"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "3",
+        "name": "Drive to Hospital",
+        "paragraphs": [
+            "You ask your friend to drive you to the hospital, afraid of the consequences of being face-to-face with police officers, and worried about the cost of the ambulence.",
+            "She asks you if you are sure, saying that you don't look like you're doing too well. You tell her that you're sure, and wait fifteen minutes for her to pull up to the cafeteria with her car.",
+            "On the way to the hospital, though, you pass out. Your friend is scared, and does not know what to do. Because she doesn't speak any English, it takes almost another hour before you are seen - all this time, you remain unconsious."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "After a Wait",
+            "pid": "10"
+        }
+    },
+    {
+        "id": "4",
+        "name": "Spanish",
+        "paragraphs": [
+            "When the officers approach you, you start to tell them what happened. They can't understand you, though, and you quickly switch to the broken English that you can muster. They seem to understand that you need to go to the hospital, and signal for the other men in uniforms to come along.",
+            "They wheel out a bright yellow stretcher. One of the officers is talking to your friend who called the police, trying to communicate something to her about money. You remember your coworker having to go to the hospital last year, who said that the ambulence cost him almost $1,000. You wonder if that's what they're talking about.",
+            "You don't have insurance. $1,000 is nearly a month's work.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Get in the ambulence",
+                "name": "Ride in Ambulence",
+                "pid": "6"
+            },
+            {
+                "text": "Ask your friend to drive you to the hospital",
+                "name": "Drive to Hospital",
+                "pid": "3"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "5",
+        "name": "English",
+        "paragraphs": [
+            "Through broken English, you tell the approaching officers that you need to go to the hospital. They give you some forms to sign, saying that you consent to receive their medical care, and that you will pay all associated costs.",
+            "Although, you don't really understand what you are signing. Nobody takes the time to explain it to you, and nobody tries to find an interpreter to help.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Get in the ambulence",
+                "name": "Ride in Ambulence",
+                "pid": "6"
+            },
+            {
+                "text": "Ask your friend to drive you to the hospital",
+                "name": "Drive to Hospital",
+                "pid": "3"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "6",
+        "name": "Ride in Ambulence",
+        "paragraphs": [
+            "On your way to the hospital, you can barely understand what is going on around you. People are trying to poke a needle into your arm, and shine lights into your eyes, and the noise of the sirens fills you with more and more anxiety.",
+            "You close your eyes and try to focus on your breathing."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "In the ER",
+            "pid": "9"
+        }
+    },
+    {
+        "id": "7",
+        "name": "Preface",
+        "paragraphs": [
+            "Welcome. This is an activity meant to cultivate empathy for the situations that our patients may endure as they seek medical care for chronic conditions within the United States. As you work your way through this exercise, there will be parts of the story that may be triggering. Please take the time to care for your own mental and emotional health as needed, and step away when you need to. We will reflect on this exercise together as a group.",
+            "Your GOAL as you put yourself in the character's shoes, is to maintain your health condition to the best of your ability before it manifests as serious complications.",
+            "The PURPOSE of this exercise is for us as healthcare providers to understand the numerous barriers to adequate treatment that our patients face, even when they are under our care."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "The Horses",
+            "pid": "1"
+        }
+    },
+    {
+        "id": "8",
+        "name": "HHS",
+        "paragraphs": [
+            "Over the last ten years, you've been employed by a horse trainer, traveling with him and the other horsekeepers between Florida and New York. They provided you with work and free housing. Though the hours are long, and the pay is minimal, you are so thankful to be here. You had been able to send your grandmother money every month, even saving up for a phone to call and check in on her everyday. Since her passing, three years ago, you took extra time to reminisce in the memories that you shared.",
+            "Today, you say a small prayer for her during your midday break. Then, you join your coworkers in the cafeteria, thankful to be shielded from the Floridian humidity. After a meal of rice, beans, pork, tomato salsa, tortillas, and a slice of birthday cake, you start to feel a little nauseous. Your vision starts to get a little blurry, and you feel like you're going to pass out. You tell one of your friends that you don't feel so good. You think that you may need to go to the hospital, but you worry how your documentation status might affect calling 9-1-1.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Call 9-1-1",
+                "name": "911",
+                "pid": "2"
+            },
+            {
+                "text": "Ask your friend to drive you to the hospital",
+                "name": "Drive to Hospital",
+                "pid": "3"
+            }
+        ],
+        "images": [
+            "https://i.guim.co.uk/img/media/ffaccf3415ef8738398f0794d0ac65a7a7e22637/55_0_2945_1767/master/2945.jpg?width=620&quality=45&dpr=2&s=none"
+        ],
+        "next": null
+    },
+    {
+        "id": "9",
+        "name": "In the ER",
+        "paragraphs": [
+            "When you get to the Emergency Room, there are many people who come in and out of your room. It feels like a whirlwind of strangers. You wish that you had asked your friend to come with you.",
+            "Different doctors and nurses insert needles into your arms and listen to your heart and lungs.",
+            "One very young looking doctor manages to get a Spanish interpreter on an iPad, and they ask you what's been going on.",
+            "You tell them that you haven't slept well recently, and that over the last few weeks, you've noticed a tingling in your hands and feet. You are hungry all the time, thirsty all the time, and always tired. You have to get up to go to the bathroom two or three times in the middle of the night. But, because you didn't have health insurance, you couldn't afford the added costs of visiting the doctor.",
+            "One of the doctors asks you whether or not you are documented. You want to lie, but are worried he'll ask for proof.",
+            "What do you say?"
+        ],
+        "decisions": [
+            {
+                "text": "Tell the doctor that you are undocumented",
+                "name": "Undocumented",
+                "pid": "11"
+            },
+            {
+                "text": "Tell the doctor that you are documented",
+                "name": "Documented",
+                "pid": "12"
+            }
+        ],
+        "images": [
+            "https://npr.brightspotcdn.com/legacy/sites/wlrn/files/201910/jackson_memorial_sn01.jpeg"
+        ],
+        "next": null
+    },
+    {
+        "id": "10",
+        "name": "After a Wait",
+        "paragraphs": [
+            "After an hour, you are finally seen by healthcare professionals who help your friend get you inside the hospital from her car. You are admitted to the hospital, and given IV fluids and insulin after your blood glucose level is determined to be 800mg/dL.",
+            "But, because it took so long for the healthcare professionals to tend to you, you have gone into hypovolemic shock.",
+            "Time of death: 2:39pm."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "11",
+        "name": "Undocumented",
+        "paragraphs": [
+            "Through the interpreter, you tell the doctor that you are undocumented, but ask him not to tell anyone. You are in the process of getting legal status, you say, and tell him that your boss from work is helping you.",
+            "He nods, and then leaves the room.",
+            "A few moments later, the same police officers who drove you to the hospital enter your room along with the doctor. The interpreter relays to you that though you will be receiving acute care here, you will have to be detained once you are discharged. It's a new legislative policy, the doctor explains, he could lose his license if he doesn't report you.",
+            "Later that night, while you are alone in your room, you think about escaping from the hospital.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Stay put",
+                "name": "Healthcare in detention",
+                "pid": "15"
+            },
+            {
+                "text": "Escape the hospital",
+                "name": "Escape!",
+                "pid": "16"
+            }
+        ],
+        "images": [
+            "https://assets3.cbsnewsstatic.com/hub/i/r/2023/04/28/0142e5f8-766f-4403-8a02-d8aeab3d1401/thumbnail/1280x720/e5c803959574ebabad5a55c09256ce24/523841475772e4488828694f4447be89.jpg"
+        ],
+        "next": null
+    },
+    {
+        "id": "12",
+        "name": "Documented",
+        "paragraphs": [
+            "Through the interpreter, you tell the doctor that you are documented, and he smiles. He just had to make sure, he says. Then, he begins to explain to the interpreter that you have something called Type II Diabetes mellitus.",
+            "He tells the interpreter that they had checked your finger-stick blood sugar on your way to the hospital, and that it was in the 800's. The interpreter relays this to you, but the entire time, the doctor speaks directly into the iPad. He does not seem very welcoming.",
+            "The interpreter relays that the doctors have given you insulin and fluids through an IV, and that you should be ready to go home within a few days. They also tell you that the doctor encourages you to go see someone at a primary care office. You know that there is a free clinic at the Backstretch in NY, and because you don't have insurance you figure it will be easier to go there, even if you have to wait a few months.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Wait for three months until you go back to New York and see the doctor at the free clinic",
+                "name": "Wait 3 Months",
+                "pid": "13"
+            },
+            {
+                "text": "Try to get an appointment at a local clinic despite the costs",
+                "name": "Appt at Local Clinic",
+                "pid": "14"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "13",
+        "name": "Wait 3 Months",
+        "paragraphs": [
+            "On your first day at the Backstretch in New York that Spring, three months since your first hospitalization, you walk into the free clinic. A friendly, Spanish-speaking doctor sees you, and asks you what's been going on.",
+            "You tell him about your vision and the dull ache in your hands and feet. He performs a physical exam on you, and helps you realize that you've lost the sense of vibration in your feet. He also gives you an eye exam, and tells you that you should be seeing an opthamologist - an eye specialist.",
+            "Then he asks you about your medications. You tell him that you're not sure what you should be taking, though other doctors have told you that you should be taking something. He prescribes some medications, and sends them to Walmart. He asks you to pick up the medications, and see him the next week.",
+            "Just then, things with work start to pick up, though. Your horse trainer is demanding longer hours of you, and your friend with a car stayed down in Florida, so you'll have to walk the two miles to Walmart.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Go to Walmart as soon as you can",
+                "name": "Walmart now!",
+                "pid": "25"
+            },
+            {
+                "text": "Wait a few days and go to Walmart when you have a day off",
+                "name": "Walmart later",
+                "pid": "26"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "14",
+        "name": "Appt at Local Clinic",
+        "paragraphs": [
+            "You go to the local clinic, and though the doctor there does not speak Spanish, she seems nice enough. She gives you prescriptions for a few medications which she sends to CVS pharmacy, and tells you through an interpreter how you're supposed to take them. Then, she gives you a handout with instructions on how to change your diet, as well as an outline of how to take your medicines.",
+            "Eventhough the handout is written in Spanish, you can't read it. Embarrassed to tell the doctor that you never went to school past fifth grade, you take the handout anyways.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Take the medications only when you feel sick",
+                "name": "Poor medication adherence",
+                "pid": "22"
+            },
+            {
+                "text": "Take the medications all at once in the morning",
+                "name": "Poor medication adherence",
+                "pid": "22"
+            },
+            {
+                "text": "Take the medications whenever you remember",
+                "name": "Poor medication adherence",
+                "pid": "22"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "15",
+        "name": "Healthcare in detention",
+        "paragraphs": [
+            "After you are discharged from the hospital, men in black uniforms escort you to a police car. You ride in the car for about an hour, and they bring you to a detention facility that seems to be in the middle of nowhere. They warn you that you are facing deportation to Mexico. Since the passing of your grandmother, you have no more family left in Puebla, where you grew up.",
+            "Upon intake to the detention facility, a Spanish-speaking doctor on site checks you out. She says that you will need to be started on a careful medication regiment. However, the government cannot cover the costs of your medications due to your non-legal status.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Use your savings to pay for your medications",
+                "name": "Pay for meds",
+                "pid": "17"
+            },
+            {
+                "text": "Go without taking your medications",
+                "name": "No meds!",
+                "pid": "18"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "16",
+        "name": "Escape!",
+        "paragraphs": [
+            "When nobody seems to be looking, you pull out the IV from your arm, and escape into the hallway. After a few minutes, you find an exit, and call your friend. She picks you up down the street and brings you back to the Racetrack housing.",
+            "She tells you that she really thinks you should see a doctor soon.",
+            "You know that there is a free clinic at the Backstretch in NY, and because you don't have insurance, you figure it will be easier to go there, even if you have to wait a few months.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Wait for three months until you go back to New York and see the doctor at the free clinic",
+                "name": "Wait 3 Months",
+                "pid": "13"
+            },
+            {
+                "text": "Try to get an appointment at a local clinic despite the costs",
+                "name": "Appt at Local Clinic",
+                "pid": "14"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "17",
+        "name": "Pay for meds",
+        "paragraphs": [
+            "You pay for your medications, but because they have to be delivered to you within the detention facility, they won't come for another three weeks.",
+            "Furious, the doctor on site brings in some of the medications that she wants you to take, and asks you to come to the detention clinic everyday before meals and before bed to take your medications.",
+            "You thank her for her kindness. However, you forget to go before your night-time cell curfew a few days in a row. One day, you ask one of the CBP officers if it's okay that you go to the clinic late. He tells you that because you were attempting to defy him, you will lose your recreational priviledges for the next three weeks."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "No Recreation",
+            "pid": "28"
+        }
+    },
+    {
+        "id": "18",
+        "name": "No meds!",
+        "paragraphs": [
+            "You decide to go without medications for the time being. After talking to some of the other migrants in detention, one of the kitchen staff tells you that you can eat a piece of garlic every morning to resolve diabetes.",
+            "This sounds like a much better and cheaper option to you than paying for medications.",
+            "She also tells you, though, that you can work for $1/day in detention to help pay for your medications. This does not sound like a lot of money to you, as you were previously earning nearly $20/hour.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Use your savings to pay for your medications",
+                "name": "Pay for meds",
+                "pid": "17"
+            },
+            {
+                "text": "Eat a slice of garlic every morning, and see what happens",
+                "name": "Garlic",
+                "pid": "19"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "19",
+        "name": "Garlic",
+        "paragraphs": [
+            "Two weeks later, the doctor at the detention facility follows up with you. She asks you if you have managed to get a hold of the medications that she prescribed. You tell her that you didn't want to pay for them, but that your friend told you eating garlic every morning can cure diabetes.",
+            "The physician lets out a laugh. She insists that you stop eating garlic and start taking your medications. She even offers to help pay for them. Still, you feel as if you've been belittled and dismissed.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Continue with the Garlic",
+                "name": "More Garlic",
+                "pid": "20"
+            },
+            {
+                "text": "Use your savings to pay for your medications",
+                "name": "Pay for meds",
+                "pid": "17"
+            },
+            {
+                "text": "Take her help to pay for medications",
+                "name": "Doc pays for meds",
+                "pid": "21"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "20",
+        "name": "More Garlic",
+        "paragraphs": [
+            "You decide to stick with the garlic, and stop going to your follow up doctor's appointments. If you're going to be dismissed like that, you might as well be dealing with ICE officers, you think to yourself.",
+            "You pick up a shift to start working in the kitchen,hoping it will help the monotony of detention go faster. You think about what will happen if you are deported to Puebla.",
+            "After a few months, though, you start to have extreme pain in your hands and feet, and your vision starts to become blurry. You visit the doctor again, and she tells you that you're starting to see complications from your diabetes. She inspects your feet, and finds a large ulcer on the bottom of your foot that you hadn't seemed to notice. She tells you that if you keep going down this path, you are likely to die soon.",
+            "A week later, you end up in the hospital again with extreme dehydration. Only this time, you go into a coma, and you don't come out.",
+            "Time of death: 4:44pm."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "21",
+        "name": "Doc pays for meds",
+        "paragraphs": [
+            "The doctor on site brings in the medications that she wants you to take, and asks you to come to the detention clinic everyday before meals and before bed so that she can show you how to administer your injections and which medications to take until you get used to it.",
+            "You thank her for her kindness. However, you forget to go before your night-time cell-curfew a few days in a row. One day, you ask one of the CBP officers if it's okay that you go late. He tells you that because you were attempting to defy him, you will lose your recreational priviledges for the next three weeks."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "No Recreation",
+            "pid": "28"
+        }
+    },
+    {
+        "id": "22",
+        "name": "Poor medication adherence",
+        "paragraphs": [
+            "You take your medications as best you can, but some of the medications make it very hard to work. One of the injections, in particular, makes you feel very sweaty and dizzy soon after you take it, and you always have to keep orange juice or candy on you so that you don't pass out.",
+            "The horse trainer doesn't like it when you have snacks around the barn, though, which makes it very difficult to control these episodes.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Stop taking the medications all together",
+                "name": "Stop meds",
+                "pid": "23"
+            },
+            {
+                "text": "Stop taking that one injection",
+                "name": "Stop injection",
+                "pid": "24"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "23",
+        "name": "Stop meds",
+        "paragraphs": [
+            "You stop taking your medications altogether, so that you can work more efficiently. By the end of the racing season in Florida, you start to feel a dull pain in your hands and feet and notice that your vision is getting blurry.",
+            "You pack your things up and get ready to move to New York. You remember that there is a free clinic there, and hope that the doctor there can help figure out what's going on with you."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "Wait 3 Months",
+            "pid": "13"
+        }
+    },
+    {
+        "id": "24",
+        "name": "Stop injection",
+        "paragraphs": [
+            "You stop the injections, but decide to keep taking your other medications when you remember or when you feel sick. By the end of the racing season in Florida, you start to feel a dull pain in your hands and feet and notice that your vision is getting blurry.",
+            "You pack your things up and get ready to move to New York. You remember that there is a free clinic there, and hope that the doctor there can help figure out what's going on with you."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "Wait 3 Months",
+            "pid": "13"
+        }
+    },
+    {
+        "id": "25",
+        "name": "Walmart now!",
+        "paragraphs": [
+            "You go to Walmart later that evening, but when you come back with your medications, you are so tired that you sleep through your morning alarms. You're late to your morning horsewalking duties, which start at 3am, and your trainer is upset.",
+            "This is your first warning, he says, if it happens again, he may have to reduce your pay.",
+            "Angry at the doctor for making you get your medications so urgently, you decide not to go see him until the end of the week."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "Back to Clinic",
+            "pid": "27"
+        }
+    },
+    {
+        "id": "26",
+        "name": "Walmart later",
+        "paragraphs": [
+            "Later in the week, when you have a day off before the races start in full-swing, you make the walk to Walmart and pick up your medications. Then, you bring them back with you to the clinic.",
+            "The doctor assigns a student to work with you, who asks you if you need help reading your medication bottles. You admit that you do not know how to read very well, and she arranges a pill organizer for you with photos of the sun and moon, telling you which medications to take in the morning and which to take at night.",
+            "Then, she tells you to come to the clinic everyday before lunch and before dinner so that she can teach you to administer your injections until you feel comfortable doing it yourself."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "Good Glycemic Control is SO Hard though",
+            "pid": "31"
+        }
+    },
+    {
+        "id": "27",
+        "name": "Back to Clinic",
+        "paragraphs": [
+            "When you finally decide to go back to the clinic, the doctor assigns a student to work with you.",
+            "The student asks you to outline what you eat in a typical day, and asks you to take photos of your meals to show her at your next visit.",
+            "Next, she asks you if you need help reading your medication bottles. You admit that you do not know how to read very well, and she arranges a pill organizer for you with photos of the sun and moon, telling you which medications to take in the morning and which to take at night.",
+            "Then, she tells you to come to the clinic everyday before lunch and before dinner so that she can teach you to administer your injections until you feel comfortable doing it yourself."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "Good Glycemic Control is SO Hard though",
+            "pid": "31"
+        }
+    },
+    {
+        "id": "28",
+        "name": "No Recreation",
+        "paragraphs": [
+            "At your next appointment, the doctor asks you why you've been missing your evening injections. You tell her that you keep forgetting to come to the clinic before curfew, and that you think it would be easier if you could just have your medications and injections in your cell. You feel as though you are comfortable administering them.",
+            "The doctor informs you that, unfortunately, because of \"safety\" rules in the detention facility, that all medications must be kept at the clinic, and that it is your responsibility to come to the clinic for your medications.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Give up on taking your medicines",
+                "name": "Give up",
+                "pid": "29"
+            },
+            {
+                "text": "Come to the clinic whenever you remember",
+                "name": "Poor medication adherence 2",
+                "pid": "30"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "29",
+        "name": "Give up",
+        "paragraphs": [
+            "Discouraged from staying ontop of your medications, you ask your physician if there are other ways in which you can control your blood sugar. She talks to you about the importance of exercise and eating healthy meals full of vegetables, but emphasizes that she knows those things are extra difficult while living in detention.",
+            "You try your best, but you have limited food options and restricted outside time. After a few months, you end up in the hospital again. This time, though, you go into a coma and you do not wake up. Time of death 5:15pm."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "30",
+        "name": "Poor medication adherence 2",
+        "paragraphs": [
+            "You take your medications as best you can, but it's difficult to keep up with it, especially given the rigid schedule of detention. Ontop of that, one day, you are late to roll call because of your nighttime medicines, and one of the CBP officers decides to punish you with solitary confinement.",
+            "Despite your medications being brought to you while in solitary confinement, you grow dejected and disappointed.",
+            "After seven days of loneliness and a lack of motivation to take care of your health, you end up in the hospital with severe dehydration again.",
+            "Although this time, you go into a coma and you do not wake up. Time of death 5:15pm."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "31",
+        "name": "Good Glycemic Control is SO Hard though",
+        "paragraphs": [
+            "You try your best to manage taking your medications when you're supposed to, and with the guidance of the doctor and the student at the clinic, you are able to change some of your dietary habits.",
+            "But, over the next two months, the races start, and your work responsibilities expand exponentially. Your trainer is very strict about your schedule, and your breaks are few and far between. Besides, if you don't obey the wishes of you trainer, you know that he can always get you deported.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Sacrifice time away from work to take care of your health",
+                "name": "Sacrifice Work for Health",
+                "pid": "32"
+            },
+            {
+                "text": "Continue to adhere to your strict work schedule, and manage as best as you can",
+                "name": "Try your best",
+                "pid": "33"
+            }
+        ],
+        "images": [
+            "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/S2TQWNUCSII6PHT2ED5I26QNWY.jpg&w=1200"
+        ],
+        "next": null
+    },
+    {
+        "id": "32",
+        "name": "Sacrifice Work for Health",
+        "paragraphs": [
+            "You give up your job at the Backstretch, begging your trainer not to reveal your documentation status. He agrees, so long as you do not tell others that he employs people without status. Then, with the help of the clinic's doctor, you seek housing at a local shelter. There, you have access to a kitchen to cook your own meals, and you take up work at a local restaurant that employs you under the table. You hope that soon you can save up enough for your own space.",
+            "You're able to visit the free clinic regularly, and the student follows up with you to make sure you're taking your medications correctly at least once a month.",
+            "The doctor ensures that you get in touch with a nutritionist to help you with your meals and an eye doctor for yearly eye exams.",
+            "He follows up with you every three months until you've acheived good control of your blood sugar. Things are looking up."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": {
+            "name": "Wow",
+            "pid": "36"
+        }
+    },
+    {
+        "id": "33",
+        "name": "Try your best",
+        "paragraphs": [
+            "You try your best, but sometimes you forget to take your medications. And, when you're in a bind for food, you have to eat the white rice and pork that is served at the cafeteria. You don't have the time or facilities to cook your own meals, and after your work responsibilities picked up, you no longer have the time to buy the healthy fruits and vegetables from the market that the student suggested you snack on.",
+            "After four more months, the race season is nearing its end. It is almost time to return to Florida. When you go to the clinic for a follow up, you find that you have lost ten pounds. You are excited about this, but when your blood work comes back, the doctor tells you that there's still a long way to go. He wants to work with you year-round, but that would mean you'd have to give up your job for your health.",
+            "You can't imagine doing that. This job is all you have. Plus, where would you live? Where would you find friends? Would your trainer expose your undocumented status?",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Sacrifice your job for your health",
+                "name": "Sacrifice Work for Health",
+                "pid": "32"
+            },
+            {
+                "text": "Continue to work",
+                "name": "Continue Work",
+                "pid": "34"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "34",
+        "name": "Continue Work",
+        "paragraphs": [
+            "You tell the doctor that you cannot give up your job. He understands, but tells you that he can only do so much during the six months that you are away in Florida.",
+            "While in Florida, you run out of your medications. Because of your last experience there, you're discouraged from seeking healthcare.",
+            "When you return to New York the next year, the pain in your hands and feet is worse, as is your vision. The doctor says that your blood sugar level has gone back up, and that there is protein in your urine, explaining that you could have kidney damage.",
+            "What do you do?"
+        ],
+        "decisions": [
+            {
+                "text": "Give up your job and focus on your health",
+                "name": "Sacrifice Work for Health",
+                "pid": "32"
+            },
+            {
+                "text": "Keep working",
+                "name": "Work to death!",
+                "pid": "35"
+            }
+        ],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "35",
+        "name": "Work to death!",
+        "paragraphs": [
+            "You try your best to manage your blood sugar, but it's difficult to keep up with it, especially given your rigid work schedule. One day, you end up in the hospital with severe dehydration again.",
+            "Although this time, you go into a coma and you do not wake up. Time of death 5:15pm."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": null
+    },
+    {
+        "id": "36",
+        "name": "Wow",
+        "paragraphs": [
+            "Congratulations! You've acheived good glycemic control.",
+            "Now it's time for reflection and discussion."
+        ],
+        "decisions": [],
+        "images": [],
+        "next": null
+    }
+]
