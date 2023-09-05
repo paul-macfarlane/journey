@@ -1,0 +1,49 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import JourneyCard from "@components/JourneyCard.astro";
+
+const journeys = [
+  {
+    title: "Example Journey 1",
+    description:
+      "Example Journey description 1. Example Journey description 1. Journey description 1.",
+    buttonText: "Start",
+    href: "/journeys/example-journey-1",
+  },
+  {
+    title: "Example Journey 1",
+    description:
+      "Example Journey description 1. Example Journey description 1. Journey description 1.",
+    buttonText: "Start",
+    href: "/journeys/example-journey-1",
+  },
+  {
+    title: "Example Journey 1",
+    description:
+      "Example Journey description 1. Example Journey description 1. Journey description 1.",
+    buttonText: "Start",
+    href: "/journeys/example-journey-1",
+  },
+  {
+    title: "Example Journey 1",
+    description:
+      "Example Journey description 1. Example Journey description 1. Journey description 1.",
+    buttonText: "Start",
+    href: "/journeys/example-journey-1",
+  },
+];
+---
+
+<MainLayout title="Journeys">
+  <div class="flex flex-col items-center gap-6 text-xl lg:gap-16 lg:text-3xl">
+    <p>Select from one of the following Journeys</p>
+
+    <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
+      {
+        journeys.map(({ title, description, buttonText, href }) => (
+          <JourneyCard {title} {description} {buttonText} {href} />
+        ))
+      }
+    </div>
+  </div>
+</MainLayout>

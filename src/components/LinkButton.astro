@@ -8,24 +8,21 @@ interface Props {
 const { variant, href, text } = Astro.props;
 ---
 
-{
-  variant === "primary" && (
-    <a
-      class="self-center rounded bg-black p-4 text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-300"
-      href={href}
-    >
-      {text}
-    </a>
-  )
-}
-
-{
-  variant === "secondary" && (
-    <a
-      class="self-center rounded border border-black bg-white p-4 hover:bg-gray-300 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-900"
-      href={href}
-    >
-      {text}
-    </a>
-  )
-}
+<a
+  class={`self-center rounded px-4 py-2 
+  ${
+    // this is one area where I do miss react classnames :(
+    variant === "primary"
+      ? "bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-300"
+      : ""
+  }
+  ${
+    variant === "secondary"
+      ? "border border-black bg-white hover:bg-gray-300 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-900"
+      : ""
+  }
+  `}
+  {href}
+>
+  {text}
+</a>
