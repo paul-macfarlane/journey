@@ -1,0 +1,166 @@
+---
+import HamburgerIcon from "./icons/HamburgerIcon.astro";
+import ThemeToggleIcon from "./icons/ThemeToggleIcon.astro";
+import XIcon from "./icons/XIcon.astro";
+import HomeIcon from "./icons/HomeIcon.astro";
+import MapIcon from "./icons/MapIcon.astro";
+import InfoCircleIcon from "./icons/InfoCircleIcon.astro";
+
+const routes = [
+  {
+    name: "Home",
+    path: "/",
+    exact: true,
+  },
+  {
+    name: "Journeys",
+    path: "/journeys",
+    exact: false,
+  },
+  {
+    name: "About",
+    path: "/about",
+    exact: false,
+  },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<div
+  class="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-black px-4 dark:border-white"
+>
+  <button id="hamburger" class="lg:hidden">
+    <HamburgerIcon />
+  </button>
+
+  <p
+    class="w-full py-2 text-center text-xl underline underline-offset-8 lg:w-auto lg:py-0 lg:text-left lg:text-3xl"
+  >
+    Journey
+  </p>
+
+  <div class="hidden h-full items-center text-3xl lg:flex">
+    {
+      routes.map(({ name, path, exact }) => (
+        <a
+          href={path}
+          class={`flex items-center rounded p-4  ${
+            (!exact && currentPath.startsWith(path)) ||
+            (exact && currentPath === path)
+              ? "bg-gray-200 dark:bg-gray-500"
+              : "hover:bg-gray-400 dark:hover:bg-gray-700"
+          }`}
+        >
+          {name}
+        </a>
+      ))
+    }
+  </div>
+
+  <button id="themeToggle">
+    <ThemeToggleIcon />
+  </button>
+</div>
+
+<div
+  id="drawer"
+  class="fixed left-0 top-0 z-20 h-full w-4/5 -translate-x-full transform bg-white p-4 transition-transform duration-300 ease-in-out dark:bg-black lg:hidden"
+>
+  <div class="flex flex-col gap-4">
+    <div class="flex justify-between">
+      <p class="w-full py-2 text-xl underline underline-offset-8">Journey</p>
+      <button id="drawer-close" class="rounded shadow-sm">
+        <XIcon />
+      </button>
+    </div>
+
+    <a href="/" class="flex items-center justify-start gap-4 py-2">
+      <HomeIcon />
+      <p class="text-lg">Home</p>
+    </a>
+
+    <a href="/journeys" class="flex items-center justify-start gap-4 py-2">
+      <MapIcon />
+      <p class="text-lg">Journeys</p>
+    </a>
+
+    <a href="/about" class="flex items-center justify-start gap-4 py-2">
+      <InfoCircleIcon />
+      <p class="text-lg">About</p>
+    </a>
+  </div>
+</div>
+
+<div
+  id="overlay"
+  class="invisible fixed left-0 top-0 z-10 h-full w-full bg-black opacity-20 dark:bg-white lg:hidden"
+>
+</div>
+
+<style>
+  .blur-overlay {
+    backdrop-filter: blur(5px);
+  }
+</style>
+
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+
+  window.localStorage.setItem("theme", theme);
+
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    element.classList.toggle("dark");
+
+    const isDark = element.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  };
+
+  document
+    .getElementById("themeToggle")
+    .addEventListener("click", handleToggleClick);
+
+  const hamburger = document.getElementById("hamburger");
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
+  const drawerClose = document.getElementById("drawer-close");
+
+  const handleHamburgerClick = () => {
+    if (
+      drawer.style.transform === "" ||
+      drawer.style.transform === "translateX(-100%)"
+    ) {
+      drawer.style.transform = "translateX(0)";
+      overlay.style.visibility = "visible";
+      overlay.classList.add("blur-overlay");
+    } else {
+      handleClose();
+    }
+  };
+
+  hamburger.addEventListener("click", handleHamburgerClick);
+
+  const handleClose = () => {
+    drawer.style.transform = "translateX(-100%)";
+    overlay.style.visibility = "hidden";
+    overlay.classList.remove("blur-overlay");
+  };
+
+  overlay.addEventListener("click", handleClose);
+  drawerClose.addEventListener("click", handleClose);
+</script>
