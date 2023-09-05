@@ -1,0 +1,53 @@
+---
+import JourneyLayout from "@layouts/JourneyLayout.astro";
+import santaLuciaHonduras from "@assets/images/santa-lucia-honduras.jpeg";
+import type { JourneyCardData } from "@components/JourneyCard.astro";
+import type { ImageData } from "@components/ImageGrid.astro";
+
+// TODO - replace with real content
+
+const decisions: JourneyCardData[] = [
+  {
+    title: "Cross the border",
+    href: "#",
+    buttonText: "Select",
+  },
+  {
+    title: "Stay in Mexico",
+    href: "#",
+    buttonText: "Select",
+  },
+];
+
+const images: ImageData[] = [
+  {
+    src: santaLuciaHonduras,
+    alt: "A photo of a Honduran town",
+  },
+  {
+    src: santaLuciaHonduras,
+    alt: "A photo of a Honduran town",
+  },
+];
+---
+
+<JourneyLayout
+  title="Example Journey 1"
+  backHref="/journeys/example-journey-1"
+  {decisions}
+  {images}
+>
+  <p>
+    You and your family live in Honduras. Every day, you look forward to
+    gathering around the table to share breakfast together. It is one of your
+    favorite moments of peace. You and your husband have two children, a girl
+    and a boy, who you love very much. A few weeks ago, you found out you had a
+    third child on the way. Each evening, after the children come home from
+    school, your husband joins the neighborhood watch team. There have been
+    rumors of gang activity close by, and he wants to play his role in keeping
+    your spot of peace safe. You are nervous for his safety, but you know that
+    you cannot stop him from going, so you pray that he will be okay. Plus, his
+    father and brother are part of the neighborhood watch as well, so you tell
+    yourself that it will all be okay.
+  </p>
+</JourneyLayout>

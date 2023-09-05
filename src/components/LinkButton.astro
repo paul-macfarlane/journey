@@ -13,12 +13,12 @@ const { variant, href, text } = Astro.props;
   ${
     // this is one area where I do miss react classnames :(
     variant === "primary"
-      ? "bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-300"
+      ? "bg-black text-white hover:bg-gray-700 dark:bg-white dark:text-black dark:hover:bg-gray-300"
       : ""
   }
   ${
     variant === "secondary"
-      ? "border border-black bg-white hover:bg-gray-300 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-900"
+      ? "border border-black bg-white hover:bg-gray-300 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-700"
       : ""
   }
   `}

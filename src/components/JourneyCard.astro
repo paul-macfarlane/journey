@@ -1,12 +1,14 @@
 ---
 import LinkButton from "./LinkButton.astro";
 
-interface Props {
+export interface JourneyCardData {
   title: string;
-  description: string;
+  description?: string;
   buttonText: string;
   href: string;
 }
+
+interface Props extends JourneyCardData {}
 
 const { title, description, buttonText, href } = Astro.props;
 ---
@@ -16,9 +18,7 @@ const { title, description, buttonText, href } = Astro.props;
 >
   <p>{title}</p>
 
-  <p class="text-lg lg:text-2xl">
-    {description}
-  </p>
+  {description && <p class="text-lg lg:text-2xl">{description}</p>}
 
   <LinkButton variant="primary" text={buttonText} href={href} />
 </div>

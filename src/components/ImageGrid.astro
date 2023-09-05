@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+export interface ImageData {
+  src: string | ImageMetadata;
+  alt: string;
+  width?: number;
+  height?: number;
+}
+
+interface Props {
+  images: ImageData[];
+}
+
+const { images } = Astro.props;
+---
+
+{
+  images.length > 0 && (
+    <div class="grid place-content-center gap-6 lg:grid-flow-col lg:gap-8">
+      {images.map(({ src, alt, width, height }) => (
+        <div class="shadow-lg">
+          <Image class="rounded" src={src as string} {alt} {width} {height} />
+        </div>
+      ))}
+    </div>
+  )
+}

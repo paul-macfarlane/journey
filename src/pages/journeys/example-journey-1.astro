@@ -1,9 +1,34 @@
 ---
-import MainLayout from "@layouts/MainLayout.astro";
+import JourneyLayout from "@layouts/JourneyLayout.astro";
 
-// TODO just a placeholder, will be replaced by a real journey
+// TODO replace content with real content
 ---
 
-<MainLayout title="Example Journey 1">
-  <p class="text-xl lg:text-3xl">Example Journey 1</p>
-</MainLayout>
+<JourneyLayout
+  title="Example Journey 1"
+  backHref="/journeys"
+  nextHref="/journeys/example-journey-1-step-1"
+>
+  <p>
+    This is an activity meant to cultivate empathy for the situations that our
+    patients may endure as they seek to cross the U.S./Mexican Border.
+  </p>
+
+  <p>
+    As you work your way through this exercise, there will be parts of the story
+    that may be triggering. Please take the time to care for your own mental and
+    emotional health as needed, and step away when you need to. We will reflect
+    on this exercise together as a group.
+  </p>
+
+  <p>
+    Your GOAL as you put yourself in the character's shoes, is to cross the
+    border.
+  </p>
+
+  <p>
+    The PURPOSE of this exercise for us as healthcare providers is to understand
+    that coming here, no matter what route our patients may take, is often not a
+    choice.
+  </p>
+</JourneyLayout>

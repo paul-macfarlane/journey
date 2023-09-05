@@ -1,9 +1,9 @@
 ---
-import MainLayout from "@layouts/MainLayout.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 import LinkButton from "@components/LinkButton.astro";
 ---
 
-<MainLayout title="Home">
+<BaseLayout title="Home">
   <div class="flex flex-col gap-6 text-xl lg:gap-16 lg:text-3xl">
     <p>
       Welcome to Journey, a site to help inform Medical Professionals about the
@@ -27,4 +27,4 @@ import LinkButton from "@components/LinkButton.astro";
 
     <LinkButton variant="secondary" href="/about" text="Learn More" />
   </div>
-</MainLayout>
+</BaseLayout>
