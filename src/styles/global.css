@@ -7,3 +7,9 @@ html.dark {
   background-color: #000000;
   color: #ffffff;
 }
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100ch;
+}
