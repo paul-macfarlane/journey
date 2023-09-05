@@ -7,7 +7,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://static01.nyt.com/images/2019/07/26/nyregion/26marylou-01/merlin_158407269_77e4911a-4a58-45db-80b2-0243d1182254-superJumbo.jpg?quality=75&auto=webp"
+            "./images/merlin_158407269_77e4911a-4a58-45db-80b2-0243d1182254-superJumbo.jpg"
         ],
         "next": {
             "name": "HHS",
@@ -150,7 +150,7 @@
             }
         ],
         "images": [
-            "https://i.guim.co.uk/img/media/ffaccf3415ef8738398f0794d0ac65a7a7e22637/55_0_2945_1767/master/2945.jpg?width=620&quality=45&dpr=2&s=none"
+            "./images/2945.jpg"
         ],
         "next": null
     },
@@ -178,7 +178,7 @@
             }
         ],
         "images": [
-            "https://npr.brightspotcdn.com/legacy/sites/wlrn/files/201910/jackson_memorial_sn01.jpeg"
+            "./images/jackson_memorial_sn01.jpeg"
         ],
         "next": null
     },
@@ -217,7 +217,7 @@
             }
         ],
         "images": [
-            "https://assets3.cbsnewsstatic.com/hub/i/r/2023/04/28/0142e5f8-766f-4403-8a02-d8aeab3d1401/thumbnail/1280x720/e5c803959574ebabad5a55c09256ce24/523841475772e4488828694f4447be89.jpg"
+            "./images/523841475772e4488828694f4447be89.jpg"
         ],
         "next": null
     },
@@ -605,7 +605,7 @@
             }
         ],
         "images": [
-            "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/S2TQWNUCSII6PHT2ED5I26QNWY.jpg&w=1200"
+            "./images/imrs.php"
         ],
         "next": null
     },

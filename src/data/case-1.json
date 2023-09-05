@@ -7,7 +7,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://media.istockphoto.com/id/1141609779/photo/santa-lucia-honduras.jpg?s=612x612&w=0&k=20&c=X_404IdTHIZE75KTrZipmIDdWoLGiDSlZo4i1CKRQwA="
+            "./images/santa-lucia-honduras.jpg"
         ],
         "next": {
             "name": "Violence Breeds",
@@ -283,7 +283,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://www.migrationpolicy.org/sites/default/files/source_images/Source-Smugglers-2020.jpg"
+            "./images/Source-Smugglers-2020.jpg"
         ],
         "next": {
             "name": "Pre-Seeking Asylum Together",
@@ -301,7 +301,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://ca-times.brightspotcdn.com/dims4/default/3a041b1/2147483647/strip/true/crop/2048x1365+0+0/resize/1200x800!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F38%2F76%2F7f1e95275f49a248281927d189e2%2Fla-1559418296-e1jtz6qrhv-snap-image"
+            "./images/80"
         ],
         "next": {
             "name": "Pre-Seeking Asylum Together",
@@ -320,7 +320,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://media.cnn.com/api/v1/images/stellar/prod/181027215155-02-migrant-caravan-stories.jpg?q=x_88,y_0,h_1080,w_1440,c_crop"
+            "./images/181027215155-02-migrant-caravan-stories.jpg"
         ],
         "next": {
             "name": "Pre-Seeking Asylum Together",
@@ -349,7 +349,7 @@
             }
         ],
         "images": [
-            "https://npr.brightspotcdn.com/dims4/default/51f9a3f/2147483647/strip/true/crop/4032x2268+0+378/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkera%2Ffiles%2F201911%2FIMG_1321.jpeg"
+            "./images/90"
         ],
         "next": null
     },
@@ -374,7 +374,7 @@
             }
         ],
         "images": [
-            "https://www.gannett-cdn.com/presto/2019/12/03/PPHXS/ee230bf8-240b-4a79-9d86-c2ebf07cb67d-50bbc677871c03d298bdc889db46c7e0a1961c0c.jpg?crop=5471,3078,x0,y278&width=3200&height=1801&format=pjpg&auto=webp"
+            "./images/ee230bf8-240b-4a79-9d86-c2ebf07cb67d-50bbc677871c03d298bdc889db46c7e0a1961c0c.jpg"
         ],
         "next": null
     },
@@ -400,7 +400,7 @@
             }
         ],
         "images": [
-            "https://www.gannett-cdn.com/presto/2018/10/30/PTX1/0171b416-c19a-4583-b412-13753c6fefb5-2_Bridge_Migrants.jpg?crop=4187,2400,x0,y479&width=3200&height=1835&format=pjpg&auto=webp"
+            "./images/0171b416-c19a-4583-b412-13753c6fefb5-2_Bridge_Migrants.jpg"
         ],
         "next": null
     },
@@ -427,7 +427,7 @@
             }
         ],
         "images": [
-            "https://www.gannett-cdn.com/presto/2019/09/19/PTX1/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG?crop=2699,1519,x0,y0&width=2699&height=1519&format=pjpg&auto=webp"
+            "./images/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG"
         ],
         "next": null
     },
@@ -484,7 +484,7 @@
             }
         ],
         "images": [
-            "https://www.gannett-cdn.com/presto/2019/12/16/PTX1/bf9012a8-cc59-4f4e-b368-3ec126c5a370-2_Escuelita_Chamizal.JPG?width=660&height=371&fit=crop&format=pjpg&auto=webp"
+            "./images/bf9012a8-cc59-4f4e-b368-3ec126c5a370-2_Escuelita_Chamizal.JPG"
         ],
         "next": null
     },
@@ -510,7 +510,7 @@
             }
         ],
         "images": [
-            "https://static01.nyt.com/images/2023/02/15/multimedia/00childlabor-border-klzc/00childlabor-border-klzc-superJumbo.jpg?quality=75&auto=webp"
+            "./images/00childlabor-border-klzc-superJumbo.jpg"
         ],
         "next": null
     },
@@ -536,7 +536,7 @@
             }
         ],
         "images": [
-            "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UPVMX4XDBNKQPFNG2FRLSGBUAY.jpg"
+            "./images/UPVMX4XDBNKQPFNG2FRLSGBUAY.jpg"
         ],
         "next": null
     },
@@ -548,7 +548,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://cdn.kpbs.org/img/photos/2012/01/16/ALISA2.JPG"
+            "./images/ALISA2.JPG"
         ],
         "next": {
             "name": "Detention 1",
@@ -564,7 +564,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://idsb.tmgrup.com.tr/ly/uploads/images/2021/02/10/thumbs/871x871/92209.jpg"
+            "./images/92209.jpg"
         ],
         "next": null
     },
@@ -577,7 +577,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://idsb.tmgrup.com.tr/ly/uploads/images/2021/02/10/thumbs/871x871/92206.jpg"
+            "./images/92206.jpg"
         ],
         "next": null
     },
@@ -616,7 +616,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.migrationpolicy.org%2Farticle%2Fally-or-exploiter-smuggler-migrant-relationship-complex-one&psig=AOvVaw3UweWeGSY-MTeaZUSK8sTl&ust=1684545335068000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMC4qcSagP8CFQAAAAAdAAAAABAE"
+            "./images/url"
         ],
         "next": {
             "name": "Seeking Asylum Separately",
@@ -633,7 +633,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://ca-times.brightspotcdn.com/dims4/default/3a041b1/2147483647/strip/true/crop/2048x1365+0+0/resize/1200x800!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F38%2F76%2F7f1e95275f49a248281927d189e2%2Fla-1559418296-e1jtz6qrhv-snap-image"
+            "./images/80"
         ],
         "next": {
             "name": "Seeking Asylum Separately",
@@ -648,7 +648,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_40/3416970/201003-honduran-migrants-honduras-mn-0920.JPG"
+            "./images/201003-honduran-migrants-honduras-mn-0920.JPG"
         ],
         "next": {
             "name": "Seeking Asylum Separately",
@@ -663,7 +663,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://media.cnn.com/api/v1/images/stellar/prod/180417150822-stweart-detention-center-lumkin-ga-restricted.jpg?q=w_2160,h_2880,x_1080,y_0,c_crop"
+            "./images/180417150822-stweart-detention-center-lumkin-ga-restricted.jpg"
         ],
         "next": {
             "name": "You've Made it to the US!",
@@ -736,7 +736,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://www.gannett-cdn.com/presto/2019/09/19/PTX1/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG?crop=2699,1519,x0,y0&width=660&height=372&format=pjpg&auto=webp"
+            "./images/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG"
         ],
         "next": {
             "name": "Baby! - Street Ctd.",
@@ -781,7 +781,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://www.aclu.org/wp-content/uploads/2020/03/Asylum-MPP-Social-Image.jpg"
+            "./images/Asylum-MPP-Social-Image.jpg"
         ],
         "next": {
             "name": "Seeking Asylum Together",
@@ -860,7 +860,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://sienaamcvoices.files.wordpress.com/2021/01/screen-shot-2021-01-21-at-4.42.47-pm.png?w=730&h=730&crop=1"
+            "./images/screen-shot-2021-01-21-at-4.42.47-pm.png"
         ],
         "next": {
             "name": "You've Made it to the US!",

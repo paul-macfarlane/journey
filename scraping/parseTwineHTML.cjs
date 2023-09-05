@@ -6,50 +6,80 @@
 const { JSDOM } = require("jsdom");
 const fs = require("fs");
 const path = require("path");
+const axios = require("axios");
 
 const inputDir = "./twineHTML";
-const outputDir = "../src/data"; // Replace with your desired output directory
+const outputDir = "../src/data";
+const imageDir = "../src/assets/images";
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
 
-// List all files in the input directory
-fs.readdirSync(inputDir).forEach((filename) => {
-  if (!filename.endsWith(".html")) return; // Skip non-html files
+if (!fs.existsSync(imageDir)) {
+  fs.mkdirSync(imageDir);
+}
 
-  const filepath = path.join(inputDir, filename);
-  let fileContent = fs.readFileSync(filepath, "utf-8");
-
-  // Extract content between first and last tw-storydata tags
-  const match = fileContent.match(/<tw-storydata[^]*<\/tw-storydata>/);
-  if (!match) return;
-
-  const storyContent = match[0];
-  const htmlDecoded = storyContent.replace(/&lt;/g, "<").replace(/&gt;/g, ">");
-
-  const dom = new JSDOM(htmlDecoded);
-  const document = dom.window.document;
-
-  // Create a mapping of passage names to their pids
-  const nameToPidMapping = {};
-  Array.from(document.querySelectorAll("tw-passagedata")).forEach((passage) => {
-    const pid = passage.getAttribute("pid");
-    const name = passage.getAttribute("name");
-    nameToPidMapping[name] = pid;
+const downloadImage = async (url) => {
+  const decodedUrl = decodeURIComponent(url);
+  const response = await axios.get(decodedUrl, {
+    responseType: "arraybuffer",
   });
 
-  const passages = Array.from(document.querySelectorAll("tw-passagedata")).map(
-    (passage) => {
+  const imageFilename = path.basename(new URL(decodedUrl).pathname);
+  const imagePath = path.join(imageDir, imageFilename);
+  fs.writeFileSync(imagePath, response.data);
+  return `./images/${imageFilename}`;
+};
+
+const filenames = fs.readdirSync(inputDir);
+
+(async () => {
+  for (const filename of filenames) {
+    if (!filename.endsWith(".html")) continue;
+
+    const filepath = path.join(inputDir, filename);
+    let fileContent = fs.readFileSync(filepath, "utf-8");
+
+    // Extract content between first and last tw-storydata tags
+    const match = fileContent.match(/<tw-storydata[^]*<\/tw-storydata>/);
+    if (!match) continue;
+
+    const storyContent = match[0];
+    const htmlDecoded = storyContent
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">");
+
+    const dom = new JSDOM(htmlDecoded);
+    const document = dom.window.document;
+
+    // Create a mapping of passage names to their pids
+    const nameToPidMapping = {};
+    Array.from(document.querySelectorAll("tw-passagedata")).forEach(
+      (passage) => {
+        const pid = passage.getAttribute("pid");
+        const name = passage.getAttribute("name");
+        nameToPidMapping[name] = pid;
+      },
+    );
+
+    const passagesPromises = Array.from(
+      document.querySelectorAll("tw-passagedata"),
+    ).map(async (passage) => {
       const pid = passage.getAttribute("pid");
       const name = passage.getAttribute("name");
 
       // Extract image links and remove <img> tags
-      const images = [];
-      Array.from(passage.querySelectorAll("img")).forEach((img) => {
-        images.push(img.getAttribute("src"));
-        img.remove();
-      });
+      const imagePromises = Array.from(passage.querySelectorAll("img")).map(
+        async (img) => {
+          const imageUrl = img.getAttribute("src");
+          const localPath = await downloadImage(imageUrl);
+          img.remove();
+          return localPath;
+        },
+      );
+
+      const images = await Promise.all(imagePromises);
 
       // Remove <style> tags and its content
       Array.from(passage.querySelectorAll("style")).forEach((style) => {
@@ -71,7 +101,7 @@ fs.readdirSync(inputDir).forEach((filename) => {
           .trim();
       }
 
-      // Now, get the cleaned text content
+      // Get the cleaned text content
       let content = passage.textContent.trim();
 
       // Extract decision content before splitting paragraphs
@@ -104,10 +134,12 @@ fs.readdirSync(inputDir).forEach((filename) => {
         images: images,
         next: clickGoto,
       };
-    },
-  );
+    });
 
-  // Write the output to a new file in the output directory
-  const outputPath = path.join(outputDir, filename.replace(".html", ".json"));
-  fs.writeFileSync(outputPath, JSON.stringify(passages, null, 4));
-});
+    const passages = await Promise.all(passagesPromises);
+
+    // Now, write the output
+    const outputPath = path.join(outputDir, filename.replace(".html", ".json"));
+    fs.writeFileSync(outputPath, JSON.stringify(passages, null, 4));
+  }
+})();

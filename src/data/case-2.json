@@ -31,7 +31,7 @@
             }
         ],
         "images": [
-            "https://www.mottodistribution.com/shop/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/e/detainee-handbook-pablo-allison-undocumented-press-9781999379742-5.jpeg"
+            "./images/detainee-handbook-pablo-allison-undocumented-press-9781999379742-5.jpeg"
         ],
         "next": null
     },
@@ -61,7 +61,7 @@
             }
         ],
         "images": [
-            "https://ww2.kqed.org/app/uploads/sites/10/2019/12/Adelanto-Immigration-Detention-ICE-1020x678.jpg"
+            "./images/Adelanto-Immigration-Detention-ICE-1020x678.jpg"
         ],
         "next": null
     },
@@ -88,7 +88,7 @@
             }
         ],
         "images": [
-            "https://www.aclu.org/wp-content/uploads/2019/09/blog16-norcal_immigration_detention_center_phone-1160x768.jpg"
+            "./images/blog16-norcal_immigration_detention_center_phone-1160x768.jpg"
         ],
         "next": null
     },
@@ -245,7 +245,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://img.assets-d.propublica.org/v5/images/202100401-unaccompanied-minors-1.jpg?crop=focalpoint&fit=crop&fm=webp&fp-x=0.5&fp-y=0.5&h=1333&q=75&w=2000&s=b4597dcc01ad5cee3057f6054632d1bd"
+            "./images/202100401-unaccompanied-minors-1.jpg"
         ],
         "next": {
             "name": "Day 1 in Detention",
@@ -263,7 +263,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://www.motherjones.com/wp-content/uploads/2019/12/20191204-adelanto.jpg?resize=1536,863"
+            "./images/20191204-adelanto.jpg"
         ],
         "next": {
             "name": "Detention Day 2",
@@ -313,7 +313,7 @@
             }
         ],
         "images": [
-            "https://www.texasobserver.org/wp-content/uploads/2020/01/detention-web-jan2020-ap.png"
+            "./images/detention-web-jan2020-ap.png"
         ],
         "next": null
     },
@@ -495,7 +495,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://s.hdnux.com/photos/01/11/46/11/19292742/16/rawImage.jpg"
+            "./images/rawImage.jpg"
         ],
         "next": {
             "name": "Trafficking?",
@@ -522,7 +522,7 @@
             }
         ],
         "images": [
-            "https://s.hdnux.com/photos/01/11/46/11/19292742/16/rawImage.jpg"
+            "./images/rawImage.jpg"
         ],
         "next": null
     },
@@ -557,7 +557,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://static01.nyt.com/images/2013/03/24/us/sub-solitary/sub-solitary-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+            "./images/sub-solitary-articleLarge.jpg"
         ],
         "next": {
             "name": "Solitary Confinement",
@@ -684,7 +684,7 @@
             }
         ],
         "images": [
-            "https://www.brennancenter.org/sites/default/files/styles/1400x800/public/2020-04/20200331_RS_GT62853287RM1630x932.jpg?itok=HvTMFFj_"
+            "./images/20200331_RS_GT62853287RM1630x932.jpg"
         ],
         "next": null
     },
@@ -840,7 +840,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://www.texasobserver.org/wp-content/uploads/2020/01/detention-web-jan2020-ap.png"
+            "./images/detention-web-jan2020-ap.png"
         ],
         "next": null
     },
@@ -972,7 +972,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://static01.nyt.com/images/2023/02/17/multimedia/00childlabor-hearthside3/00childlabor-hearthside3-superJumbo.jpg?quality=75&auto=webp"
+            "./images/00childlabor-hearthside3-superJumbo.jpg"
         ],
         "next": {
             "name": "Cheetos",
@@ -1007,7 +1007,7 @@
             }
         ],
         "images": [
-            "https://static01.nyt.com/images/2023/02/15/multimedia/00childlabor-hearthside2/00childlabor-hearthside2-superJumbo.jpg?quality=75&auto=webp"
+            "./images/00childlabor-hearthside2-superJumbo.jpg"
         ],
         "next": null
     },
@@ -1242,7 +1242,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://fwiw.imgix.net/wp-content/uploads/sites/7/2020/09/homeless-1--scaled.jpg?w=1400&fm=webp"
+            "./images/homeless-1--scaled.jpg"
         ],
         "next": null
     },
@@ -1313,7 +1313,7 @@
         ],
         "decisions": [],
         "images": [
-            "https://cdn.houstonpublicmedia.org/wp-content/uploads/2019/08/06183213/ICE-SERVICE-HEALTH-CORP.jpg.webp"
+            "./images/ICE-SERVICE-HEALTH-CORP.jpg.webp"
         ],
         "next": null
     },
