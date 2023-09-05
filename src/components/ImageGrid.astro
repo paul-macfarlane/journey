@@ -1,12 +1,6 @@
 ---
 import { Image } from "astro:assets";
-
-export interface ImageData {
-  src: string | ImageMetadata;
-  alt: string;
-  width?: number;
-  height?: number;
-}
+import type { ImageData } from "src/types";
 
 interface Props {
   images: ImageData[];

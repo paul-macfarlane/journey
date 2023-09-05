@@ -1,37 +1,17 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import JourneyCardGrid from "@components/JourneyCardGrid.astro";
+import { journeyPageData } from "src/data";
+import type { JourneyCardData } from "src/types";
 
-const journeys = [
-  {
-    title: "Example Journey 1",
-    description:
-      "Example Journey description 1. Example Journey description 1. Journey description 1.",
+const journeys: JourneyCardData[] = journeyPageData
+  .filter(({ isStart }) => isStart)
+  .map((pageData) => ({
+    title: pageData.title,
+    description: pageData.description,
     buttonText: "Start",
-    href: "/journeys/example-journey-1",
-  },
-  {
-    title: "Example Journey 1",
-    description:
-      "Example Journey description 1. Example Journey description 1. Journey description 1.",
-    buttonText: "Start",
-    href: "/journeys/example-journey-1",
-  },
-  {
-    title: "Example Journey 1",
-    description:
-      "Example Journey description 1. Example Journey description 1. Journey description 1.",
-    buttonText: "Start",
-    href: "/journeys/example-journey-1",
-  },
-  {
-    title: "Example Journey 1",
-    description:
-      "Example Journey description 1. Example Journey description 1. Journey description 1.",
-    buttonText: "Start",
-    href: "/journeys/example-journey-1",
-  },
-];
+    href: `/journeys/${pageData.path}`,
+  }));
 ---
 
 <BaseLayout title="Journeys">

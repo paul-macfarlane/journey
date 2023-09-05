@@ -2,19 +2,13 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import LinkButton from "@components/LinkButton.astro";
 import JourneyCardGrid from "@components/JourneyCardGrid.astro";
-import type { ImageData } from "@components/ImageGrid.astro";
-import type { JourneyCardData } from "@components/JourneyCard.astro";
 import ImageGrid from "@components/ImageGrid.astro";
+import type { JourneyCardData, JourneyLayoutData } from "src/types";
 
-interface Props {
-  title: string;
-  backHref: string;
-  nextHref?: string;
-  decisions?: JourneyCardData[];
-  images?: ImageData[];
-}
+interface Props extends JourneyLayoutData {}
 
-const { title, backHref, nextHref, decisions, images } = Astro.props;
+const { title, backHref, paragraphs, nextHref, decisions, images } =
+  Astro.props;
 
 const journeys: JourneyCardData[] | undefined =
   decisions?.map(({ title, description, href }) => ({
@@ -27,11 +21,19 @@ const journeys: JourneyCardData[] | undefined =
 
 <BaseLayout {title}>
   <div class="space-y-6 pb-6 text-xl lg:space-y-10 lg:pb-10 lg:text-3xl">
-    <slot />
+    <slot name="before-paragraphs" />
+
+    {paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+
+    <slot name="before-images" />
 
     {images && <ImageGrid images={images} />}
 
+    <slot name="before-cards" />
+
     {journeys && <JourneyCardGrid {journeys} />}
+
+    <slot name="before-buttons" />
 
     <div class="flex justify-between">
       <div class="shadow-lg">
@@ -46,5 +48,7 @@ const journeys: JourneyCardData[] | undefined =
         )
       }
     </div>
+
+    <slot name="after-buttons" />
   </div>
 </BaseLayout>

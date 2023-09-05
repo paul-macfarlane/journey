@@ -1,0 +1,25 @@
+---
+import JourneyLayout from "@layouts/JourneyLayout.astro";
+import { journeyPageData } from "src/data";
+import type { JourneyPageData } from "src/types";
+
+/**
+ * Create dynamic routes for each journey page.
+ */
+export async function getStaticPaths() {
+  return journeyPageData.map((page) => ({
+    params: {
+      path: page.path,
+    },
+    props: {
+      ...page,
+    },
+  }));
+}
+
+interface Props extends JourneyPageData {}
+
+const { title, backHref, nextHref, paragraphs, images } = Astro.props;
+---
+
+<JourneyLayout {title} {backHref} {nextHref} {paragraphs} {images} />

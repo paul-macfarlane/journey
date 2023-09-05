@@ -1,11 +1,15 @@
+/* Global styles, use sparingly. Favor tailwind utility classes instead */
+
 html {
-  background-color: #ffffff;
   font-family: Georgia, sans-serif;
+
+  background-color: white;
+  color: black;
 }
 
 html.dark {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: black;
+  color: white;
 }
 
 body {

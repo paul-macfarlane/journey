@@ -1,12 +1,6 @@
 ---
+import type { JourneyCardData } from "src/types";
 import LinkButton from "./LinkButton.astro";
-
-export interface JourneyCardData {
-  title: string;
-  description?: string;
-  buttonText: string;
-  href: string;
-}
 
 interface Props extends JourneyCardData {}
 
