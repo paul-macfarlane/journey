@@ -27,6 +27,7 @@ export interface JourneyLayoutData {
   title: string;
   paragraphs?: string[];
   nextHref?: string;
+  nextName?: string
   decisions?: JourneyLayoutDecisionData[];
   images?: ImageData[];
 }

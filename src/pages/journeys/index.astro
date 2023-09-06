@@ -8,15 +8,17 @@ const caseData = await Astro.glob("../../data/cases/*.json");
 
 const journeyPageData: JourneyPageData[] = [];
 caseData.forEach((caseFile, i) => {
-  const caseData = toJourneyPageData(i + 1, [caseFile.default[0]]);
-  journeyPageData.push(caseData[0]);
+  const caseData = toJourneyPageData(i + 1, [
+    caseFile.default.find((page) => page.name === "Preface") ??
+      caseFile.default[0],
+  ]);
+  journeyPageData.push(...caseData);
 });
 
 const journeys: JourneyCardData[] = journeyPageData
   .filter(({ isStart }) => isStart)
   .map((pageData) => ({
-    title: pageData.title,
-    description: pageData.description,
+    title: pageData.nextName,
     buttonText: "Start",
     href: `/journeys/${pageData.path}`,
   }));

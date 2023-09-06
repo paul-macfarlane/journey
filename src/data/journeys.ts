@@ -10,6 +10,7 @@ export function toJourneyPageData (caseNumber: number, data: any): JourneyPageDa
       title: data.name,
       paragraphs: data.paragraphs,
       nextHref: data.next ? `${baseHref}/${data.next.pid}` : undefined,
+      nextName: data.next ? data.next.name : undefined,
       decisions: data.decisions?.map((decision): JourneyLayoutDecisionData => ({
         href: `${baseHref}/${decision.pid}`,
         buttonText: decision.text,
@@ -22,5 +23,4 @@ export function toJourneyPageData (caseNumber: number, data: any): JourneyPageDa
       isStart: index === 0
     };
   });
-
 }
