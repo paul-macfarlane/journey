@@ -6,7 +6,9 @@
       "You and your family live in Honduras. Every day, you look forward to gathering around the table to share breakfast together. It is one of your favorite moments of peace. You and your husband have two children, a girl and a boy, who you love very much. A few weeks ago, you found out you had a third child on the way. Each evening, after the children come home from school, your husband joins the neighborhood watch team. There have been rumors of gang activity close by, and he wants to play his role in keeping your spot of peace safe. You are nervous for his safety, but you know that you cannot stop him from going, so you pray that he will be okay. Plus, his father and brother are part of the neighborhood watch as well, so you tell yourself that it will all be okay."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/santa-lucia-honduras.jpg"],
+    "images": [
+      "https://media.istockphoto.com/id/1141609779/photo/santa-lucia-honduras.jpg?s=612x612&w=0&k=20&c=X_404IdTHIZE75KTrZipmIDdWoLGiDSlZo4i1CKRQwA="
+    ],
     "next": {
       "name": "Violence Breeds",
       "pid": "2"
@@ -62,7 +64,9 @@
     "paragraphs": [
       "The next week, your husband's brother is killed on his way to work.",
       "You and your husband begin to fight every night about whether or not you should leave. He tells you that he is next. You don't want to believe him. You have no idea what leaving your home would mean for your family. And, you don't know how practical it is to travel while pregnant. You have started to have morning sickness regularly, are incredibly tired, and your baby bump has started to show.",
-      "What do you do?"
+      "What do you do?",
+      "*",
+      "*"
     ],
     "decisions": [
       {
@@ -278,7 +282,9 @@
       "Finally, you make it to Juarez, Mexico, just outside of the US border. Your coyote drops you off at the bridge leading to the U.S., and says that he cannot take you any further. There are new regulations, he says. You'll have to do the rest on your own."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/Source-Smugglers-2020.jpg"],
+    "images": [
+      "https://www.migrationpolicy.org/sites/default/files/source_images/Source-Smugglers-2020.jpg"
+    ],
     "next": {
       "name": "Pre-Seeking Asylum Together",
       "pid": "34"
@@ -294,7 +300,9 @@
       "Finally, you arrive in Juarez, Mexico, and you and your family jump off the moving train."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/80.jpeg"],
+    "images": [
+      "https://ca-times.brightspotcdn.com/dims4/default/3a041b1/2147483647/strip/true/crop/2048x1365+0+0/resize/1200x800!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F38%2F76%2F7f1e95275f49a248281927d189e2%2Fla-1559418296-e1jtz6qrhv-snap-image"
+    ],
     "next": {
       "name": "Pre-Seeking Asylum Together",
       "pid": "34"
@@ -312,7 +320,7 @@
     ],
     "decisions": [],
     "images": [
-      "/src/assets/images/181027215155-02-migrant-caravan-stories.jpg"
+      "https://media.cnn.com/api/v1/images/stellar/prod/181027215155-02-migrant-caravan-stories.jpg?q=x_88,y_0,h_1080,w_1440,c_crop"
     ],
     "next": {
       "name": "Pre-Seeking Asylum Together",
@@ -340,7 +348,9 @@
         "pid": "17"
       }
     ],
-    "images": ["/src/assets/images/90.jpeg"],
+    "images": [
+      "https://npr.brightspotcdn.com/dims4/default/51f9a3f/2147483647/strip/true/crop/4032x2268+0+378/resize/1200x675!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkera%2Ffiles%2F201911%2FIMG_1321.jpeg"
+    ],
     "next": null
   },
   {
@@ -364,7 +374,7 @@
       }
     ],
     "images": [
-      "/src/assets/images/ee230bf8-240b-4a79-9d86-c2ebf07cb67d-50bbc677871c03d298bdc889db46c7e0a1961c0c.jpg"
+      "https://www.gannett-cdn.com/presto/2019/12/03/PPHXS/ee230bf8-240b-4a79-9d86-c2ebf07cb67d-50bbc677871c03d298bdc889db46c7e0a1961c0c.jpg?crop=5471,3078,x0,y278&width=3200&height=1801&format=pjpg&auto=webp"
     ],
     "next": null
   },
@@ -390,7 +400,7 @@
       }
     ],
     "images": [
-      "/src/assets/images/0171b416-c19a-4583-b412-13753c6fefb5-2_Bridge_Migrants.jpg"
+      "https://www.gannett-cdn.com/presto/2018/10/30/PTX1/0171b416-c19a-4583-b412-13753c6fefb5-2_Bridge_Migrants.jpg?crop=4187,2400,x0,y479&width=3200&height=1835&format=pjpg&auto=webp"
     ],
     "next": null
   },
@@ -400,7 +410,9 @@
     "paragraphs": [
       "Your husband calls you and tells you that he's made it with the coyote to the United States. They traveled to Kansas, where he has settled into a run-down apartment, will wait for you there. You tell him that you have just reached Juarez, and that you cannot wait to join him soon.",
       "However, when you go to the port of entry to seek asylum, the ICE officials tell you that there is a new policy in place called the Migrant Protection Program (MPP). Because you are seeking asylum from Honduras, and not Mexico, you must wait on the Mexican side of the border for your court date to be processed. You don't know anybody in Juarez, and have no place to stay.",
-      "What do you do?"
+      "What do you do?",
+      "*",
+      "*"
     ],
     "decisions": [
       {
@@ -415,7 +427,7 @@
       }
     ],
     "images": [
-      "/src/assets/images/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG"
+      "https://www.gannett-cdn.com/presto/2019/09/19/PTX1/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG?crop=2699,1519,x0,y0&width=2699&height=1519&format=pjpg&auto=webp"
     ],
     "next": null
   },
@@ -425,7 +437,10 @@
     "paragraphs": [
       "You've decided to cross the border illegally. You weigh your options of how to do so, carefully. You don't want to get caught, because you heard that if you did, you would be put in detention and your children will be ripped away from you.",
       "You can climb the eight-foot border wall, and create a pulley system to get your kids across, but you are worried that you might not be agile enough. You can hike Mount Cristel Rey, which did not have a border wall, but you've heard that many others have died of dehydration in the dry desert heat trying to make that journey. Or, you could cross El Rio Grande, but you and your kids cannot swim.",
-      "What do you do?"
+      "What do you do?",
+      "*",
+      "*",
+      "*"
     ],
     "decisions": [
       {
@@ -452,7 +467,9 @@
     "name": "Purgatory 1",
     "paragraphs": [
       "You decide to wait for your court case to be processed. This takes weeks, then months, then years. You start to work at a restaurant to earn some extra money. Your kids go to school at the camp, but they only have classes for up to fifth grade. You're growing tired of life in Juarez. There is no privacy, and the poverty around you makes you feel sick.",
-      "What do you do?"
+      "What do you do?",
+      "*",
+      "*"
     ],
     "decisions": [
       {
@@ -467,7 +484,7 @@
       }
     ],
     "images": [
-      "/src/assets/images/bf9012a8-cc59-4f4e-b368-3ec126c5a370-2_Escuelita_Chamizal.JPG"
+      "https://www.gannett-cdn.com/presto/2019/12/16/PTX1/bf9012a8-cc59-4f4e-b368-3ec126c5a370-2_Escuelita_Chamizal.JPG?width=660&height=371&fit=crop&format=pjpg&auto=webp"
     ],
     "next": null
   },
@@ -476,7 +493,9 @@
     "name": "Purgatory 2",
     "paragraphs": [
       "Your case begins to be processed, and you go to court many times, meeting the ICE officials at the bridge at 4am. Each time, they take you to a detention center, and stick you and your family in a //hielera// with other migrants. It is so cold that on one of these court dates, your son develops pneumonia. They strip you of your clothes and your belongings, making you wear these ugly, orange jumpsuits. They keep the lights on all day, with the TV loudly blaring something about the Migrant Protection Program over and over again. You have no idea how much time has passed, but at the end of it, they let you go with nothing but a new court date. You dread going through this process again and again.",
-      "What do you do?"
+      "What do you do?",
+      "*",
+      "*"
     ],
     "decisions": [
       {
@@ -490,7 +509,9 @@
         "pid": "20"
       }
     ],
-    "images": ["/src/assets/images/00childlabor-border-klzc-superJumbo.jpg"],
+    "images": [
+      "https://static01.nyt.com/images/2023/02/15/multimedia/00childlabor-border-klzc/00childlabor-border-klzc-superJumbo.jpg?quality=75&auto=webp"
+    ],
     "next": null
   },
   {
@@ -498,7 +519,9 @@
     "name": "Wall",
     "paragraphs": [
       "You climb the border wall, but when you get to the top, you lose balance, and fall eight feet to the other side. You are in agonizing pain. There is blood seeping through your pants. You are sure that your leg is broken, and you cannot move well, if at all. Luckily, your children manage to make their way across unharmed.",
-      "What do you do?"
+      "What do you do?",
+      "*",
+      "*"
     ],
     "decisions": [
       {
@@ -512,7 +535,9 @@
         "pid": "27"
       }
     ],
-    "images": ["/src/assets/images/UPVMX4XDBNKQPFNG2FRLSGBUAY.jpg"],
+    "images": [
+      "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UPVMX4XDBNKQPFNG2FRLSGBUAY.jpg"
+    ],
     "next": null
   },
   {
@@ -522,7 +547,7 @@
       "You hike Mount Cristel Rey, but just as you are making your way up the hill, a Customs and Border Patrol Car comes out of nowhere. They arrest you and your family and bring you to a detention center. They stick you and your family in a //hielera// with other migrants. It is so cold that your son falls sick. They strip you of your clothes and your belongings, making you wear these ugly, orange jumpsuits. They keep the lights on all day, and the TV blaring something about the Migrant Protection Program. They only bring you one meal a day. You have no idea how much time has passed."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/ALISA2.JPG"],
+    "images": ["https://cdn.kpbs.org/img/photos/2012/01/16/ALISA2.JPG"],
     "next": {
       "name": "Detention 1",
       "pid": "46"
@@ -536,7 +561,9 @@
       "Time of death: 4:23PM."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/92209.jpg"],
+    "images": [
+      "https://idsb.tmgrup.com.tr/ly/uploads/images/2021/02/10/thumbs/871x871/92209.jpg"
+    ],
     "next": null
   },
   {
@@ -547,7 +574,9 @@
       "Time of death: 3:22PM."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/92206.jpg"],
+    "images": [
+      "https://idsb.tmgrup.com.tr/ly/uploads/images/2021/02/10/thumbs/871x871/92206.jpg"
+    ],
     "next": null
   },
   {
@@ -584,7 +613,9 @@
       "Finally, you make it to Juarez, Mexico, just outside of the US border. Your coyote drops you off at the bridge leading to the U.S., and says that he cannot take you any further. There are new regulations, he says. You'll have to do the rest on your own."
     ],
     "decisions": [],
-    "images": [],
+    "images": [
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.migrationpolicy.org%2Farticle%2Fally-or-exploiter-smuggler-migrant-relationship-complex-one&psig=AOvVaw3UweWeGSY-MTeaZUSK8sTl&ust=1684545335068000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMC4qcSagP8CFQAAAAAdAAAAABAE"
+    ],
     "next": {
       "name": "Seeking Asylum Separately",
       "pid": "19"
@@ -599,7 +630,9 @@
       "Finally, you arrive in Juarez, Mexico, and you and your family dismount the moving train."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/80"],
+    "images": [
+      "https://ca-times.brightspotcdn.com/dims4/default/3a041b1/2147483647/strip/true/crop/2048x1365+0+0/resize/1200x800!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F38%2F76%2F7f1e95275f49a248281927d189e2%2Fla-1559418296-e1jtz6qrhv-snap-image"
+    ],
     "next": {
       "name": "Seeking Asylum Separately",
       "pid": "19"
@@ -613,7 +646,7 @@
     ],
     "decisions": [],
     "images": [
-      "/src/assets/images/201003-honduran-migrants-honduras-mn-0920.JPG"
+      "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_40/3416970/201003-honduran-migrants-honduras-mn-0920.JPG"
     ],
     "next": {
       "name": "Seeking Asylum Separately",
@@ -628,7 +661,7 @@
     ],
     "decisions": [],
     "images": [
-      "/src/assets/images/180417150822-stweart-detention-center-lumkin-ga-restricted.jpg"
+      "https://media.cnn.com/api/v1/images/stellar/prod/180417150822-stweart-detention-center-lumkin-ga-restricted.jpg?q=w_2160,h_2880,x_1080,y_0,c_crop"
     ],
     "next": {
       "name": "You've Made it to the US!",
@@ -701,7 +734,7 @@
     ],
     "decisions": [],
     "images": [
-      "/src/assets/images/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG"
+      "https://www.gannett-cdn.com/presto/2019/09/19/PTX1/5be46951-3596-4450-924a-25892c2edb11-3_Mexican_Asylum_Seekers.JPG?crop=2699,1519,x0,y0&width=660&height=372&format=pjpg&auto=webp"
     ],
     "next": {
       "name": "Baby! - Street Ctd.",
@@ -714,7 +747,9 @@
     "paragraphs": [
       "When you get to the port of entry, the ICE officials say that they have too many pending cases, and that instead of going through the asylum process that would permit you to wait in the US, they will take your name down, and add it to a list. They tell you to check back at the bridge everyday at 4am, and when it's your turn, they will process your case. But, they don't know how long that will take.",
       "You know that your baby will be delivered anyday now, and cannot afford for your case to take time to process before you deliver your new child.",
-      "What do you do?"
+      "What do you do?",
+      "*",
+      "*"
     ],
     "decisions": [
       {
@@ -743,7 +778,9 @@
       "After a few days of rest, you are ready to try and enter the US."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/Asylum-MPP-Social-Image.jpg"],
+    "images": [
+      "https://www.aclu.org/wp-content/uploads/2020/03/Asylum-MPP-Social-Image.jpg"
+    ],
     "next": {
       "name": "Seeking Asylum Together",
       "pid": "18"
@@ -820,7 +857,9 @@
       "You jump with joy when a different Presidential candidate is elected. Maybe you could make it to the United States after all. Two months later, MPP is lifted, and you cross the border into the United States."
     ],
     "decisions": [],
-    "images": ["/src/assets/images/screen-shot-2021-01-21-at-4.42.47-pm.png"],
+    "images": [
+      "https://sienaamcvoices.files.wordpress.com/2021/01/screen-shot-2021-01-21-at-4.42.47-pm.png?w=730&h=730&crop=1"
+    ],
     "next": {
       "name": "You've Made it to the US!",
       "pid": "33"

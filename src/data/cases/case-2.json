@@ -1,1347 +1,1347 @@
 [
-    {
-        "id": "1",
-        "name": "Detention Day 2",
-        "paragraphs": [
-            "The next day, members of a \"Know Your Rights\" organization give a virtual presentation. They tell you that they may be able to help advocate for your rights as a detainee, connect you to a lawyer, and help you seek asylum. But, they warn you that not everyone will be represented.",
-            "One of the \"Customs and Border Patrol\" officers, as you learn they are called, tells you that because you crossed illegally, you will most likely be deported anyways with a ban to entering the U.S. for the next five years.",
-            "One of the other migrants tells you that in El Paso, almost every asylum case gets denied. But, she says that if you can find a sponsor, then you can leave detention to go to another city in the U.S. where you will have a better chance of winning. That's what she's going to do, her sister lives in a place called Providence, Rhode Island.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Call the legal rights organization",
-                "name": "Legal Org",
-                "pid": "2"
-            },
-            {
-                "text": "Volunteer to work & save up for calls and travel",
-                "name": "Work",
-                "pid": "3"
-            },
-            {
-                "text": "Try to find a sponsor",
-                "name": "Sponsor",
-                "pid": "4"
-            },
-            {
-                "text": "Wait out the court process",
-                "name": "Wait it out",
-                "pid": "30"
-            }
-        ],
-        "images": [
-            "/src/assets/images/detainee-handbook-pablo-allison-undocumented-press-9781999379742-5.jpeg"
-        ],
-        "next": null
-    },
-    {
-        "id": "2",
+  {
+    "id": "1",
+    "name": "Detention Day 2",
+    "paragraphs": [
+      "The next day, members of a \"Know Your Rights\" organization give a virtual presentation. They tell you that they may be able to help advocate for your rights as a detainee, connect you to a lawyer, and help you seek asylum. But, they warn you that not everyone will be represented.",
+      "One of the \"Customs and Border Patrol\" officers, as you learn they are called, tells you that because you crossed illegally, you will most likely be deported anyways with a ban to entering the U.S. for the next five years.",
+      "One of the other migrants tells you that in El Paso, almost every asylum case gets denied. But, she says that if you can find a sponsor, then you can leave detention to go to another city in the U.S. where you will have a better chance of winning. That's what she's going to do, her sister lives in a place called Providence, Rhode Island.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Call the legal rights organization",
         "name": "Legal Org",
-        "paragraphs": [
-            "You call the legal organization, who tells you that they will take care of the cost for today's call. They tell you that before they can determine if you can be connected to a lawyer, you must recount your story from beginning to end. There are few grounds for seeking asylum, they tell you, and they will help determine which category your situation fits into.",
-            "You want their help, but the thought of re-telling your story, re-living your trauma, makes you sick to your stomach.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Recount your story",
-                "name": "Recount to Lawyer",
-                "pid": "5"
-            },
-            {
-                "text": "Delay recounting your story & schedule a future appointment",
-                "name": "Reschedule Appt",
-                "pid": "6"
-            },
-            {
-                "text": "Tell the staff member you cannot work with them",
-                "name": "Deny Lawyer",
-                "pid": "7"
-            }
-        ],
-        "images": [
-            "/src/assets/images/Adelanto-Immigration-Detention-ICE-1020x678.jpg"
-        ],
-        "next": null
-    },
-    {
-        "id": "3",
+        "pid": "2"
+      },
+      {
+        "text": "Volunteer to work & save up for calls and travel",
         "name": "Work",
-        "paragraphs": [
-            "You decide to try and work, with the intention to save up enough to get out of detention and fight your case for asylum in another part of the country. Your bunk-mate tells you that their cousin's friend might be able to sponsor you if you can figure out how to get to Michigan, giving you a torn off piece of paper with his phone number written on it.",
-            "At $1/day, you figure you'll have to save up for about a year to be able ot leave this place. That's another full year that your wife and daughters back home will go without food.",
-            "At the main intake office, next to the cage they held you in when you arrived, you sign a volunteer to work form. The CBP officers assign you to the laundry room, and tell you that you'll be paid $1 at the end of each day for your service. And, they tell you that you can be fired from your position for not performing your job as expected.",
-            "Your first day of work passes quickly, laundry isn't so bad. The next day, during your lunch break, you decide to use your $1 to make a phone call.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Call your family in Guatemala",
-                "name": "Call Home",
-                "pid": "18"
-            },
-            {
-                "text": "Call your bunk mate's cousin",
-                "name": "Call Sponsor",
-                "pid": "19"
-            }
-        ],
-        "images": [
-            "/src/assets/images/blog16-norcal_immigration_detention_center_phone-1160x768.jpg"
-        ],
-        "next": null
-    },
-    {
-        "id": "4",
+        "pid": "3"
+      },
+      {
+        "text": "Try to find a sponsor",
         "name": "Sponsor",
-        "paragraphs": [
-            "You ask around, and your bunkmate tells you that his cousin may know a guy who is able to sponsor you. He scribbles down his phone number on a piece of paper, and says that he can lend you a dollar or two for a phone call.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Call the sponsor",
-                "name": "Call Sponsor",
-                "pid": "19"
-            },
-            {
-                "text": "Call your family",
-                "name": "Call Home",
-                "pid": "18"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "5",
-        "name": "Recount to Lawyer",
-        "paragraphs": [
-            "You begin to tell your story, about the place that you used to call home. Your remember your family farm -- land that had been passed down for generations. You remember your daughters, their smiling faces asking you to pick them up and twirl them around, how you happy you had been to see them grow up. You remember your wife, hoping to be with her as she grew old. Nothing pained you more than to leave them behind.",
-            "But after the third year of unfarmable land, after the third year with no food on the table, no clean water, and no work downtown, you and your wife both knew that you would have to leave.",
-            "You pause. You want to continue, to tell the staff member what happened once you left, but you start to choke on your words. You feel your heart pounding in your chest, beads of sweat forming on your forehead, and before you muster the courage to go on, the room starts to spin.",
-            "The staff member gives you a minute to catch your breath. She tells you that you can try again tomorrow.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Wait until tomorrow.",
-                "name": "Wait Until Tomorrow",
-                "pid": "8"
-            },
-            {
-                "text": "Forge on through the story.",
-                "name": "Forge On",
-                "pid": "9"
-            },
-            {
-                "text": "Tell the staff member you don't want to work with her.",
-                "name": "Deny Lawyer",
-                "pid": "7"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "6",
-        "name": "Reschedule Appt",
-        "paragraphs": [
-            "You inform the staff member that you'll call and talk to her when you're ready. She says to take your time, there's no rush. She also encourages you to seek mental health services while in detention.",
-            "After a week, you call the organization back. The staff member who picks up immediately apologizes.",
-            "\"I'm really sorry,\" she says. \"I was informed this morning that we cannot take anymore clients. The immigration lawyer who we work with was killed in a shooting yesterday.\"",
-            "Your heart sinks as you hear the staff member speaking through sniffles on the other side. \"He and his family were killed in a shooting at the mall. They think the murderer was trying to prevent him from doing his work.\"",
-            "When you hang up the phone, you feel your hands shaking."
-        ],
-        "decisions": [
-            {
-                "text": "Work and save up to call home",
-                "name": "Call Home",
-                "pid": "18"
-            },
-            {
-                "text": "Find a Sponsor",
-                "name": "Sponsor",
-                "pid": "4"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "7",
-        "name": "Deny Lawyer",
-        "paragraphs": [
-            "On the phone with the legal organization, the staff member asks you if there's anything that she can do to help you right away.",
-            "You tell her that you want to contact your family. You're not sure if this is possible from detention, but you want them to know that you're alive and that you made it to the United States. You want to check on how they are and make sure they are safe. And, regretably, you have to tell them that it's going to be a while before you're able to send any money home to help out.",
-            "The staff member tells you that she can make a three way call and connectyou to your family. You give her their phone number, and wait as the phone rings."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Family!",
-            "pid": "21"
-        }
-    },
-    {
-        "id": "8",
-        "name": "Wait Until Tomorrow",
-        "paragraphs": [
-            "You inform the staff member that you'll continue your conversation tomorrow, hang up the phone, and return to your cell. When you finally sit down on your bunk, you begin to cry. One of your roommates comes to console you, but you don't want to be consoled. You feel so, incredibly alone.",
-            "The next day, when you call the organization back, the staff member immediately apologizes.",
-            "\"I'm really sorry,\" she says. \"I was informed this morning that we cannot take anymore clients. The immigration lawyer who we work with was killed in a shooting yesterday.\"",
-            "Your heart sinks as you hear the staff member speaking through sniffles on the other side. \"He and his family were killed in a shooting at the mall. They think the murderer was trying to prevent him from doing his work.\"",
-            "When you hang up the phone, you feel your hands shaking.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Work and save up to call home",
-                "name": "Call Home",
-                "pid": "18"
-            },
-            {
-                "text": "Find a Sponsor",
-                "name": "Sponsor",
-                "pid": "4"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "9",
-        "name": "Forge On",
-        "paragraphs": [
-            "You take a deep breath. Then you continue.",
-            "To come to the U.S., you decided to utilize the help a coyote - a human smuggler. The coyote told you that he could take care of you.",
-            "You didn't have any money to pay him, but he offered you a deal. You could help him with some work, and in exchange he would take you to the U.S. Without many other options, you agreed, and before you knew you were handed the keys to a truck. It was a shipment from the United States, all you had to do was drive it accross the Guatemalan border to El Salvador.",
-            "At first you agreed, but when you learned that there were hundreds of arms in the truck, you objected. That's when they showed you a photo of the last person who refused the task -- dead, next to the dead bodies of his children, their faces so disfigured you couldn't even fathom their ages. This wasn't much of a choice at all. You had to do this, or your three daughters would die. You asked God for forgiveness and drove the truck.",
-            "When you get to this part of the story, though, a CBP officer interrupts you. Your have 2 minutes remaining before your phone call time runs out.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Continue the phone call.",
-                "name": "Continue the Phone Call",
-                "pid": "12"
-            },
-            {
-                "text": "Tell the staff member that you'll call them tomorrow.",
-                "name": "Wait Until Tomorrow",
-                "pid": "8"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "10",
-        "name": "Waking Up in Detention",
-        "paragraphs": [
-            "You wake up disoriented, trying to remember what happened yesterday. The days had grown so long and laborsome that they all started to meld together. But when you see the chain-link fence walls of the cell and feel the cold metal of the shackles cut into your skin, it all comes racing back.",
-            "The man who rescued you in the desert, who told you he would get you to safety, let you climb into the back seat of his car, and you slept most of the two hours that it took you to come to this place. This prison. You had done nothing wrong, but you were here. This was detention, the ice box, the //hielera//. It was cold and crowded, and it had taken you hours to fall asleep against the backdrop of the blaring television."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/202100401-unaccompanied-minors-1.jpg"
-        ],
-        "next": {
-            "name": "Day 1 in Detention",
-            "pid": "11"
-        }
-    },
-    {
-        "id": "11",
-        "name": "Day 1 in Detention",
-        "paragraphs": [
-            "It's your first day here, and the other people with you inside what feels like a cage look just as hungry, tired, and terrified as you feel. It's a sea of orange jumpsuits; what little that you had left on you had been taken when you arrived. Your clothes, your phone, your wallet, your shoe laces, even the four printed photos of your children whose faces were seared into your mind.",
-            "One of the men wearing the same uniform as the man who brought you here announces that everyone will go through something called \"intake\" today. They will assign you to a room and talk you through your daily schedule.",
-            "The rest of the day is a whirl of information. They tell you that you will be held in this detention facility indefinitely until your case is processed. They tell you that you have the right to work at the facility for $1/day. They tell you that you have a designated 20mins/day during which you can use the phone, which costs 10 cents/minute. You will have 1hr/day of outside time. They give you hand out after hand out of information.",
-            "Then, they assign you to a room with another three men. It is a three walled, windowless cell with a chain-link metal door. There are two sets of bunk beds, about a foot apart, with a toilet in between. Immediately, you realize privacy was a priviledge you had taken for granted."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/20191204-adelanto.jpg"
-        ],
-        "next": {
-            "name": "Detention Day 2",
-            "pid": "1"
-        }
-    },
-    {
-        "id": "12",
-        "name": "Continue the Phone Call",
-        "paragraphs": [
-            "Knowing you won't be able to muster up the energy to retell the story again tomorrow, you continue speaking against the CBP officer's warning.",
-            "You tell the staff member what happened next as quickly as you can. You delivered the arms. But the truck on the way back to Guatemala was not empty. It was full of people. Migrants, like you. When you met up with the coyote again, he shoved you in the back of the truck with everybody else. It was a heat box. Seventeen of the thirty people in the truck died before the doors were opened in the desert in Mexico. Five of them were children.",
-            "You break into tears when the CBP officer comes to get you.",
-            "\"You're five minutes past the phone call limit,\" he says. Because you had failed to adhere to his warning, you will be punished.",
-            "He brings you to an isolation room. You will spend the next seven days here, he says, your priviledges to the phone and outside grounds have been revoked."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Solitary Confinement",
-            "pid": "13"
-        }
-    },
-    {
-        "id": "13",
-        "name": "Solitary Confinement",
-        "paragraphs": [
-            "The next seven days are the slowest you've endured. After everything you've been through, you felt like you should be grateful for the rest, but in the small dark space you live with nothing but your guilt. Guilt for the crimes you've committed. Guilt for leaving your loved ones behind. Guilt for not being able to see your children grow up. And now, guilt for not even being able to send money home. You had told yourself that you had sacrificed being with them for their own future, and now it seemed like you couldn't even provide them with that. You let yourself grow skinny and sorrowful, the bland meals delivered to you are collected untouched.",
-            "Seven days later, a CBP officer comes to get you. You feel so weak, tired, depressed, and angry that when you get to your bed, you just lay down. Nobody can talk to you. Nobody can rouse you. You remember one of the pamflets they gave you was about mental health, and that you were supposed to be able to see a doctor if you needed to, but you don't have the energy to find out.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Try to contact the healthcare provider.",
-                "name": "Mental Health?",
-                "pid": "14"
-            },
-            {
-                "text": "Tell a CBP officer that you're feeling depressed.",
-                "name": "You're Crazy",
-                "pid": "15"
-            },
-            {
-                "text": "Stay in bed.",
-                "name": "You're defiant",
-                "pid": "16"
-            }
-        ],
-        "images": [
-            "/src/assets/images/detention-web-jan2020-ap.png"
-        ],
-        "next": null
-    },
-    {
-        "id": "14",
-        "name": "Mental Health?",
-        "paragraphs": [
-            "You muster up enough strength to ask one of your roommates how to see the doctor in detention. They help you flip through some of the handbooks, and find a form that you have to fill out and submit to one of the CBP officers. It must have your name, A-number, and the reason for your appointment. Once you submit the form, it will be up to seven days until you can see the doctor.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Fill out the form and submit it.",
-                "name": "Fill Out Form",
-                "pid": "17"
-            },
-            {
-                "text": "Tell the CBP officer you're feeling depressed.",
-                "name": "You're Crazy",
-                "pid": "15"
-            },
-            {
-                "text": "Give up and stay in bed.",
-                "name": "You're defiant",
-                "pid": "16"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "15",
-        "name": "You're Crazy",
-        "paragraphs": [
-            "You get the attention of one of the passing CBP officers, and muster up the courage to tell them how you've been feeling. You tell them you want to die, you want to get help, your family still needs you.",
-            "The CBP officer asks you if you're thinking about killing yourself. When you say yes, he immediately re-handcuffs you. You've been determined a danger to yourself and/or others.",
-            "So back to the hole you go. Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to retrieve you seven days later, you are emaciated, on the brink of death.",
-            "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
-            "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
-            "Time of death: 2:36P.M."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "16",
-        "name": "You're defiant",
-        "paragraphs": [
-            "You cannot find the strength to do anything but lay in bed. At the time of the next headcount, at 10:00PM, your roommates tell you to stand up. \"You could get in trouble if you don't!\" They warn you. But you can't even find the strength to respond.",
-            "When the CBP officers get to your cell, they ask your roommates if you're alive. You hear them open the door to your cell, and feel one of the officers shake you forcibly. They yell in your ear to get up. Then, they drag you back to solitary confinement.",
-            "This is the second time you've disobeyed a CBP officer, they tell you. This time your punishment will be longer.",
-            "So back to the hole you go. Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to check on you seven days later, you are emaciated, on the brink of death.",
-            "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
-            "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
-            "Time of death: 2:36P.M."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "17",
-        "name": "Fill Out Form",
-        "paragraphs": [
-            "You fill out the form with the help of your roommate and submit it to one of the CBP officers. But when they read your cheif complaint \"need mental healthcare; contemplating suicide,\" they decide that you are a danger to yourself and others, and determine that you should be sent back to solitary confinement.",
-            "So to solitary confinement you go. Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to retrieve you seven days later, you are emaciated, on the brink of death.",
-            "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
-            "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
-            "Time of death: 2:36P.M."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "18",
-        "name": "Call Home",
-        "paragraphs": [
-            "You try to call your family, but each time you dial the number, the same message is delivered in English -- only some of which you can understand. Starting to wonder why the phone isn't working, you ask the CBP officer who had escorted you to use the phone.",
-            "He tells you that you cannot make international phone calls while in detention. \"You should have known that,\" he remarks, \"it was in the booklet we gave you, idiot.\"",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Call your bunk mate's cousin",
-                "name": "Call Sponsor",
-                "pid": "19"
-            },
-            {
-                "text": "Call the legal rights organization",
-                "name": "Deny Lawyer",
-                "pid": "7"
-            },
-            {
-                "text": "Respond to the CBP officer",
-                "name": "Fuck CBP",
-                "pid": "20"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "19",
-        "name": "Call Sponsor",
-        "paragraphs": [
-            "Not too sure about what to expect, you call your bunkmate's cousin. An animated man picks up the phone and asks you what's up.",
-            "You tell him that you are detained in El Paso, and that your bunkmate suggested you call him in search of someone who could potentially sponsor you.",
-            "The animated man on the phone tells you that he knows a man who will sponsor you, but that you'll need to work for him in return. You ask him if you will get paid for working, to which he replies \"of course!\" giving you a phone number to call.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Call the number",
-                "name": "Trafficking?",
-                "pid": "32"
-            },
-            {
-                "text": "Call the legal organization",
-                "name": "Legal Org",
-                "pid": "2"
-            },
-            {
-                "text": "Work and save up first",
-                "name": "It's going to be a long haul",
-                "pid": "23"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "20",
-        "name": "Fuck CBP",
-        "paragraphs": [
-            "Hurt by the words of the CBP officer, you feel the anger boil up inside of you. You tell him that you haven't talked to your family in //months//, how would he feel if that was him?",
-            "He responds with a smirk. \"Did you really just talk back to me?\" he asks."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Defy Defy Defy",
-            "pid": "25"
-        }
-    },
-    {
-        "id": "21",
-        "name": "Family!",
-        "paragraphs": [
-            "Your eyes well up with tears at the sound of your wife's voice. You tell her that you're in detention, awaiting entry to the United States, and that it may be some itme before you can send money home.",
-            "She tells you not to worry, that she's just happy you are safe. She calls for your daughters, and suddenly their voices -- full of joy and laughter fill your ears.",
-            "You ask them how they've been getting by, and your wife tells you that it's been difficult to make ends meet. She goes every few days without food to make sure that your daughters are growing. Right now, they're surviving mostly on corn, but they're still surviving.",
-            "She asks you about your journey, but you can't bring yourself to tell her about it. Not now. Not yet. Maybe not ever. As soon as you find a way to get funds, you'll call her, you say.",
-            "Understanding that it may be a while before she hears from you again, she tells you that she loves you. And makes you promise her that you'll stay safe. With that, your $1 of phone time comes to an end, and the server hangs up for you.",
-            "What now?"
-        ],
-        "decisions": [
-            {
-                "text": "Back to work so you can save up and call your bunk mate's cousin",
-                "name": "Back to Work",
-                "pid": "22"
-            },
-            {
-                "text": "Back to work, save up for a while and try to afford transportation",
-                "name": "It's going to be a long haul",
-                "pid": "23"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "22",
-        "name": "Back to Work",
-        "paragraphs": [
-            "You work in the laundry room. Each day, there are new migrants who arrive, and the number of laundry loads that you do increases ten fold each week, though you continue to earn only $1/day.",
-            "After a week, you cash in a dollar to call your bunkmate's cousin's friend."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/rawImage.jpg"
-        ],
-        "next": {
-            "name": "Trafficking?",
-            "pid": "32"
-        }
-    },
-    {
-        "id": "23",
-        "name": "It's going to be a long haul",
-        "paragraphs": [
-            "Day after day, you continue to work in the laundry room. Each day, there are new migrants who arrive, and the number of laundry loads that you do increases ten fold each week. Eventually, there are so many clothes that you cannot fit them all in the washer.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Hand wash the rest of the clothes.",
-                "name": "Hand Wash",
-                "pid": "24"
-            },
-            {
-                "text": "Leave some dirty clothes to wash for tomorrow.",
-                "name": "Dirty Clothes",
-                "pid": "37"
-            }
-        ],
-        "images": [
-            "/src/assets/images/rawImage.jpg"
-        ],
-        "next": null
-    },
-    {
-        "id": "24",
-        "name": "Hand Wash",
-        "paragraphs": [
-            "You begin to grow frustrated and over-tired by the increase in workload. Hand washing the remaining clothing ontop of running the machines takes a lot of energy, and it begins to cut into your \"recreational\" outisde time and lunch break. Additionally, your pay has remained at $1/day, and you've only earned a total of $25 to date.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Ask the CBP officer to increase your pay",
-                "name": "Pay me more!",
-                "pid": "26"
-            },
-            {
-                "text": "Quit your job",
-                "name": "I quit!",
-                "pid": "27"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "25",
-        "name": "Defy Defy Defy",
-        "paragraphs": [
-            "What you didn't know was that small act, in an attempt to prevent the deterioration of your own health, was considered defiance against a CBP officer.",
-            "You're \"failure to comply\" earns you a week in solitary confinement."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/sub-solitary-articleLarge.jpg"
-        ],
-        "next": {
-            "name": "Solitary Confinement",
-            "pid": "13"
-        }
-    },
-    {
-        "id": "26",
-        "name": "Pay me more!",
-        "paragraphs": [
-            "One evening, you decide to confront one of the CBP officers about your pay. You explain that you've been doing a lot of extra work, and that $1/day does not seem like reasonable compensation.",
-            "He smirks at you, asking what you need the extra money for anyways.",
-            "Then he asks to search you for contraband. He doesn't believe that you're just \"saving up.\" You must be using the money for something illegal, and he has the right to search you.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Let him search you",
-                "name": "Let him search you",
-                "pid": "28"
-            },
-            {
-                "text": "Tell him no",
-                "name": "No!",
-                "pid": "36"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "27",
-        "name": "I quit!",
-        "paragraphs": [
-            "Your head grows heavy and your body becomes achey. Deciding that the compensation for what you have to put up with is not worth it, you submit a form of resignation from the voluntary work program.",
-            "You wonder how you could possibly come back from the toll of the last few days, but everytime you close your eyes, you see the faces of your daughters. You have to keep going, for them. How can you care for them if your health is on the line?",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Submit an intake form to see the doctor",
-                "name": "See the doc",
-                "pid": "33"
-            },
-            {
-                "text": "Call your bunkmate's cousin's friend",
-                "name": "Trafficking?",
-                "pid": "32"
-            },
-            {
-                "text": "Lay in bed for today. You need your rest.",
-                "name": "Stay in Bed",
-                "pid": "34"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "28",
-        "name": "Let him search you",
-        "paragraphs": [
-            "The CBP officer tells you to turn around and place your hands above your head, palms touching the wall. He pats you down, beginning at your arms and working his way to your shoulders and your chest. When his hands make their way to your waist, though, you feel yourself jerk reactively.",
-            "He pushes you forcefully against the wall and feels for your genitals. He tells you that if you scream, he'll just put you in solitary confinement anyways.",
-            "Then he releases you.",
-            "If you want more money, he says, you know how you can get it. He tells you that he will come monitor you as you wash clothes tomorrow.",
-            "Then he walks away. You crumble to the floor."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Ahhhhhhhhh",
-            "pid": "29"
-        }
-    },
-    {
-        "id": "29",
-        "name": "Ahhhhhhhhh",
-        "paragraphs": [
-            "The next day, your brain feels empty. You cannot stop thinking about what that officer did to you, how uncomfortable it made you feel. You think about reporting him, but you worry that nobody will believe you. After all, you're a man, you should have been able to defend yourself.",
-            "You sift through the pamflets that were given to you during your intake, and come accross the zero tolerace sexual assault policy. There is a form to fill out, instructions on how to submit it, and a phone number you can call for support. The next page, though, outlines consequences for false acusations. If the investigation finds that there was a false acusation of sexual assault, you could be restricted to solitary confinement for the rest of your time in detention.",
-            "You wonder if this is a battle you will ever win.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Report the assault",
-                "name": "Report it",
-                "pid": "31"
-            },
-            {
-                "text": "Call your wife and tell her what happened",
-                "name": "Call home again",
-                "pid": "35"
-            },
-            {
-                "text": "Quit your job",
-                "name": "I quit!",
-                "pid": "27"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "30",
+        "pid": "4"
+      },
+      {
+        "text": "Wait out the court process",
         "name": "Wait it out",
-        "paragraphs": [
-            "You decide to wait out the immigration hearing process. You try to follow the rules of the detention facility, but everyday the rooms get more crowded and the days get more monotonous.",
-            "You try to find things to do, but unless you know someone who can send you books or magazines, there's not much entertainment. You have one hour of outside time per day, and the rest of the time, you lay awake in a cramped cell. Eventually, they demand that you share cots in order to contain all of the detainees who arrive. You'd rather sleep on the floor.",
-            "After two months, the CBP officers announce that they do not have enough room to contain all of you in the detention facility. They're going to deport everybody who arrived within the last year who does not have a sponsor.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Look for a sponsor",
-                "name": "Sponsor",
-                "pid": "4"
-            },
-            {
-                "text": "Allow yourself to get deported",
-                "name": "Deportation",
-                "pid": "64"
-            }
-        ],
-        "images": [
-            "/src/assets/images/20200331_RS_GT62853287RM1630x932.jpg"
-        ],
-        "next": null
-    },
-    {
-        "id": "31",
-        "name": "Report it",
-        "paragraphs": [
-            "Not sure if it will amount to anything, you decide to report the sexual assault. You know that the CBP officer was in the wrong, and despite the difficulties of being in detention, you had heard how much the United States valued justice. You placed your hope in that value, and filled out the form.",
-            "Who do you give it to?"
-        ],
-        "decisions": [
-            {
-                "text": "CBP Officer",
-                "name": "Report Assault to CBP",
-                "pid": "38"
-            },
-            {
-                "text": "Clergyman",
-                "name": "Report Assault to Clergyman",
-                "pid": "39"
-            },
-            {
-                "text": "Healthcare provider",
-                "name": "Report Assault to Doc",
-                "pid": "40"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "32",
-        "name": "Trafficking?",
-        "paragraphs": [
-            "You call the number, and find out that the man willing to sponsor you has sponsored at least a dozen migrants already. He lives in Michigan, and he makes a lot of money, he says. He's willing to help you out.",
-            "But, he says that because he'll be helping you through the sponsorship process, you'll have to pay for plane tickets to Michigan on your own. If you can't afford them, he tells you that you can work a few weeks without pay to make up for it.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Work in detention and save up to go to Michigan",
-                "name": "It's going to be a long haul",
-                "pid": "23"
-            },
-            {
-                "text": "Go to Michigan and work without pay once you get there",
-                "name": "Modern Slavery",
-                "pid": "45"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "33",
-        "name": "See the doc",
-        "paragraphs": [
-            "You submit an intake form to see the doctor, but you have to write down your cheif complaint on the form. You want to be honest, but you're not sure how certain topics will be stigmatized by the CBP officers to whom you have to submit your intake form to.",
-            "What do you write as your cheif complaint?"
-        ],
-        "decisions": [
-            {
-                "text": "Difficultues with Mental Health",
-                "name": "Fill Out Form",
-                "pid": "17"
-            },
-            {
-                "text": "Fatigue, stress, and physical achiness from Work",
-                "name": "Detention Doc",
-                "pid": "41"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "34",
-        "name": "Stay in Bed",
-        "paragraphs": [
-            "The next day, a CBP officer comes to your cell asking you why you did not show up at work yesterday. You tell him that you submitted a resignation from voluntary work form. He says that the office did not receive it, and that not showing up was unacceptable behavior which would be met with punitive measures.",
-            "You will no longer be able to work for the next sixty days, and your phone priviledges have been revoked for the next two weeks. This defiance has also earned you a week in solitary confinement, he says."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Solitary Confinement",
-            "pid": "13"
-        }
-    },
-    {
-        "id": "35",
-        "name": "Call home again",
-        "paragraphs": [
-            "You use some of your saved up change to call back the legal organization, and ask if she can help you reconnect with your family again. When you hear your wife's voice on the phone, you feel yourself starting to fight back tears. You tell her that you're having a really hard time in detention. You will do anything it takes to leave, you just don't know how to go about it.",
-            "She asks you what has been happening, and all you have the strength to tell her is that one of the CBP officers had harassed and threatened you.",
-            "She tells you to stay strong. Your oldest daughter has dropped out of school and has been working along with your wife to sell dolls and necklaces made out of corn husks to people on the street. It's helped keep their stomachs from being empty over the past month.",
-            "Your heart drops. You want to keep working with the hope of sending something home soon. Your daughter not being in school makes you so deeply upset. You made this trecherous journey to prevent just that.",
-            "At the same time, you know that if you quit your job, you will not be able to get another voluntary work position for at least sixty days.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Quit your job",
-                "name": "I quit!",
-                "pid": "27"
-            },
-            {
-                "text": "Continue to work, and call your bunkmate's cousin to ask about sponsorship",
-                "name": "Modern Slavery",
-                "pid": "45"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "36",
-        "name": "No!",
-        "paragraphs": [
-            "You tell the CBP officer that he cannot search you. You have nothing to hide, but he also should not have any reason to suspect that you've done anything wrong.",
-            "Next thing you know, he's cuffed you and shoved you forcefully against the wall."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Defy Defy Defy",
-            "pid": "25"
-        }
-    },
-    {
-        "id": "37",
-        "name": "Dirty Clothes",
-        "paragraphs": [
-            "The next day, the CBP officer in charge of compliance with the volunteer to work program confronts you. Because you left some dirty clothes without washing yesterday, this was considered unacceptable behavior. You've lost your priviledges to work, and you will be punished more severely as well."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Defy Defy Defy",
-            "pid": "25"
-        }
-    },
-    {
-        "id": "38",
-        "name": "Report Assault to CBP",
-        "paragraphs": [
-            "You get the attention of one of the passing CBP officers, and muster up the courage to tell them what has happened. You tell them through tears that you want the officer who assaulted you to be held accountable. You want to get help to move past this, too, your family still needs you.",
-            "The CBP officer smirks and immediately re-handcuffs you. You've dared to falsely accuse an officer of assault. He drags you to solitary confinement.",
-            "Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to retrieve you seven days later, you are emaciated, on the brink of death.",
-            "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
-            "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
-            "Time of death: 2:36P.M."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/detention-web-jan2020-ap.png"
-        ],
-        "next": null
-    },
-    {
-        "id": "39",
-        "name": "Report Assault to Clergyman",
-        "paragraphs": [
-            "You wait three days, you know that the designated priest comes to the detention facility every Sunday to lead prayer, but every minute you wait feels like torture.",
-            "On Sunday morning, after the prayer service, you ask the priest if you can speak to him alone. You tell him what happened, as briefly as you can, and give him the form that you've filled out.",
-            "You want to make sure that the officer is held accountable, you say.",
-            "The clergyman tells you that he will ensure the proper people are made aware of the situation."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Doc Calls You In",
-            "pid": "44"
-        }
-    },
-    {
-        "id": "40",
-        "name": "Report Assault to Doc",
-        "paragraphs": [
-            "You submit an intake form to see the doctor, but you have to write down your cheif complaint on the form. You want to be honest, but you're not sure how certain topics will be stigmatized by the CBP officers to whom you have to submit your intake form to.",
-            "What do you write as your cheif complaint?"
-        ],
-        "decisions": [
-            {
-                "text": "Difficultues with Mental Health",
-                "name": "Fill Out Form",
-                "pid": "17"
-            },
-            {
-                "text": "Victim of Abuse/Assault",
-                "name": "Victim of Abuse/Assault",
-                "pid": "42"
-            },
-            {
-                "text": "Fatigue, stress, and physical achiness from Work",
-                "name": "Detention Doc",
-                "pid": "41"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "41",
-        "name": "Detention Doc",
-        "paragraphs": [
-            "The doctor in the detention facility is very kind. She opens up the conversation with you an incredibly sensitive way, and you feel comfortable telling her about what's been happening since you got to detention. She tells you that she will do everything in her power to advocate for you, and before she examines you, she listens intently to everything that you have to say.",
-            "She asks about your family, about your hopes for coming to the U.S. She asks about your mental health and emotional well being. She asks you if you feel safe. But, she also gives you permission to refuse to answer if you want to talk about something at a later time.",
-            "You don't tell her everything, but you tell her about the CBP officer who harassed you. You tell her about your daughters. You tell her that their future depends on your work, and how guilty you feel that you haven't sent any money home.",
-            "She comforts you."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Congratulations! You made it to the doctor!",
-            "pid": "62"
-        }
-    },
-    {
-        "id": "42",
-        "name": "Victim of Abuse/Assault",
-        "paragraphs": [
-            "You fill out the intake form to see the doctor, siting \"Abuse/Assault\" as your cheif complaint. It will be seven days before you can see the doctor.",
-            "As you wait consultation, though, the CBP officer who harassed you shows up at your cell. The form you filled out is in his hand. He tells you that one of his coworkers gave him the form, and that you would face consequences for trying to report the incident to the doctor.",
-            "He drags you to solitary confinement, you'll be there for two weeks, he says.",
-            "Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. You stop sleeping. You lose track of time. All you can think about is how you've failed your family, how your daughters will never get the education that they deserve, how your wife will continue to go hungry. How if you die, they will not even know what has happened to you.",
-            "When the CBP officers come to retrieve you two weeks later, you are emaciated, on the brink of death."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": ":(",
-            "pid": "43"
-        }
-    },
-    {
-        "id": "43",
-        "name": ":(",
-        "paragraphs": [
-            "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
-            "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
-            "Time of death: 2:36P.M."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "44",
-        "name": "Doc Calls You In",
-        "paragraphs": [
-            "The next day, the physician who works at the detention facility asks to see you. A CBP officer is sent to come get you, and escorts you to the two room clinic.",
-            "When you're alone with the doctor, she tells you that the preist informed her of what has happened. She tells you that she believes you, and that she's here to support you however she can."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Detention Doc",
-            "pid": "41"
-        }
-    },
-    {
-        "id": "45",
-        "name": "Modern Slavery",
-        "paragraphs": [
-            "You tell the man on the phone that you'd rather get out of detention as soon as possible, and work without pay for him in Michigan to compensate for the cost of the plane tickets.",
-            "He agrees to the arrangement, and works with you to fill out and submit the proper forms to the CBP agents saying that he will sponsor you.",
-            "The process is swift, probably because the influx of new migrants to the detention facility is ever-increasing, and you suspect that they may need your empty bed.",
-            "Before you know it, you're on a plane to Michigan."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Michigan",
-            "pid": "46"
-        }
-    },
-    {
-        "id": "46",
-        "name": "Michigan",
-        "paragraphs": [
-            "In Michigan, another migrant picks you up at the airport. He tells you that he has also been sponsored by the same man, and talks to you about how thankful he is for the opportunity to work for him.",
-            "He tells you that the work is hard, but the pay is pretty good - $6/hour. He's been working here for four years now, and though he is still paying your sponsor back for rent, he is able to send about $100 home every month.",
-            "You are excited about the prospects of being here, and wonder when you'll be able to start sending money home, too."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/00childlabor-hearthside3-superJumbo.jpg"
-        ],
-        "next": {
-            "name": "Cheetos",
-            "pid": "47"
-        }
-    },
-    {
-        "id": "47",
-        "name": "Cheetos",
-        "paragraphs": [
-            "After a few weeks in Michigan, you start to understand how things work around here. You've made friends with your coworkers -- seven of whom you share a two bedroom apartment with, and for the most part, things are good.",
-            "You still have to work without pay, as you remain in debt to your sponsor for your plane tickets, and now for your housing, but you keep working with the hopes that you'll be able to send money home soon.",
-            "The shifts are long. You begin your shift at the factory at 3am, and work until 9pm with limited breaks to eat and go to the bathroom. And, the job gets monotonous, as you quickly stuff bags of \"Cheetos,\" trying to work as quickly as the machinery does to prevent back-logs.",
-            "Eventually, things become so tiring that they start to eat at you. You feel sad, lonely, and depressed, even though you've made amazing new friends. You miss your daughters and your wife, eventhough you can now call them regularly over Whatsapp using one of your coworker's phones.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Seek metnal healthcare",
-                "name": "Healthcare? In THIS economy?!",
-                "pid": "48"
-            },
-            {
-                "text": "Ask your friends for help",
-                "name": "Alcohol",
-                "pid": "50"
-            },
-            {
-                "text": "Put up with it",
-                "name": "Put up with it",
-                "pid": "49"
-            }
-        ],
-        "images": [
-            "/src/assets/images/00childlabor-hearthside2-superJumbo.jpg"
-        ],
-        "next": null
-    },
-    {
-        "id": "48",
-        "name": "Healthcare? In THIS economy?!",
-        "paragraphs": [
-            "After talking to your coworkers, you come to understand that to see a doctor is going to cost a lot of extra money. The only place where they will see you without insurance is the Emergency Room, and they will send you a very large bill.",
-            "This means that you could be in even more debt to your sponsor, and it might be a few more weeks before you can send anythinig home.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Go to the Emergency Room",
-                "name": "ER",
-                "pid": "52"
-            },
-            {
-                "text": "Ask your friends for help",
-                "name": "Alcohol",
-                "pid": "50"
-            },
-            {
-                "text": "Seek insurance",
-                "name": "Insurance for the Migrant",
-                "pid": "53"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "49",
-        "name": "Put up with it",
-        "paragraphs": [
-            "After a few more weeks of work, you find your heart beating quickly at all times of the day. When you try to go to sleep at night, you lay awake for hours, thinking about all that you've endured over the past few months. You feel the guilt of not being able to send money home weighing on your chest.",
-            "Recently, your wife told you that your oldest daughter has dropped out of school and has been working along with your wife to sell dolls and necklaces made out of corn husks to people on the street. It's helped keep their stomachs from being empty over the past month.",
-            "Your heart drops. You want to keep working with the hope of sending something home soon. Your daughter not being in school makes you so deeply upset. You made this trecherous journey to prevent just that.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Seek mental healthcare",
-                "name": "Healthcare? In THIS economy?!",
-                "pid": "48"
-            },
-            {
-                "text": "Ask your friends for help",
-                "name": "Alcohol",
-                "pid": "50"
-            },
-            {
-                "text": "Continue to put up with it",
-                "name": "Put up with it 2",
-                "pid": "51"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "50",
-        "name": "Alcohol",
-        "paragraphs": [
-            "That night, after your shift, you ask one of your roommates if he's ever experienced difficulties with sleeping or overwhelming sadness and fear. He says that he has. He understands what you're going through.",
-            "The two of you sit around the cramped kitchen table, and your friend retrieves a six-pack of beer that he keeps stashed in one of the cabinets. He tells you that beer always helps take the edge off, and the two of you drink together."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Self Medication",
-            "pid": "54"
-        }
-    },
-    {
-        "id": "51",
-        "name": "Put up with it 2",
-        "paragraphs": [
-            "Still, more weeks go by. The long hours start to take a toll on you physically, too. One of the women at the factory where you work recently lost a finger when misanticipating one of the machines, and you're scared that your tiredness will cause you to make a similar slip.",
-            "You decide you need to get something to help you sleep, but you're not sure what works.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Seek healthcare",
-                "name": "Healthcare? In THIS economy?!",
-                "pid": "48"
-            },
-            {
-                "text": "Ask your friends for help",
-                "name": "Alcohol",
-                "pid": "50"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "52",
-        "name": "ER",
-        "paragraphs": [
-            "You decide to go to the ER to ask for help with your mental health. You get there at 9:30pm on a Saturday night, right after your work shift. They are seeing a lot of patients in need of immediate attention, they tell you through a language line, and you'll have to wait for turn.",
-            "Four hours later, you're still in the waiting room.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Keep waiting",
-                "name": "Waiting in the ER",
-                "pid": "60"
-            },
-            {
-                "text": "Go home, and try again later",
-                "name": "Insurance for the Migrant",
-                "pid": "53"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "53",
-        "name": "Insurance for the Migrant",
-        "paragraphs": [
-            "Deciding that trying to get care at the ER will be too difficult, you ask your sponsor if there's anyway for you to get health insurance. He tells you that because your asylum case has not yet been processed, you do not qualify for federally funded insurance programs, adding that he refuses to help you pay for any other private insurances.",
-            "He tells you that he'll incur the costs of a visit to urgent care, though, at the expense of another month of free labor.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Go to Urgent Care",
-                "name": "Urgent Care",
-                "pid": "61"
-            },
-            {
-                "text": "Continue to work without care",
-                "name": "Work to Death",
-                "pid": "55"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "54",
-        "name": "Self Medication",
-        "paragraphs": [
-            "Soon, you start to drink every evening. Then every day, then even at work during your shift. Your roommate says not to worry about paying him back for the alcohol, because he knows you're in a bind.",
-            "You start to forget to call your wife everyday, and start underperforming at your job. When word gets back to your sponsor about your behavior, he threatens to kick you out of his housing.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Go to the emergency room to get help",
-                "name": "ER",
-                "pid": "52"
-            },
-            {
-                "text": "Find medical insurance",
-                "name": "Insurance for the Migrant",
-                "pid": "53"
-            },
-            {
-                "text": "Keep working, your family needs you",
-                "name": "Work to Death",
-                "pid": "55"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "55",
-        "name": "Work to Death",
-        "paragraphs": [
-            "You continue to work, but after another week of feeling terrible and failing to deliver to your sponsor's liking, he decides to kick you out of your housing. You have no home, no money, and no direction. What's worse is that you still feel the immense guilt that got you here in the first place. It's as if nothing has changed.",
-            "Your sponsor tells you that you can continue to work for him, and that if you get your act together he will let you come back to work.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Keep working for your sponsor",
-                "name": "This is when work kills you",
-                "pid": "56"
-            },
-            {
-                "text": "Find a shelter",
-                "name": "Homelessness for the Migrant",
-                "pid": "57"
-            },
-            {
-                "text": "Seek care at the ER",
-                "name": "ER",
-                "pid": "52"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "56",
-        "name": "This is when work kills you",
-        "paragraphs": [
-            "Your exhaustion and addiction have driven you to a new low. One day at work, the sleeve of your shirt gets caught in one of the conveyor belts. You black out.",
-            "When you wake up in the hospital, one of the healthcare workers tells you through a language line that you've lost one of your arms, and that you have a large wound on your chest. Much of your skin had been sheered off, she said, but they thought you were stable for now.",
-            "One of your coworkers comes to visit you the next day, and tells you that your sponsor is extremely upset. He tells you that he's demanding more working hours and more money from you, and that he will not permit you to live in the apartment once you are discharged from the hospital. And, he tells you that you'll be fired if you mention any of this to anyone at the hospital.",
-            "What do you do?"
-        ],
-        "decisions": [
-            {
-                "text": "Ask the healthcare providers for help",
-                "name": "Help!",
-                "pid": "58"
-            },
-            {
-                "text": "Refrain from saying anything",
-                "name": "Time of death",
-                "pid": "59"
-            }
-        ],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "57",
-        "name": "Homelessness for the Migrant",
-        "paragraphs": [
-            "You try to find a shelter that you can stay at temporarily until you feel better and can work to your sponsor's liking, but after two shelters ask you for proper identification as well as the signing of a contract stating that you will maintain sobriety while you're there, you decide to give up.",
-            "You stay on the street for a few nights, and after a few days without food, you grow incredibly emaciated. Nobody walking by seems to pay any attention to you.",
-            "One particularly chilly night, you start to feel yourself slip away. You close your eyes and picture your daughter's faces. You wish that you could have told them goodbye.",
-            "Time of death 3:39am."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/homeless-1--scaled.jpg"
-        ],
-        "next": null
-    },
-    {
-        "id": "58",
-        "name": "Help!",
-        "paragraphs": [
-            "After sometime, a Spanish-speaking doctor comes in to take care of you. She tells you that you're not the only person with a work-related injury like this that she's seen. She asks you what exactly happened, telling you that she wants to help advocate for your safety before discharging you from the hospital.",
-            "You explain that you've been experiencing episodes of severe anxiety where it feels like your heart is going to fall out of your chest. You tell her  that you feel sad and so incredibly lonely all the time. You tell her that if it weren't for your daughters, you'd consider taking your own life. And you tell her that your sponsor has you working incredibly long shifts with the hope of being able to send money home to your family.",
-            "The healthcare provider tells you that they can keep you in the hospital for a few days, and that they can help get a social worker involved to find you a safer place to work and live. She encourages you to visit a Primary Care Physician for long-term mental healthcare, too."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Congratulations! You made it to the doctor!",
-            "pid": "62"
-        }
-    },
-    {
-        "id": "59",
-        "name": "Time of death",
-        "paragraphs": [
-            "The next day, you develop a high fever. Your mouth feels dry, and your fingers start to go numb. As the doctors start to insert needles into your arms, though, you feel yourself slipping away.",
-            "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
-            "Time of death: 2:36P.M."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": null
-    },
-    {
-        "id": "60",
-        "name": "Waiting in the ER",
-        "paragraphs": [
-            "After two more hours, one of the nurses wakes you up in the emergency room and tells you to follow her. The doctors, who you communicate with through a language line, tell you that they're here to listen and ask you what they can do to help.",
-            "You explain that you've been experiencing episodes of severe anxiety where it feels like your heart is going to fall out of your chest. You tell them that you feel sad and so incredibly lonely all the time. You tell them that if it weren't for your daughters, you'd consider taking your own life.",
-            "The healthcare provider tells you that they can watch you in the psychiatric floor for a few days, and help you get enrolled in an outpatient rehabillitation program. But, she encourages you to visit a Primary Care Physician for long-term mental healthcare."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Congratulations! You made it to the doctor!",
-            "pid": "62"
-        }
-    },
-    {
-        "id": "61",
-        "name": "Urgent Care",
-        "paragraphs": [
-            "You go to urgent care the next day at 9:30pm after your shift. The wait is not too long, and you're able to be seen by someone soon.",
-            "Through a language line, you tell them that you've been experiencing episodes of severe anxiety where it feels like your heart is going to fall out of your chest. You tell them that you feel sad and so incredibly lonely all the time. You tell them that if it weren't for your daughters, you'd consider taking your own life.",
-            "The healthcare provider tells you that she doesn't ordinarily prescribe mental health medications the first time she meets someone, and that you're better off going to a Primary Care Physician. But, she adds, given the severity of the situation, she's willing to make an exception."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Congratulations! You made it to the doctor!",
-            "pid": "62"
-        }
-    },
-    {
-        "id": "62",
-        "name": "Congratulations! You made it to the doctor!",
-        "paragraphs": [
-            "Congratulations. You've made it to the doctor before you ended up in a healthcare facility due to a life or death situation. Of course, most of the conflict that your character is enduring has yet to be resolved.",
-            "Now it's time for reflection and discussion.",
-            "During our next case, we will discuss the challenges of navigating our healthcare system to get the care that we all deserve."
-        ],
-        "decisions": [],
-        "images": [
-            "/src/assets/images/ICE-SERVICE-HEALTH-CORP.jpg.webp"
-        ],
-        "next": null
-    },
-    {
-        "id": "63",
-        "name": "Preface",
-        "paragraphs": [
-            "Welcome. This is an activity meant to cultivate empathy for the situations that our patients may endure prior to coming to see us in a healthcare setting. As you work your way through this exercise, there will be parts of the story that may be triggering. Please take the time to care for your own mental and emotional health as needed, and step away when you need to. We will reflect on this exercise together as a group.",
-            "Your GOAL as you put yourself in the character's shoes, is to seek healthcare for your needs before they overwhelm you, and the situation becomes life or death.",
-            "The PURPOSE of this exercise is for us as healthcare providers to understand that someone's journey starts long before they come into the healthcare setting."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": {
-            "name": "Waking Up in Detention",
-            "pid": "10"
-        }
-    },
-    {
-        "id": "64",
-        "name": "Deportation",
-        "paragraphs": [
-            "The ICE officers decide to deport you, pushing you onto a crowded plane with several other shackled detainees. You're dropped off in a remote part of Guatemala without a way to contact your family. You and the other detainees trek for a few days in the heat, but without food, water, or direction, the journey becomes unbarable.",
-            "All you can think about is how you've failed your family, how your daughters will never get the education that they deserve, how your wife will continue to go hungry. Two weeks later, you are emaciated, on the brink of death.",
-            "Time of death: 3:30P.M."
-        ],
-        "decisions": [],
-        "images": [],
-        "next": null
+        "pid": "30"
+      }
+    ],
+    "images": [
+      "https://www.mottodistribution.com/shop/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/e/detainee-handbook-pablo-allison-undocumented-press-9781999379742-5.jpeg"
+    ],
+    "next": null
+  },
+  {
+    "id": "2",
+    "name": "Legal Org",
+    "paragraphs": [
+      "You call the legal organization, who tells you that they will take care of the cost for today's call. They tell you that before they can determine if you can be connected to a lawyer, you must recount your story from beginning to end. There are few grounds for seeking asylum, they tell you, and they will help determine which category your situation fits into.",
+      "You want their help, but the thought of re-telling your story, re-living your trauma, makes you sick to your stomach.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Recount your story",
+        "name": "Recount to Lawyer",
+        "pid": "5"
+      },
+      {
+        "text": "Delay recounting your story & schedule a future appointment",
+        "name": "Reschedule Appt",
+        "pid": "6"
+      },
+      {
+        "text": "Tell the staff member you cannot work with them",
+        "name": "Deny Lawyer",
+        "pid": "7"
+      }
+    ],
+    "images": [
+      "https://ww2.kqed.org/app/uploads/sites/10/2019/12/Adelanto-Immigration-Detention-ICE-1020x678.jpg"
+    ],
+    "next": null
+  },
+  {
+    "id": "3",
+    "name": "Work",
+    "paragraphs": [
+      "You decide to try and work, with the intention to save up enough to get out of detention and fight your case for asylum in another part of the country. Your bunk-mate tells you that their cousin's friend might be able to sponsor you if you can figure out how to get to Michigan, giving you a torn off piece of paper with his phone number written on it.",
+      "At $1/day, you figure you'll have to save up for about a year to be able ot leave this place. That's another full year that your wife and daughters back home will go without food.",
+      "At the main intake office, next to the cage they held you in when you arrived, you sign a volunteer to work form. The CBP officers assign you to the laundry room, and tell you that you'll be paid $1 at the end of each day for your service. And, they tell you that you can be fired from your position for not performing your job as expected.",
+      "Your first day of work passes quickly, laundry isn't so bad. The next day, during your lunch break, you decide to use your $1 to make a phone call.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Call your family in Guatemala",
+        "name": "Call Home",
+        "pid": "18"
+      },
+      {
+        "text": "Call your bunk mate's cousin",
+        "name": "Call Sponsor",
+        "pid": "19"
+      }
+    ],
+    "images": [
+      "https://www.aclu.org/wp-content/uploads/2019/09/blog16-norcal_immigration_detention_center_phone-1160x768.jpg"
+    ],
+    "next": null
+  },
+  {
+    "id": "4",
+    "name": "Sponsor",
+    "paragraphs": [
+      "You ask around, and your bunkmate tells you that his cousin may know a guy who is able to sponsor you. He scribbles down his phone number on a piece of paper, and says that he can lend you a dollar or two for a phone call.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Call the sponsor",
+        "name": "Call Sponsor",
+        "pid": "19"
+      },
+      {
+        "text": "Call your family",
+        "name": "Call Home",
+        "pid": "18"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "5",
+    "name": "Recount to Lawyer",
+    "paragraphs": [
+      "You begin to tell your story, about the place that you used to call home. Your remember your family farm -- land that had been passed down for generations. You remember your daughters, their smiling faces asking you to pick them up and twirl them around, how you happy you had been to see them grow up. You remember your wife, hoping to be with her as she grew old. Nothing pained you more than to leave them behind.",
+      "But after the third year of unfarmable land, after the third year with no food on the table, no clean water, and no work downtown, you and your wife both knew that you would have to leave.",
+      "You pause. You want to continue, to tell the staff member what happened once you left, but you start to choke on your words. You feel your heart pounding in your chest, beads of sweat forming on your forehead, and before you muster the courage to go on, the room starts to spin.",
+      "The staff member gives you a minute to catch your breath. She tells you that you can try again tomorrow.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Wait until tomorrow.",
+        "name": "Wait Until Tomorrow",
+        "pid": "8"
+      },
+      {
+        "text": "Forge on through the story.",
+        "name": "Forge On",
+        "pid": "9"
+      },
+      {
+        "text": "Tell the staff member you don't want to work with her.",
+        "name": "Deny Lawyer",
+        "pid": "7"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "6",
+    "name": "Reschedule Appt",
+    "paragraphs": [
+      "You inform the staff member that you'll call and talk to her when you're ready. She says to take your time, there's no rush. She also encourages you to seek mental health services while in detention.",
+      "After a week, you call the organization back. The staff member who picks up immediately apologizes.",
+      "\"I'm really sorry,\" she says. \"I was informed this morning that we cannot take anymore clients. The immigration lawyer who we work with was killed in a shooting yesterday.\"",
+      "Your heart sinks as you hear the staff member speaking through sniffles on the other side. \"He and his family were killed in a shooting at the mall. They think the murderer was trying to prevent him from doing his work.\"",
+      "When you hang up the phone, you feel your hands shaking."
+    ],
+    "decisions": [
+      {
+        "text": "Work and save up to call home",
+        "name": "Call Home",
+        "pid": "18"
+      },
+      {
+        "text": "Find a Sponsor",
+        "name": "Sponsor",
+        "pid": "4"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "7",
+    "name": "Deny Lawyer",
+    "paragraphs": [
+      "On the phone with the legal organization, the staff member asks you if there's anything that she can do to help you right away.",
+      "You tell her that you want to contact your family. You're not sure if this is possible from detention, but you want them to know that you're alive and that you made it to the United States. You want to check on how they are and make sure they are safe. And, regretably, you have to tell them that it's going to be a while before you're able to send any money home to help out.",
+      "The staff member tells you that she can make a three way call and connectyou to your family. You give her their phone number, and wait as the phone rings."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Family!",
+      "pid": "21"
     }
+  },
+  {
+    "id": "8",
+    "name": "Wait Until Tomorrow",
+    "paragraphs": [
+      "You inform the staff member that you'll continue your conversation tomorrow, hang up the phone, and return to your cell. When you finally sit down on your bunk, you begin to cry. One of your roommates comes to console you, but you don't want to be consoled. You feel so, incredibly alone.",
+      "The next day, when you call the organization back, the staff member immediately apologizes.",
+      "\"I'm really sorry,\" she says. \"I was informed this morning that we cannot take anymore clients. The immigration lawyer who we work with was killed in a shooting yesterday.\"",
+      "Your heart sinks as you hear the staff member speaking through sniffles on the other side. \"He and his family were killed in a shooting at the mall. They think the murderer was trying to prevent him from doing his work.\"",
+      "When you hang up the phone, you feel your hands shaking.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Work and save up to call home",
+        "name": "Call Home",
+        "pid": "18"
+      },
+      {
+        "text": "Find a Sponsor",
+        "name": "Sponsor",
+        "pid": "4"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "9",
+    "name": "Forge On",
+    "paragraphs": [
+      "You take a deep breath. Then you continue.",
+      "To come to the U.S., you decided to utilize the help a coyote - a human smuggler. The coyote told you that he could take care of you.",
+      "You didn't have any money to pay him, but he offered you a deal. You could help him with some work, and in exchange he would take you to the U.S. Without many other options, you agreed, and before you knew you were handed the keys to a truck. It was a shipment from the United States, all you had to do was drive it accross the Guatemalan border to El Salvador.",
+      "At first you agreed, but when you learned that there were hundreds of arms in the truck, you objected. That's when they showed you a photo of the last person who refused the task -- dead, next to the dead bodies of his children, their faces so disfigured you couldn't even fathom their ages. This wasn't much of a choice at all. You had to do this, or your three daughters would die. You asked God for forgiveness and drove the truck.",
+      "When you get to this part of the story, though, a CBP officer interrupts you. Your have 2 minutes remaining before your phone call time runs out.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Continue the phone call.",
+        "name": "Continue the Phone Call",
+        "pid": "12"
+      },
+      {
+        "text": "Tell the staff member that you'll call them tomorrow.",
+        "name": "Wait Until Tomorrow",
+        "pid": "8"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "10",
+    "name": "Waking Up in Detention",
+    "paragraphs": [
+      "You wake up disoriented, trying to remember what happened yesterday. The days had grown so long and laborsome that they all started to meld together. But when you see the chain-link fence walls of the cell and feel the cold metal of the shackles cut into your skin, it all comes racing back.",
+      "The man who rescued you in the desert, who told you he would get you to safety, let you climb into the back seat of his car, and you slept most of the two hours that it took you to come to this place. This prison. You had done nothing wrong, but you were here. This was detention, the ice box, the //hielera//. It was cold and crowded, and it had taken you hours to fall asleep against the backdrop of the blaring television."
+    ],
+    "decisions": [],
+    "images": [
+      "https://img.assets-d.propublica.org/v5/images/202100401-unaccompanied-minors-1.jpg?crop=focalpoint&fit=crop&fm=webp&fp-x=0.5&fp-y=0.5&h=1333&q=75&w=2000&s=b4597dcc01ad5cee3057f6054632d1bd"
+    ],
+    "next": {
+      "name": "Day 1 in Detention",
+      "pid": "11"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Day 1 in Detention",
+    "paragraphs": [
+      "It's your first day here, and the other people with you inside what feels like a cage look just as hungry, tired, and terrified as you feel. It's a sea of orange jumpsuits; what little that you had left on you had been taken when you arrived. Your clothes, your phone, your wallet, your shoe laces, even the four printed photos of your children whose faces were seared into your mind.",
+      "One of the men wearing the same uniform as the man who brought you here announces that everyone will go through something called \"intake\" today. They will assign you to a room and talk you through your daily schedule.",
+      "The rest of the day is a whirl of information. They tell you that you will be held in this detention facility indefinitely until your case is processed. They tell you that you have the right to work at the facility for $1/day. They tell you that you have a designated 20mins/day during which you can use the phone, which costs 10 cents/minute. You will have 1hr/day of outside time. They give you hand out after hand out of information.",
+      "Then, they assign you to a room with another three men. It is a three walled, windowless cell with a chain-link metal door. There are two sets of bunk beds, about a foot apart, with a toilet in between. Immediately, you realize privacy was a priviledge you had taken for granted."
+    ],
+    "decisions": [],
+    "images": [
+      "https://www.motherjones.com/wp-content/uploads/2019/12/20191204-adelanto.jpg?resize=1536,863"
+    ],
+    "next": {
+      "name": "Detention Day 2",
+      "pid": "1"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Continue the Phone Call",
+    "paragraphs": [
+      "Knowing you won't be able to muster up the energy to retell the story again tomorrow, you continue speaking against the CBP officer's warning.",
+      "You tell the staff member what happened next as quickly as you can. You delivered the arms. But the truck on the way back to Guatemala was not empty. It was full of people. Migrants, like you. When you met up with the coyote again, he shoved you in the back of the truck with everybody else. It was a heat box. Seventeen of the thirty people in the truck died before the doors were opened in the desert in Mexico. Five of them were children.",
+      "You break into tears when the CBP officer comes to get you.",
+      "\"You're five minutes past the phone call limit,\" he says. Because you had failed to adhere to his warning, you will be punished.",
+      "He brings you to an isolation room. You will spend the next seven days here, he says, your priviledges to the phone and outside grounds have been revoked."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Solitary Confinement",
+      "pid": "13"
+    }
+  },
+  {
+    "id": "13",
+    "name": "Solitary Confinement",
+    "paragraphs": [
+      "The next seven days are the slowest you've endured. After everything you've been through, you felt like you should be grateful for the rest, but in the small dark space you live with nothing but your guilt. Guilt for the crimes you've committed. Guilt for leaving your loved ones behind. Guilt for not being able to see your children grow up. And now, guilt for not even being able to send money home. You had told yourself that you had sacrificed being with them for their own future, and now it seemed like you couldn't even provide them with that. You let yourself grow skinny and sorrowful, the bland meals delivered to you are collected untouched.",
+      "Seven days later, a CBP officer comes to get you. You feel so weak, tired, depressed, and angry that when you get to your bed, you just lay down. Nobody can talk to you. Nobody can rouse you. You remember one of the pamflets they gave you was about mental health, and that you were supposed to be able to see a doctor if you needed to, but you don't have the energy to find out.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Try to contact the healthcare provider.",
+        "name": "Mental Health?",
+        "pid": "14"
+      },
+      {
+        "text": "Tell a CBP officer that you're feeling depressed.",
+        "name": "You're Crazy",
+        "pid": "15"
+      },
+      {
+        "text": "Stay in bed.",
+        "name": "You're defiant",
+        "pid": "16"
+      }
+    ],
+    "images": [
+      "https://www.texasobserver.org/wp-content/uploads/2020/01/detention-web-jan2020-ap.png"
+    ],
+    "next": null
+  },
+  {
+    "id": "14",
+    "name": "Mental Health?",
+    "paragraphs": [
+      "You muster up enough strength to ask one of your roommates how to see the doctor in detention. They help you flip through some of the handbooks, and find a form that you have to fill out and submit to one of the CBP officers. It must have your name, A-number, and the reason for your appointment. Once you submit the form, it will be up to seven days until you can see the doctor.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Fill out the form and submit it.",
+        "name": "Fill Out Form",
+        "pid": "17"
+      },
+      {
+        "text": "Tell the CBP officer you're feeling depressed.",
+        "name": "You're Crazy",
+        "pid": "15"
+      },
+      {
+        "text": "Give up and stay in bed.",
+        "name": "You're defiant",
+        "pid": "16"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "15",
+    "name": "You're Crazy",
+    "paragraphs": [
+      "You get the attention of one of the passing CBP officers, and muster up the courage to tell them how you've been feeling. You tell them you want to die, you want to get help, your family still needs you.",
+      "The CBP officer asks you if you're thinking about killing yourself. When you say yes, he immediately re-handcuffs you. You've been determined a danger to yourself and/or others.",
+      "So back to the hole you go. Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to retrieve you seven days later, you are emaciated, on the brink of death.",
+      "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
+      "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
+      "Time of death: 2:36P.M."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "16",
+    "name": "You're defiant",
+    "paragraphs": [
+      "You cannot find the strength to do anything but lay in bed. At the time of the next headcount, at 10:00PM, your roommates tell you to stand up. \"You could get in trouble if you don't!\" They warn you. But you can't even find the strength to respond.",
+      "When the CBP officers get to your cell, they ask your roommates if you're alive. You hear them open the door to your cell, and feel one of the officers shake you forcibly. They yell in your ear to get up. Then, they drag you back to solitary confinement.",
+      "This is the second time you've disobeyed a CBP officer, they tell you. This time your punishment will be longer.",
+      "So back to the hole you go. Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to check on you seven days later, you are emaciated, on the brink of death.",
+      "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
+      "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
+      "Time of death: 2:36P.M."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "17",
+    "name": "Fill Out Form",
+    "paragraphs": [
+      "You fill out the form with the help of your roommate and submit it to one of the CBP officers. But when they read your cheif complaint \"need mental healthcare; contemplating suicide,\" they decide that you are a danger to yourself and others, and determine that you should be sent back to solitary confinement.",
+      "So to solitary confinement you go. Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to retrieve you seven days later, you are emaciated, on the brink of death.",
+      "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
+      "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
+      "Time of death: 2:36P.M."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "18",
+    "name": "Call Home",
+    "paragraphs": [
+      "You try to call your family, but each time you dial the number, the same message is delivered in English -- only some of which you can understand. Starting to wonder why the phone isn't working, you ask the CBP officer who had escorted you to use the phone.",
+      "He tells you that you cannot make international phone calls while in detention. \"You should have known that,\" he remarks, \"it was in the booklet we gave you, idiot.\"",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Call your bunk mate's cousin",
+        "name": "Call Sponsor",
+        "pid": "19"
+      },
+      {
+        "text": "Call the legal rights organization",
+        "name": "Deny Lawyer",
+        "pid": "7"
+      },
+      {
+        "text": "Respond to the CBP officer",
+        "name": "Fuck CBP",
+        "pid": "20"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "19",
+    "name": "Call Sponsor",
+    "paragraphs": [
+      "Not too sure about what to expect, you call your bunkmate's cousin. An animated man picks up the phone and asks you what's up.",
+      "You tell him that you are detained in El Paso, and that your bunkmate suggested you call him in search of someone who could potentially sponsor you.",
+      "The animated man on the phone tells you that he knows a man who will sponsor you, but that you'll need to work for him in return. You ask him if you will get paid for working, to which he replies \"of course!\" giving you a phone number to call.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Call the number",
+        "name": "Trafficking?",
+        "pid": "32"
+      },
+      {
+        "text": "Call the legal organization",
+        "name": "Legal Org",
+        "pid": "2"
+      },
+      {
+        "text": "Work and save up first",
+        "name": "It's going to be a long haul",
+        "pid": "23"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "20",
+    "name": "Fuck CBP",
+    "paragraphs": [
+      "Hurt by the words of the CBP officer, you feel the anger boil up inside of you. You tell him that you haven't talked to your family in //months//, how would he feel if that was him?",
+      "He responds with a smirk. \"Did you really just talk back to me?\" he asks."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Defy Defy Defy",
+      "pid": "25"
+    }
+  },
+  {
+    "id": "21",
+    "name": "Family!",
+    "paragraphs": [
+      "Your eyes well up with tears at the sound of your wife's voice. You tell her that you're in detention, awaiting entry to the United States, and that it may be some itme before you can send money home.",
+      "She tells you not to worry, that she's just happy you are safe. She calls for your daughters, and suddenly their voices -- full of joy and laughter fill your ears.",
+      "You ask them how they've been getting by, and your wife tells you that it's been difficult to make ends meet. She goes every few days without food to make sure that your daughters are growing. Right now, they're surviving mostly on corn, but they're still surviving.",
+      "She asks you about your journey, but you can't bring yourself to tell her about it. Not now. Not yet. Maybe not ever. As soon as you find a way to get funds, you'll call her, you say.",
+      "Understanding that it may be a while before she hears from you again, she tells you that she loves you. And makes you promise her that you'll stay safe. With that, your $1 of phone time comes to an end, and the server hangs up for you.",
+      "What now?"
+    ],
+    "decisions": [
+      {
+        "text": "Back to work so you can save up and call your bunk mate's cousin",
+        "name": "Back to Work",
+        "pid": "22"
+      },
+      {
+        "text": "Back to work, save up for a while and try to afford transportation",
+        "name": "It's going to be a long haul",
+        "pid": "23"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "22",
+    "name": "Back to Work",
+    "paragraphs": [
+      "You work in the laundry room. Each day, there are new migrants who arrive, and the number of laundry loads that you do increases ten fold each week, though you continue to earn only $1/day.",
+      "After a week, you cash in a dollar to call your bunkmate's cousin's friend."
+    ],
+    "decisions": [],
+    "images": [
+      "https://s.hdnux.com/photos/01/11/46/11/19292742/16/rawImage.jpg"
+    ],
+    "next": {
+      "name": "Trafficking?",
+      "pid": "32"
+    }
+  },
+  {
+    "id": "23",
+    "name": "It's going to be a long haul",
+    "paragraphs": [
+      "Day after day, you continue to work in the laundry room. Each day, there are new migrants who arrive, and the number of laundry loads that you do increases ten fold each week. Eventually, there are so many clothes that you cannot fit them all in the washer.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Hand wash the rest of the clothes.",
+        "name": "Hand Wash",
+        "pid": "24"
+      },
+      {
+        "text": "Leave some dirty clothes to wash for tomorrow.",
+        "name": "Dirty Clothes",
+        "pid": "37"
+      }
+    ],
+    "images": [
+      "https://s.hdnux.com/photos/01/11/46/11/19292742/16/rawImage.jpg"
+    ],
+    "next": null
+  },
+  {
+    "id": "24",
+    "name": "Hand Wash",
+    "paragraphs": [
+      "You begin to grow frustrated and over-tired by the increase in workload. Hand washing the remaining clothing ontop of running the machines takes a lot of energy, and it begins to cut into your \"recreational\" outisde time and lunch break. Additionally, your pay has remained at $1/day, and you've only earned a total of $25 to date.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Ask the CBP officer to increase your pay",
+        "name": "Pay me more!",
+        "pid": "26"
+      },
+      {
+        "text": "Quit your job",
+        "name": "I quit!",
+        "pid": "27"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "25",
+    "name": "Defy Defy Defy",
+    "paragraphs": [
+      "What you didn't know was that small act, in an attempt to prevent the deterioration of your own health, was considered defiance against a CBP officer.",
+      "You're \"failure to comply\" earns you a week in solitary confinement."
+    ],
+    "decisions": [],
+    "images": [
+      "https://static01.nyt.com/images/2013/03/24/us/sub-solitary/sub-solitary-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+    ],
+    "next": {
+      "name": "Solitary Confinement",
+      "pid": "13"
+    }
+  },
+  {
+    "id": "26",
+    "name": "Pay me more!",
+    "paragraphs": [
+      "One evening, you decide to confront one of the CBP officers about your pay. You explain that you've been doing a lot of extra work, and that $1/day does not seem like reasonable compensation.",
+      "He smirks at you, asking what you need the extra money for anyways.",
+      "Then he asks to search you for contraband. He doesn't believe that you're just \"saving up.\" You must be using the money for something illegal, and he has the right to search you.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Let him search you",
+        "name": "Let him search you",
+        "pid": "28"
+      },
+      {
+        "text": "Tell him no",
+        "name": "No!",
+        "pid": "36"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "27",
+    "name": "I quit!",
+    "paragraphs": [
+      "Your head grows heavy and your body becomes achey. Deciding that the compensation for what you have to put up with is not worth it, you submit a form of resignation from the voluntary work program.",
+      "You wonder how you could possibly come back from the toll of the last few days, but everytime you close your eyes, you see the faces of your daughters. You have to keep going, for them. How can you care for them if your health is on the line?",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Submit an intake form to see the doctor",
+        "name": "See the doc",
+        "pid": "33"
+      },
+      {
+        "text": "Call your bunkmate's cousin's friend",
+        "name": "Trafficking?",
+        "pid": "32"
+      },
+      {
+        "text": "Lay in bed for today. You need your rest.",
+        "name": "Stay in Bed",
+        "pid": "34"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "28",
+    "name": "Let him search you",
+    "paragraphs": [
+      "The CBP officer tells you to turn around and place your hands above your head, palms touching the wall. He pats you down, beginning at your arms and working his way to your shoulders and your chest. When his hands make their way to your waist, though, you feel yourself jerk reactively.",
+      "He pushes you forcefully against the wall and feels for your genitals. He tells you that if you scream, he'll just put you in solitary confinement anyways.",
+      "Then he releases you.",
+      "If you want more money, he says, you know how you can get it. He tells you that he will come monitor you as you wash clothes tomorrow.",
+      "Then he walks away. You crumble to the floor."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Ahhhhhhhhh",
+      "pid": "29"
+    }
+  },
+  {
+    "id": "29",
+    "name": "Ahhhhhhhhh",
+    "paragraphs": [
+      "The next day, your brain feels empty. You cannot stop thinking about what that officer did to you, how uncomfortable it made you feel. You think about reporting him, but you worry that nobody will believe you. After all, you're a man, you should have been able to defend yourself.",
+      "You sift through the pamflets that were given to you during your intake, and come accross the zero tolerace sexual assault policy. There is a form to fill out, instructions on how to submit it, and a phone number you can call for support. The next page, though, outlines consequences for false acusations. If the investigation finds that there was a false acusation of sexual assault, you could be restricted to solitary confinement for the rest of your time in detention.",
+      "You wonder if this is a battle you will ever win.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Report the assault",
+        "name": "Report it",
+        "pid": "31"
+      },
+      {
+        "text": "Call your wife and tell her what happened",
+        "name": "Call home again",
+        "pid": "35"
+      },
+      {
+        "text": "Quit your job",
+        "name": "I quit!",
+        "pid": "27"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "30",
+    "name": "Wait it out",
+    "paragraphs": [
+      "You decide to wait out the immigration hearing process. You try to follow the rules of the detention facility, but everyday the rooms get more crowded and the days get more monotonous.",
+      "You try to find things to do, but unless you know someone who can send you books or magazines, there's not much entertainment. You have one hour of outside time per day, and the rest of the time, you lay awake in a cramped cell. Eventually, they demand that you share cots in order to contain all of the detainees who arrive. You'd rather sleep on the floor.",
+      "After two months, the CBP officers announce that they do not have enough room to contain all of you in the detention facility. They're going to deport everybody who arrived within the last year who does not have a sponsor.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Look for a sponsor",
+        "name": "Sponsor",
+        "pid": "4"
+      },
+      {
+        "text": "Allow yourself to get deported",
+        "name": "Deportation",
+        "pid": "64"
+      }
+    ],
+    "images": [
+      "https://www.brennancenter.org/sites/default/files/styles/1400x800/public/2020-04/20200331_RS_GT62853287RM1630x932.jpg?itok=HvTMFFj_"
+    ],
+    "next": null
+  },
+  {
+    "id": "31",
+    "name": "Report it",
+    "paragraphs": [
+      "Not sure if it will amount to anything, you decide to report the sexual assault. You know that the CBP officer was in the wrong, and despite the difficulties of being in detention, you had heard how much the United States valued justice. You placed your hope in that value, and filled out the form.",
+      "Who do you give it to?"
+    ],
+    "decisions": [
+      {
+        "text": "CBP Officer",
+        "name": "Report Assault to CBP",
+        "pid": "38"
+      },
+      {
+        "text": "Clergyman",
+        "name": "Report Assault to Clergyman",
+        "pid": "39"
+      },
+      {
+        "text": "Healthcare provider",
+        "name": "Report Assault to Doc",
+        "pid": "40"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "32",
+    "name": "Trafficking?",
+    "paragraphs": [
+      "You call the number, and find out that the man willing to sponsor you has sponsored at least a dozen migrants already. He lives in Michigan, and he makes a lot of money, he says. He's willing to help you out.",
+      "But, he says that because he'll be helping you through the sponsorship process, you'll have to pay for plane tickets to Michigan on your own. If you can't afford them, he tells you that you can work a few weeks without pay to make up for it.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Work in detention and save up to go to Michigan",
+        "name": "It's going to be a long haul",
+        "pid": "23"
+      },
+      {
+        "text": "Go to Michigan and work without pay once you get there",
+        "name": "Modern Slavery",
+        "pid": "45"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "33",
+    "name": "See the doc",
+    "paragraphs": [
+      "You submit an intake form to see the doctor, but you have to write down your cheif complaint on the form. You want to be honest, but you're not sure how certain topics will be stigmatized by the CBP officers to whom you have to submit your intake form to.",
+      "What do you write as your cheif complaint?"
+    ],
+    "decisions": [
+      {
+        "text": "Difficultues with Mental Health",
+        "name": "Fill Out Form",
+        "pid": "17"
+      },
+      {
+        "text": "Fatigue, stress, and physical achiness from Work",
+        "name": "Detention Doc",
+        "pid": "41"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "34",
+    "name": "Stay in Bed",
+    "paragraphs": [
+      "The next day, a CBP officer comes to your cell asking you why you did not show up at work yesterday. You tell him that you submitted a resignation from voluntary work form. He says that the office did not receive it, and that not showing up was unacceptable behavior which would be met with punitive measures.",
+      "You will no longer be able to work for the next sixty days, and your phone priviledges have been revoked for the next two weeks. This defiance has also earned you a week in solitary confinement, he says."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Solitary Confinement",
+      "pid": "13"
+    }
+  },
+  {
+    "id": "35",
+    "name": "Call home again",
+    "paragraphs": [
+      "You use some of your saved up change to call back the legal organization, and ask if she can help you reconnect with your family again. When you hear your wife's voice on the phone, you feel yourself starting to fight back tears. You tell her that you're having a really hard time in detention. You will do anything it takes to leave, you just don't know how to go about it.",
+      "She asks you what has been happening, and all you have the strength to tell her is that one of the CBP officers had harassed and threatened you.",
+      "She tells you to stay strong. Your oldest daughter has dropped out of school and has been working along with your wife to sell dolls and necklaces made out of corn husks to people on the street. It's helped keep their stomachs from being empty over the past month.",
+      "Your heart drops. You want to keep working with the hope of sending something home soon. Your daughter not being in school makes you so deeply upset. You made this trecherous journey to prevent just that.",
+      "At the same time, you know that if you quit your job, you will not be able to get another voluntary work position for at least sixty days.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Quit your job",
+        "name": "I quit!",
+        "pid": "27"
+      },
+      {
+        "text": "Continue to work, and call your bunkmate's cousin to ask about sponsorship",
+        "name": "Modern Slavery",
+        "pid": "45"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "36",
+    "name": "No!",
+    "paragraphs": [
+      "You tell the CBP officer that he cannot search you. You have nothing to hide, but he also should not have any reason to suspect that you've done anything wrong.",
+      "Next thing you know, he's cuffed you and shoved you forcefully against the wall."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Defy Defy Defy",
+      "pid": "25"
+    }
+  },
+  {
+    "id": "37",
+    "name": "Dirty Clothes",
+    "paragraphs": [
+      "The next day, the CBP officer in charge of compliance with the volunteer to work program confronts you. Because you left some dirty clothes without washing yesterday, this was considered unacceptable behavior. You've lost your priviledges to work, and you will be punished more severely as well."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Defy Defy Defy",
+      "pid": "25"
+    }
+  },
+  {
+    "id": "38",
+    "name": "Report Assault to CBP",
+    "paragraphs": [
+      "You get the attention of one of the passing CBP officers, and muster up the courage to tell them what has happened. You tell them through tears that you want the officer who assaulted you to be held accountable. You want to get help to move past this, too, your family still needs you.",
+      "The CBP officer smirks and immediately re-handcuffs you. You've dared to falsely accuse an officer of assault. He drags you to solitary confinement.",
+      "Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. When the CBP officers come to retrieve you seven days later, you are emaciated, on the brink of death.",
+      "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
+      "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
+      "Time of death: 2:36P.M."
+    ],
+    "decisions": [],
+    "images": [
+      "https://www.texasobserver.org/wp-content/uploads/2020/01/detention-web-jan2020-ap.png"
+    ],
+    "next": null
+  },
+  {
+    "id": "39",
+    "name": "Report Assault to Clergyman",
+    "paragraphs": [
+      "You wait three days, you know that the designated priest comes to the detention facility every Sunday to lead prayer, but every minute you wait feels like torture.",
+      "On Sunday morning, after the prayer service, you ask the priest if you can speak to him alone. You tell him what happened, as briefly as you can, and give him the form that you've filled out.",
+      "You want to make sure that the officer is held accountable, you say.",
+      "The clergyman tells you that he will ensure the proper people are made aware of the situation."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Doc Calls You In",
+      "pid": "44"
+    }
+  },
+  {
+    "id": "40",
+    "name": "Report Assault to Doc",
+    "paragraphs": [
+      "You submit an intake form to see the doctor, but you have to write down your cheif complaint on the form. You want to be honest, but you're not sure how certain topics will be stigmatized by the CBP officers to whom you have to submit your intake form to.",
+      "What do you write as your cheif complaint?"
+    ],
+    "decisions": [
+      {
+        "text": "Difficultues with Mental Health",
+        "name": "Fill Out Form",
+        "pid": "17"
+      },
+      {
+        "text": "Victim of Abuse/Assault",
+        "name": "Victim of Abuse/Assault",
+        "pid": "42"
+      },
+      {
+        "text": "Fatigue, stress, and physical achiness from Work",
+        "name": "Detention Doc",
+        "pid": "41"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "41",
+    "name": "Detention Doc",
+    "paragraphs": [
+      "The doctor in the detention facility is very kind. She opens up the conversation with you an incredibly sensitive way, and you feel comfortable telling her about what's been happening since you got to detention. She tells you that she will do everything in her power to advocate for you, and before she examines you, she listens intently to everything that you have to say.",
+      "She asks about your family, about your hopes for coming to the U.S. She asks about your mental health and emotional well being. She asks you if you feel safe. But, she also gives you permission to refuse to answer if you want to talk about something at a later time.",
+      "You don't tell her everything, but you tell her about the CBP officer who harassed you. You tell her about your daughters. You tell her that their future depends on your work, and how guilty you feel that you haven't sent any money home.",
+      "She comforts you."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Congratulations! You made it to the doctor!",
+      "pid": "62"
+    }
+  },
+  {
+    "id": "42",
+    "name": "Victim of Abuse/Assault",
+    "paragraphs": [
+      "You fill out the intake form to see the doctor, siting \"Abuse/Assault\" as your cheif complaint. It will be seven days before you can see the doctor.",
+      "As you wait consultation, though, the CBP officer who harassed you shows up at your cell. The form you filled out is in his hand. He tells you that one of his coworkers gave him the form, and that you would face consequences for trying to report the incident to the doctor.",
+      "He drags you to solitary confinement, you'll be there for two weeks, he says.",
+      "Your thoughts eat you alive in the dark, windowless cell. You stop eating all together. You stop sleeping. You lose track of time. All you can think about is how you've failed your family, how your daughters will never get the education that they deserve, how your wife will continue to go hungry. How if you die, they will not even know what has happened to you.",
+      "When the CBP officers come to retrieve you two weeks later, you are emaciated, on the brink of death."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": ":(",
+      "pid": "43"
+    }
+  },
+  {
+    "id": "43",
+    "name": ":(",
+    "paragraphs": [
+      "They take you to the emergency care center, but as the doctors start to insert needles into your arms and a tube up your nose, you feel yourself slipping away.",
+      "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
+      "Time of death: 2:36P.M."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "44",
+    "name": "Doc Calls You In",
+    "paragraphs": [
+      "The next day, the physician who works at the detention facility asks to see you. A CBP officer is sent to come get you, and escorts you to the two room clinic.",
+      "When you're alone with the doctor, she tells you that the preist informed her of what has happened. She tells you that she believes you, and that she's here to support you however she can."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Detention Doc",
+      "pid": "41"
+    }
+  },
+  {
+    "id": "45",
+    "name": "Modern Slavery",
+    "paragraphs": [
+      "You tell the man on the phone that you'd rather get out of detention as soon as possible, and work without pay for him in Michigan to compensate for the cost of the plane tickets.",
+      "He agrees to the arrangement, and works with you to fill out and submit the proper forms to the CBP agents saying that he will sponsor you.",
+      "The process is swift, probably because the influx of new migrants to the detention facility is ever-increasing, and you suspect that they may need your empty bed.",
+      "Before you know it, you're on a plane to Michigan."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Michigan",
+      "pid": "46"
+    }
+  },
+  {
+    "id": "46",
+    "name": "Michigan",
+    "paragraphs": [
+      "In Michigan, another migrant picks you up at the airport. He tells you that he has also been sponsored by the same man, and talks to you about how thankful he is for the opportunity to work for him.",
+      "He tells you that the work is hard, but the pay is pretty good - $6/hour. He's been working here for four years now, and though he is still paying your sponsor back for rent, he is able to send about $100 home every month.",
+      "You are excited about the prospects of being here, and wonder when you'll be able to start sending money home, too."
+    ],
+    "decisions": [],
+    "images": [
+      "https://static01.nyt.com/images/2023/02/17/multimedia/00childlabor-hearthside3/00childlabor-hearthside3-superJumbo.jpg?quality=75&auto=webp"
+    ],
+    "next": {
+      "name": "Cheetos",
+      "pid": "47"
+    }
+  },
+  {
+    "id": "47",
+    "name": "Cheetos",
+    "paragraphs": [
+      "After a few weeks in Michigan, you start to understand how things work around here. You've made friends with your coworkers -- seven of whom you share a two bedroom apartment with, and for the most part, things are good.",
+      "You still have to work without pay, as you remain in debt to your sponsor for your plane tickets, and now for your housing, but you keep working with the hopes that you'll be able to send money home soon.",
+      "The shifts are long. You begin your shift at the factory at 3am, and work until 9pm with limited breaks to eat and go to the bathroom. And, the job gets monotonous, as you quickly stuff bags of \"Cheetos,\" trying to work as quickly as the machinery does to prevent back-logs.",
+      "Eventually, things become so tiring that they start to eat at you. You feel sad, lonely, and depressed, even though you've made amazing new friends. You miss your daughters and your wife, eventhough you can now call them regularly over Whatsapp using one of your coworker's phones.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Seek metnal healthcare",
+        "name": "Healthcare? In THIS economy?!",
+        "pid": "48"
+      },
+      {
+        "text": "Ask your friends for help",
+        "name": "Alcohol",
+        "pid": "50"
+      },
+      {
+        "text": "Put up with it",
+        "name": "Put up with it",
+        "pid": "49"
+      }
+    ],
+    "images": [
+      "https://static01.nyt.com/images/2023/02/15/multimedia/00childlabor-hearthside2/00childlabor-hearthside2-superJumbo.jpg?quality=75&auto=webp"
+    ],
+    "next": null
+  },
+  {
+    "id": "48",
+    "name": "Healthcare? In THIS economy?!",
+    "paragraphs": [
+      "After talking to your coworkers, you come to understand that to see a doctor is going to cost a lot of extra money. The only place where they will see you without insurance is the Emergency Room, and they will send you a very large bill.",
+      "This means that you could be in even more debt to your sponsor, and it might be a few more weeks before you can send anythinig home.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Go to the Emergency Room",
+        "name": "ER",
+        "pid": "52"
+      },
+      {
+        "text": "Ask your friends for help",
+        "name": "Alcohol",
+        "pid": "50"
+      },
+      {
+        "text": "Seek insurance",
+        "name": "Insurance for the Migrant",
+        "pid": "53"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "49",
+    "name": "Put up with it",
+    "paragraphs": [
+      "After a few more weeks of work, you find your heart beating quickly at all times of the day. When you try to go to sleep at night, you lay awake for hours, thinking about all that you've endured over the past few months. You feel the guilt of not being able to send money home weighing on your chest.",
+      "Recently, your wife told you that your oldest daughter has dropped out of school and has been working along with your wife to sell dolls and necklaces made out of corn husks to people on the street. It's helped keep their stomachs from being empty over the past month.",
+      "Your heart drops. You want to keep working with the hope of sending something home soon. Your daughter not being in school makes you so deeply upset. You made this trecherous journey to prevent just that.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Seek mental healthcare",
+        "name": "Healthcare? In THIS economy?!",
+        "pid": "48"
+      },
+      {
+        "text": "Ask your friends for help",
+        "name": "Alcohol",
+        "pid": "50"
+      },
+      {
+        "text": "Continue to put up with it",
+        "name": "Put up with it 2",
+        "pid": "51"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "50",
+    "name": "Alcohol",
+    "paragraphs": [
+      "That night, after your shift, you ask one of your roommates if he's ever experienced difficulties with sleeping or overwhelming sadness and fear. He says that he has. He understands what you're going through.",
+      "The two of you sit around the cramped kitchen table, and your friend retrieves a six-pack of beer that he keeps stashed in one of the cabinets. He tells you that beer always helps take the edge off, and the two of you drink together."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Self Medication",
+      "pid": "54"
+    }
+  },
+  {
+    "id": "51",
+    "name": "Put up with it 2",
+    "paragraphs": [
+      "Still, more weeks go by. The long hours start to take a toll on you physically, too. One of the women at the factory where you work recently lost a finger when misanticipating one of the machines, and you're scared that your tiredness will cause you to make a similar slip.",
+      "You decide you need to get something to help you sleep, but you're not sure what works.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Seek healthcare",
+        "name": "Healthcare? In THIS economy?!",
+        "pid": "48"
+      },
+      {
+        "text": "Ask your friends for help",
+        "name": "Alcohol",
+        "pid": "50"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "52",
+    "name": "ER",
+    "paragraphs": [
+      "You decide to go to the ER to ask for help with your mental health. You get there at 9:30pm on a Saturday night, right after your work shift. They are seeing a lot of patients in need of immediate attention, they tell you through a language line, and you'll have to wait for turn.",
+      "Four hours later, you're still in the waiting room.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Keep waiting",
+        "name": "Waiting in the ER",
+        "pid": "60"
+      },
+      {
+        "text": "Go home, and try again later",
+        "name": "Insurance for the Migrant",
+        "pid": "53"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "53",
+    "name": "Insurance for the Migrant",
+    "paragraphs": [
+      "Deciding that trying to get care at the ER will be too difficult, you ask your sponsor if there's anyway for you to get health insurance. He tells you that because your asylum case has not yet been processed, you do not qualify for federally funded insurance programs, adding that he refuses to help you pay for any other private insurances.",
+      "He tells you that he'll incur the costs of a visit to urgent care, though, at the expense of another month of free labor.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Go to Urgent Care",
+        "name": "Urgent Care",
+        "pid": "61"
+      },
+      {
+        "text": "Continue to work without care",
+        "name": "Work to Death",
+        "pid": "55"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "54",
+    "name": "Self Medication",
+    "paragraphs": [
+      "Soon, you start to drink every evening. Then every day, then even at work during your shift. Your roommate says not to worry about paying him back for the alcohol, because he knows you're in a bind.",
+      "You start to forget to call your wife everyday, and start underperforming at your job. When word gets back to your sponsor about your behavior, he threatens to kick you out of his housing.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Go to the emergency room to get help",
+        "name": "ER",
+        "pid": "52"
+      },
+      {
+        "text": "Find medical insurance",
+        "name": "Insurance for the Migrant",
+        "pid": "53"
+      },
+      {
+        "text": "Keep working, your family needs you",
+        "name": "Work to Death",
+        "pid": "55"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "55",
+    "name": "Work to Death",
+    "paragraphs": [
+      "You continue to work, but after another week of feeling terrible and failing to deliver to your sponsor's liking, he decides to kick you out of your housing. You have no home, no money, and no direction. What's worse is that you still feel the immense guilt that got you here in the first place. It's as if nothing has changed.",
+      "Your sponsor tells you that you can continue to work for him, and that if you get your act together he will let you come back to work.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Keep working for your sponsor",
+        "name": "This is when work kills you",
+        "pid": "56"
+      },
+      {
+        "text": "Find a shelter",
+        "name": "Homelessness for the Migrant",
+        "pid": "57"
+      },
+      {
+        "text": "Seek care at the ER",
+        "name": "ER",
+        "pid": "52"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "56",
+    "name": "This is when work kills you",
+    "paragraphs": [
+      "Your exhaustion and addiction have driven you to a new low. One day at work, the sleeve of your shirt gets caught in one of the conveyor belts. You black out.",
+      "When you wake up in the hospital, one of the healthcare workers tells you through a language line that you've lost one of your arms, and that you have a large wound on your chest. Much of your skin had been sheered off, she said, but they thought you were stable for now.",
+      "One of your coworkers comes to visit you the next day, and tells you that your sponsor is extremely upset. He tells you that he's demanding more working hours and more money from you, and that he will not permit you to live in the apartment once you are discharged from the hospital. And, he tells you that you'll be fired if you mention any of this to anyone at the hospital.",
+      "What do you do?"
+    ],
+    "decisions": [
+      {
+        "text": "Ask the healthcare providers for help",
+        "name": "Help!",
+        "pid": "58"
+      },
+      {
+        "text": "Refrain from saying anything",
+        "name": "Time of death",
+        "pid": "59"
+      }
+    ],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "57",
+    "name": "Homelessness for the Migrant",
+    "paragraphs": [
+      "You try to find a shelter that you can stay at temporarily until you feel better and can work to your sponsor's liking, but after two shelters ask you for proper identification as well as the signing of a contract stating that you will maintain sobriety while you're there, you decide to give up.",
+      "You stay on the street for a few nights, and after a few days without food, you grow incredibly emaciated. Nobody walking by seems to pay any attention to you.",
+      "One particularly chilly night, you start to feel yourself slip away. You close your eyes and picture your daughter's faces. You wish that you could have told them goodbye.",
+      "Time of death 3:39am."
+    ],
+    "decisions": [],
+    "images": [
+      "https://fwiw.imgix.net/wp-content/uploads/sites/7/2020/09/homeless-1--scaled.jpg?w=1400&fm=webp"
+    ],
+    "next": null
+  },
+  {
+    "id": "58",
+    "name": "Help!",
+    "paragraphs": [
+      "After sometime, a Spanish-speaking doctor comes in to take care of you. She tells you that you're not the only person with a work-related injury like this that she's seen. She asks you what exactly happened, telling you that she wants to help advocate for your safety before discharging you from the hospital.",
+      "You explain that you've been experiencing episodes of severe anxiety where it feels like your heart is going to fall out of your chest. You tell her  that you feel sad and so incredibly lonely all the time. You tell her that if it weren't for your daughters, you'd consider taking your own life. And you tell her that your sponsor has you working incredibly long shifts with the hope of being able to send money home to your family.",
+      "The healthcare provider tells you that they can keep you in the hospital for a few days, and that they can help get a social worker involved to find you a safer place to work and live. She encourages you to visit a Primary Care Physician for long-term mental healthcare, too."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Congratulations! You made it to the doctor!",
+      "pid": "62"
+    }
+  },
+  {
+    "id": "59",
+    "name": "Time of death",
+    "paragraphs": [
+      "The next day, you develop a high fever. Your mouth feels dry, and your fingers start to go numb. As the doctors start to insert needles into your arms, though, you feel yourself slipping away.",
+      "You close your eyes and picture your daughters' smiling faces. You wish that you could have told them goodbye.",
+      "Time of death: 2:36P.M."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": null
+  },
+  {
+    "id": "60",
+    "name": "Waiting in the ER",
+    "paragraphs": [
+      "After two more hours, one of the nurses wakes you up in the emergency room and tells you to follow her. The doctors, who you communicate with through a language line, tell you that they're here to listen and ask you what they can do to help.",
+      "You explain that you've been experiencing episodes of severe anxiety where it feels like your heart is going to fall out of your chest. You tell them that you feel sad and so incredibly lonely all the time. You tell them that if it weren't for your daughters, you'd consider taking your own life.",
+      "The healthcare provider tells you that they can watch you in the psychiatric floor for a few days, and help you get enrolled in an outpatient rehabillitation program. But, she encourages you to visit a Primary Care Physician for long-term mental healthcare."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Congratulations! You made it to the doctor!",
+      "pid": "62"
+    }
+  },
+  {
+    "id": "61",
+    "name": "Urgent Care",
+    "paragraphs": [
+      "You go to urgent care the next day at 9:30pm after your shift. The wait is not too long, and you're able to be seen by someone soon.",
+      "Through a language line, you tell them that you've been experiencing episodes of severe anxiety where it feels like your heart is going to fall out of your chest. You tell them that you feel sad and so incredibly lonely all the time. You tell them that if it weren't for your daughters, you'd consider taking your own life.",
+      "The healthcare provider tells you that she doesn't ordinarily prescribe mental health medications the first time she meets someone, and that you're better off going to a Primary Care Physician. But, she adds, given the severity of the situation, she's willing to make an exception."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Congratulations! You made it to the doctor!",
+      "pid": "62"
+    }
+  },
+  {
+    "id": "62",
+    "name": "Congratulations! You made it to the doctor!",
+    "paragraphs": [
+      "Congratulations. You've made it to the doctor before you ended up in a healthcare facility due to a life or death situation. Of course, most of the conflict that your character is enduring has yet to be resolved.",
+      "Now it's time for reflection and discussion.",
+      "During our next case, we will discuss the challenges of navigating our healthcare system to get the care that we all deserve."
+    ],
+    "decisions": [],
+    "images": [
+      "https://cdn.houstonpublicmedia.org/wp-content/uploads/2019/08/06183213/ICE-SERVICE-HEALTH-CORP.jpg.webp"
+    ],
+    "next": null
+  },
+  {
+    "id": "63",
+    "name": "Preface",
+    "paragraphs": [
+      "Welcome. This is an activity meant to cultivate empathy for the situations that our patients may endure prior to coming to see us in a healthcare setting. As you work your way through this exercise, there will be parts of the story that may be triggering. Please take the time to care for your own mental and emotional health as needed, and step away when you need to. We will reflect on this exercise together as a group.",
+      "Your GOAL as you put yourself in the character's shoes, is to seek healthcare for your needs before they overwhelm you, and the situation becomes life or death.",
+      "The PURPOSE of this exercise is for us as healthcare providers to understand that someone's journey starts long before they come into the healthcare setting."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": {
+      "name": "Waking Up in Detention",
+      "pid": "10"
+    }
+  },
+  {
+    "id": "64",
+    "name": "Deportation",
+    "paragraphs": [
+      "The ICE officers decide to deport you, pushing you onto a crowded plane with several other shackled detainees. You're dropped off in a remote part of Guatemala without a way to contact your family. You and the other detainees trek for a few days in the heat, but without food, water, or direction, the journey becomes unbarable.",
+      "All you can think about is how you've failed your family, how your daughters will never get the education that they deserve, how your wife will continue to go hungry. Two weeks later, you are emaciated, on the brink of death.",
+      "Time of death: 3:30P.M."
+    ],
+    "decisions": [],
+    "images": [],
+    "next": null
+  }
 ]

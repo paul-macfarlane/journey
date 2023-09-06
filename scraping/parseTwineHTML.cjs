@@ -1,39 +1,17 @@
 /**
  * Parse HTML from Twine into JSON for use in this app.
- * Big shout to ChatGPT for writing the bulk of this code.
- *
- * There is a known bug in parsing emncoded s3 urls, but that is pretty low priority.
  */
 
 const { JSDOM } = require("jsdom");
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
 
 const inputDir = "./twineHTML";
 const outputDir = "../src/data/cases";
-const imageBaseDir = "/src/assets/images";
-const imageDir = `../${imageBaseDir}`;
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
-
-if (!fs.existsSync(imageDir)) {
-  fs.mkdirSync(imageDir);
-}
-
-const downloadImage = async (url) => {
-  const decodedUrl = decodeURIComponent(url);
-  const response = await axios.get(decodedUrl, {
-    responseType: "arraybuffer",
-  });
-
-  const imageFilename = path.basename(new URL(decodedUrl).pathname);
-  const imagePath = path.join(imageDir, imageFilename);
-  fs.writeFileSync(imagePath, response.data);
-  return `${imageBaseDir}/${imageFilename}`;
-};
 
 const filenames = fs.readdirSync(inputDir);
 
@@ -66,23 +44,16 @@ const filenames = fs.readdirSync(inputDir);
       },
     );
 
-    const passagesPromises = Array.from(
+    const passages = Array.from(
       document.querySelectorAll("tw-passagedata"),
-    ).map(async (passage) => {
+    ).map((passage) => {
       const pid = passage.getAttribute("pid");
       const name = passage.getAttribute("name");
 
       // Extract image links and remove <img> tags
-      const imagePromises = Array.from(passage.querySelectorAll("img")).map(
-        async (img) => {
-          const imageUrl = img.getAttribute("src");
-          const localPath = await downloadImage(imageUrl);
-          img.remove();
-          return localPath;
-        },
+      const images = Array.from(passage.querySelectorAll("img")).map((img) =>
+        img.getAttribute("src"),
       );
-
-      const images = await Promise.all(imagePromises);
 
       // Remove <style> tags and its content
       Array.from(passage.querySelectorAll("style")).forEach((style) => {
@@ -138,8 +109,6 @@ const filenames = fs.readdirSync(inputDir);
         next: clickGoto,
       };
     });
-
-    const passages = await Promise.all(passagesPromises);
 
     // Now, write the output
     const outputPath = path.join(outputDir, filename.replace(".html", ".json"));
