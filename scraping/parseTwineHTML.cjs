@@ -1,6 +1,8 @@
 /**
  * Parse HTML from Twine into JSON for use in this app.
  * Big shout to ChatGPT for writing the bulk of this code.
+ *
+ * There is a known bug in parsing emncoded s3 urls, but that is pretty low priority.
  */
 
 const { JSDOM } = require("jsdom");
@@ -9,7 +11,7 @@ const path = require("path");
 const axios = require("axios");
 
 const inputDir = "./twineHTML";
-const outputDir = "../src/data";
+const outputDir = "../src/data/cases";
 const imageBaseDir = "/src/assets/images";
 const imageDir = `../${imageBaseDir}`;
 

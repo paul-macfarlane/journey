@@ -5,7 +5,7 @@
 */
 
 export interface ImageData {
-  src: string | ImageMetadata;
+  src: string;
   alt: string;
   width?: number;
   height?: number;
@@ -18,12 +18,16 @@ export interface JourneyCardData {
   href: string;
 }
 
+export interface JourneyLayoutDecisionData {
+  href: string;
+  buttonText: string;
+}
+
 export interface JourneyLayoutData {
   title: string;
-  backHref: string;
   paragraphs?: string[];
   nextHref?: string;
-  decisions?: JourneyCardData[];
+  decisions?: JourneyLayoutDecisionData[];
   images?: ImageData[];
 }
 

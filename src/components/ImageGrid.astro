@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import type { ImageData } from "src/types";
 
 interface Props {
@@ -14,7 +13,7 @@ const { images } = Astro.props;
     <div class="grid place-content-center gap-6 lg:grid-flow-col lg:gap-8">
       {images.map(({ src, alt, width, height }) => (
         <div class="shadow-lg">
-          <Image class="rounded" src={src as string} {alt} {width} {height} />
+          <img {src} {alt} {width} {height} />
         </div>
       ))}
     </div>

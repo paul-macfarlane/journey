@@ -1,12 +1,20 @@
 ---
 import JourneyLayout from "@layouts/JourneyLayout.astro";
-import { journeyPageData } from "src/data";
 import type { JourneyPageData } from "src/types";
+import { toJourneyPageData } from "src/data/journeys";
 
 /**
  * Create dynamic routes for each journey page.
  */
 export async function getStaticPaths() {
+  const caseData = await Astro.glob("../../data/cases/*.json");
+
+  const journeyPageData: JourneyPageData[] = [];
+  caseData.forEach((caseFile, i) => {
+    const caseData = toJourneyPageData(i + 1, caseFile.default);
+    journeyPageData.push(...caseData);
+  });
+
   return journeyPageData.map((page) => ({
     params: {
       path: page.path,
@@ -19,15 +27,7 @@ export async function getStaticPaths() {
 
 interface Props extends JourneyPageData {}
 
-const { title, backHref, nextHref, paragraphs, decisions, images } =
-  Astro.props;
+const { title, nextHref, paragraphs, decisions, images } = Astro.props;
 ---
 
-<JourneyLayout
-  {title}
-  {backHref}
-  {nextHref}
-  {paragraphs}
-  {decisions}
-  {images}
-/>
+<JourneyLayout {title} {nextHref} {paragraphs} {decisions} {images} />

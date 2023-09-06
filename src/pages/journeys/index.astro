@@ -1,8 +1,16 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import JourneyCardGrid from "@components/JourneyCardGrid.astro";
-import { journeyPageData } from "src/data";
-import type { JourneyCardData } from "src/types";
+import type { JourneyCardData, JourneyPageData } from "src/types";
+import { toJourneyPageData } from "src/data/journeys";
+
+const caseData = await Astro.glob("../../data/cases/*.json");
+
+const journeyPageData: JourneyPageData[] = [];
+caseData.forEach((caseFile, i) => {
+  const caseData = toJourneyPageData(i + 1, [caseFile.default[0]]);
+  journeyPageData.push(caseData[0]);
+});
 
 const journeys: JourneyCardData[] = journeyPageData
   .filter(({ isStart }) => isStart)

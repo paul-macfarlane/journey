@@ -1,22 +1,12 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import LinkButton from "@components/LinkButton.astro";
-import JourneyCardGrid from "@components/JourneyCardGrid.astro";
 import ImageGrid from "@components/ImageGrid.astro";
-import type { JourneyCardData, JourneyLayoutData } from "src/types";
+import type { JourneyLayoutData } from "src/types";
 
 interface Props extends JourneyLayoutData {}
 
-const { title, backHref, paragraphs, nextHref, decisions, images } =
-  Astro.props;
-
-const journeys: JourneyCardData[] | undefined =
-  decisions?.map(({ title, description, href }) => ({
-    title,
-    description,
-    href,
-    buttonText: "Select",
-  })) ?? undefined;
+const { title, paragraphs, nextHref, decisions, images } = Astro.props;
 ---
 
 <BaseLayout {title}>
@@ -29,15 +19,26 @@ const journeys: JourneyCardData[] | undefined =
 
     {images && <ImageGrid images={images} />}
 
-    <slot name="before-cards" />
+    <slot name="before-decisions" />
 
-    {journeys && <JourneyCardGrid {journeys} />}
+    {
+      decisions &&
+        decisions.map(({ href, buttonText: text }) => (
+          <div class="flex">
+            <LinkButton variant="primary" {text} {href} />
+          </div>
+        ))
+    }
 
     <slot name="before-buttons" />
 
     <div class="flex justify-between">
-      <div class="shadow-lg">
-        <LinkButton variant="secondary" text="Back" href={backHref} />
+      <div id="layout-back" class="shadow-lg">
+        <LinkButton
+          variant="secondary"
+          text="Back"
+          href="javascript:undefined"
+        />
       </div>
 
       {
@@ -52,3 +53,9 @@ const journeys: JourneyCardData[] | undefined =
     <slot name="after-buttons" />
   </div>
 </BaseLayout>
+
+<script is:inline>
+  document.getElementById("layout-back").addEventListener("click", function () {
+    window.history.back();
+  });
+</script>
