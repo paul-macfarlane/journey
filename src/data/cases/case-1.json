@@ -64,9 +64,7 @@
     "paragraphs": [
       "The next week, your husband's brother is killed on his way to work.",
       "You and your husband begin to fight every night about whether or not you should leave. He tells you that he is next. You don't want to believe him. You have no idea what leaving your home would mean for your family. And, you don't know how practical it is to travel while pregnant. You have started to have morning sickness regularly, are incredibly tired, and your baby bump has started to show.",
-      "What do you do?",
-      "*",
-      "*"
+      "What do you do?"
     ],
     "decisions": [
       {
@@ -410,9 +408,7 @@
     "paragraphs": [
       "Your husband calls you and tells you that he's made it with the coyote to the United States. They traveled to Kansas, where he has settled into a run-down apartment, will wait for you there. You tell him that you have just reached Juarez, and that you cannot wait to join him soon.",
       "However, when you go to the port of entry to seek asylum, the ICE officials tell you that there is a new policy in place called the Migrant Protection Program (MPP). Because you are seeking asylum from Honduras, and not Mexico, you must wait on the Mexican side of the border for your court date to be processed. You don't know anybody in Juarez, and have no place to stay.",
-      "What do you do?",
-      "*",
-      "*"
+      "What do you do?"
     ],
     "decisions": [
       {
@@ -437,10 +433,7 @@
     "paragraphs": [
       "You've decided to cross the border illegally. You weigh your options of how to do so, carefully. You don't want to get caught, because you heard that if you did, you would be put in detention and your children will be ripped away from you.",
       "You can climb the eight-foot border wall, and create a pulley system to get your kids across, but you are worried that you might not be agile enough. You can hike Mount Cristel Rey, which did not have a border wall, but you've heard that many others have died of dehydration in the dry desert heat trying to make that journey. Or, you could cross El Rio Grande, but you and your kids cannot swim.",
-      "What do you do?",
-      "*",
-      "*",
-      "*"
+      "What do you do?"
     ],
     "decisions": [
       {
@@ -467,9 +460,7 @@
     "name": "Purgatory 1",
     "paragraphs": [
       "You decide to wait for your court case to be processed. This takes weeks, then months, then years. You start to work at a restaurant to earn some extra money. Your kids go to school at the camp, but they only have classes for up to fifth grade. You're growing tired of life in Juarez. There is no privacy, and the poverty around you makes you feel sick.",
-      "What do you do?",
-      "*",
-      "*"
+      "What do you do?"
     ],
     "decisions": [
       {
@@ -493,9 +484,7 @@
     "name": "Purgatory 2",
     "paragraphs": [
       "Your case begins to be processed, and you go to court many times, meeting the ICE officials at the bridge at 4am. Each time, they take you to a detention center, and stick you and your family in a //hielera// with other migrants. It is so cold that on one of these court dates, your son develops pneumonia. They strip you of your clothes and your belongings, making you wear these ugly, orange jumpsuits. They keep the lights on all day, with the TV loudly blaring something about the Migrant Protection Program over and over again. You have no idea how much time has passed, but at the end of it, they let you go with nothing but a new court date. You dread going through this process again and again.",
-      "What do you do?",
-      "*",
-      "*"
+      "What do you do?"
     ],
     "decisions": [
       {
@@ -519,9 +508,7 @@
     "name": "Wall",
     "paragraphs": [
       "You climb the border wall, but when you get to the top, you lose balance, and fall eight feet to the other side. You are in agonizing pain. There is blood seeping through your pants. You are sure that your leg is broken, and you cannot move well, if at all. Luckily, your children manage to make their way across unharmed.",
-      "What do you do?",
-      "*",
-      "*"
+      "What do you do?"
     ],
     "decisions": [
       {
@@ -747,9 +734,7 @@
     "paragraphs": [
       "When you get to the port of entry, the ICE officials say that they have too many pending cases, and that instead of going through the asylum process that would permit you to wait in the US, they will take your name down, and add it to a list. They tell you to check back at the bridge everyday at 4am, and when it's your turn, they will process your case. But, they don't know how long that will take.",
       "You know that your baby will be delivered anyday now, and cannot afford for your case to take time to process before you deliver your new child.",
-      "What do you do?",
-      "*",
-      "*"
+      "What do you do?"
     ],
     "decisions": [
       {
