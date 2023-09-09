@@ -78,6 +78,9 @@ const filenames = fs.readdirSync(inputDir);
       // Get the cleaned text content
       let content = passage.textContent.trim();
 
+      // parse italics
+      content = content.replace(/\/\/(.*?)\/\//g, "<i>$1</i>");
+
       // Extract decision content before splitting paragraphs
       const decisions = [];
       const decisionsRaw = content.match(/\[\[.*?\]\]/g) || [];

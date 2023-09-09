@@ -13,7 +13,7 @@ const { title, paragraphs, nextHref, decisions, images } = Astro.props;
   <div class="space-y-6 pb-6 text-xl lg:space-y-10 lg:pb-10 lg:text-3xl">
     <slot name="before-paragraphs" />
 
-    {paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+    {paragraphs?.map((paragraph) => <p set:html={paragraph} />)}
 
     <slot name="before-images" />
 
