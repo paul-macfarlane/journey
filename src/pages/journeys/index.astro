@@ -12,13 +12,14 @@ caseData.forEach((caseFile, i) => {
     caseFile.default.find((page) => page.name === "Preface") ??
       caseFile.default[0],
   ]);
+
   journeyPageData.push(...caseData);
 });
 
 const journeys: JourneyCardData[] = journeyPageData
   .filter(({ isStart }) => isStart)
-  .map((pageData) => ({
-    title: pageData.nextName,
+  .map((pageData, index) => ({
+    title: `Case ${index + 1}`,
     buttonText: "Start",
     href: `/journeys/${pageData.path}`,
   }));
@@ -26,7 +27,7 @@ const journeys: JourneyCardData[] = journeyPageData
 
 <BaseLayout title="Journeys">
   <div class="flex flex-col items-center gap-6 text-xl lg:gap-16 lg:text-3xl">
-    <p>Select from one of the following Journeys</p>
+    <p>Refugee and Migrant Cases</p>
 
     <JourneyCardGrid {journeys} />
   </div>
