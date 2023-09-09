@@ -21,14 +21,14 @@ const { title, paragraphs, nextHref, decisions, images } = Astro.props;
 
     <slot name="before-decisions" />
 
-    {
-      decisions &&
-        decisions.map(({ href, buttonText: text }) => (
-          <div class="flex">
+    <div class="flex flex-col items-center gap-6 lg:gap-10">
+      {
+        decisions &&
+          decisions.map(({ href, buttonText: text }) => (
             <LinkButton variant="primary" {text} {href} />
-          </div>
-        ))
-    }
+          ))
+      }
+    </div>
 
     <slot name="before-buttons" />
 
