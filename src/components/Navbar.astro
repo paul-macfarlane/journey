@@ -4,7 +4,6 @@ import ThemeToggleIcon from "./icons/ThemeToggleIcon.astro";
 import XIcon from "./icons/XIcon.astro";
 import HomeIcon from "./icons/HomeIcon.astro";
 import MapIcon from "./icons/MapIcon.astro";
-import InfoCircleIcon from "./icons/InfoCircleIcon.astro";
 
 // can replace this with a React/Preact/Svelte component to better handle the user interactivity, but that also might be overkill
 
@@ -17,11 +16,6 @@ const routes = [
   {
     name: "Journeys",
     path: "/journeys",
-    exact: false,
-  },
-  {
-    name: "About",
-    path: "/about",
     exact: false,
   },
 ];
@@ -85,11 +79,6 @@ const currentPath = Astro.url.pathname;
     <a href="/journeys" class="flex items-center justify-start gap-4 py-2">
       <MapIcon />
       <p class="text-lg">Journeys</p>
-    </a>
-
-    <a href="/about" class="flex items-center justify-start gap-4 py-2">
-      <InfoCircleIcon />
-      <p class="text-lg">About</p>
     </a>
   </div>
 </div>
