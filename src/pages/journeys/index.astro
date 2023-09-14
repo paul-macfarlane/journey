@@ -3,6 +3,10 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import JourneyCardGrid from "@components/JourneyCardGrid.astro";
 import type { JourneyCardData, JourneyPageData } from "src/types";
 import { toJourneyPageData } from "src/data/journeys";
+import ChevronUp from "@components/icons/ChevronUp.astro";
+import ChevronDown from "@components/icons/ChevronDown.astro";
+import { Image } from "astro:assets";
+import referencesQR from "../../assets/references.png";
 
 const caseData = await Astro.glob("../../data/cases/*.json");
 
@@ -29,6 +33,113 @@ const journeys: JourneyCardData[] = journeyPageData
   <div class="flex flex-col items-center gap-6 text-xl lg:gap-16 lg:text-3xl">
     <p>Refugee and Migrant Cases</p>
 
+    <div id="read-description" class="flex gap-2 text-lg">
+      <p>Read description</p>
+      <button id="show-description-toggle">
+        <ChevronDown width={18} height={16} />
+      </button>
+    </div>
+
+    <div
+      id="hide-description"
+      class="flex hidden flex-col gap-6 text-lg lg:gap-16"
+    >
+      <div class="flex justify-center gap-2">
+        <p>Hide description</p>
+        <button id="hide-description-toggle">
+          <ChevronUp width={18} height={16} />
+        </button>
+      </div>
+
+      <div class="flex flex-col items-start gap-4">
+        <p class="font-bold">Description:</p>
+        <p>
+          Migrants at the U.S.-Mexican border suffer from some of the most
+          insidious health crises imaginable. This year alone, an underestimated
+          136 people died in the desert on the U.S. side of the border from
+          heat-related injuries, wall-falls, and drownings in the Rio Grande, an
+          87% increase from last year (“Migrant Death Toll” 2023). These deaths
+          exclude the lives that were lost on the Mexican side of the border,
+          including the 40 people killed by intentional neglect when a fire
+          broke out in a detention facility in Juarez (Romo 2023), and the 53
+          people who were killed while being trafficked by coyotes through
+          Laredo (Dobbins 2022). Notably, these deaths also exclude the living.
+          They exclude the hundreds of people who suffer from razor-wire gashes
+          as they make their way through Eagle Pass (Garcia 2023), the hundreds
+          of people who sustain life-long ankle, foot, and hip injuries from
+          border wall falls (Miroff 2022), and the dozens of people who still
+          cough up ash-tinged sputum from the fire (Romo 2023). They exclude the
+          thousands who continue to suffer from infectious disease due to
+          overcrowded detention facilities and shelters, malnourishment and
+          dehydration related disease from homelessness, and orthopedic injuries
+          from kidnapping, assault, and labor-trafficking (Dreier and Luce
+          2023). They exclude the hundreds of thousands who are burdened with
+          mental health crises because of their experiences (American
+          Psychiatric Association 2023). Currently, upwards of 200,000 people
+          cross the southern border each month, dispersing to cities and towns
+          across the United States (Gramlich 2023), carrying with them
+          pathologies originating from complex sociopolitical origins. And thus
+          far, medical education has failed to equip healthcare professionals
+          with the tools to treat them. In medicine, we often laser-focus on
+          biological explanations of pathology: how bodies respond to injury,
+          how microorganisms invade and attack the immune system. Too often, we
+          forget to look upstream at the reasons why hundreds of thousands of
+          people suffer from the same types of injuries, illnesses, and disease.
+          This workshop, based on the Trauma Informed Care model (Gerber 2019),
+          seeks to equip healthcare professionals with the tools to guide
+          impoverished patients along meaningful paths of healing, treat them
+          with dignity, and advocate for them beyond the confines of the
+          doctor’s office.
+        </p>
+
+        <p class="font-bold">Learning Objectives:</p>
+        <ol class="ml-4 list-decimal">
+          <li>
+            Dispel societal myths about the origins of displaced peoples and
+            highlight the contributions that they make to our society.
+          </li>
+          <li>
+            Evaluate specific barriers to healthcare that the refugee and
+            migrant communities face when seeking treatment.
+          </li>
+          <li>
+            Reflect on how the healthcare system can contribute to trauma that
+            the refugee and migrant communities face, recognizing our
+            responsibility to provide culturally humble care for this community.
+          </li>
+        </ol>
+
+        <p class="font-bold">References:</p>
+        <Image
+          height={140}
+          width={140}
+          src={referencesQR}
+          alt="QR Code for references"
+        />
+      </div>
+    </div>
+
     <JourneyCardGrid {journeys} />
   </div>
 </BaseLayout>
+
+<script is:inline>
+  const showDescriptionToggle = document.querySelector(
+    "#show-description-toggle",
+  );
+  const hideDescriptionToggle = document.querySelector(
+    "#hide-description-toggle",
+  );
+  const readDescription = document.querySelector("#read-description");
+  const hideDescription = document.querySelector("#hide-description");
+
+  showDescriptionToggle.addEventListener("click", () => {
+    readDescription.classList.add("hidden");
+    hideDescription.classList.remove("hidden");
+  });
+
+  hideDescriptionToggle.addEventListener("click", () => {
+    readDescription.classList.remove("hidden");
+    hideDescription.classList.add("hidden");
+  });
+</script>
