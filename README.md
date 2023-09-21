@@ -1,7 +1,5 @@
 # Journey
 
-🦺 Site in progress/under construction.
-
 This is a tiny personal project to help my Girlfriend out with her Trauma Informed Care project for Medical School.
 
 Hosted at https://paul-macfarlane-journey.netlify.app/
@@ -19,7 +17,7 @@ Some examples of a Journey include:
 
 ## Technology
 
-This is a static site. The core pieces of technology used here are
+This all currently SSG, but could be updated to SSR if the need arose. The core pieces of technology used here are
 - [Astro](https://astro.build/)
 - [Tailwind](https://tailwindcss.com/)
 - A TINY bit of [TypeScript](https://www.typescriptlang.org/)
