@@ -19,7 +19,7 @@
         "name": "911",
         "paragraphs": [
             "You feel your lips go dry and your head spinning while your friend calls 9-1-1. The person who picks up the phone does not speak Spanish, but your friend manages to tell them the location of the emergency.",
-            "Within a few minutes, an ambulence and two police cars arrive at the entrance to the Backstretch of the Racetrack -- yards away from the cafeteria. A police officer in a black uniform approaches you. You feel your heart start to beat more quickly. He reminds you of the scary ICE agents who you dealt with years ago.",
+            "Within a few minutes, an ambulance and two police cars arrive at the entrance to the Backstretch of the Racetrack -- yards away from the cafeteria. A police officer in a black uniform approaches you. You feel your heart start to beat more quickly. He reminds you of the scary ICE agents who you dealt with years ago.",
             "You worry if you speak Spanish to them that they might treat you differently. But you're nervous that your English may sound foreign, too.",
             "What do you do?"
         ],
@@ -42,9 +42,9 @@
         "id": "3",
         "name": "Drive to Hospital",
         "paragraphs": [
-            "You ask your friend to drive you to the hospital, afraid of the consequences of being face-to-face with police officers, and worried about the cost of the ambulence.",
+            "You ask your friend to drive you to the hospital, afraid of the consequences of being face-to-face with police officers, and worried about the cost of the ambulance.",
             "She asks you if you are sure, saying that you don't look like you're doing too well. You tell her that you're sure, and wait fifteen minutes for her to pull up to the cafeteria with her car.",
-            "On the way to the hospital, though, you pass out. Your friend is scared, and does not know what to do. Because she doesn't speak any English, it takes almost another hour before you are seen - all this time, you remain unconsious."
+            "On the way to the hospital, though, you pass out. Your friend is scared, and does not know what to do. Because she doesn't speak any English, it takes almost another hour before you are seen - all this time, you remain unconscious."
         ],
         "decisions": [],
         "images": [],
@@ -58,14 +58,14 @@
         "name": "Spanish",
         "paragraphs": [
             "When the officers approach you, you start to tell them what happened. They can't understand you, though, and you quickly switch to the broken English that you can muster. They seem to understand that you need to go to the hospital, and signal for the other men in uniforms to come along.",
-            "They wheel out a bright yellow stretcher. One of the officers is talking to your friend who called the police, trying to communicate something to her about money. You remember your coworker having to go to the hospital last year, who said that the ambulence cost him almost $1,000. You wonder if that's what they're talking about.",
+            "They wheel out a bright yellow stretcher. One of the officers is talking to your friend who called the police, trying to communicate something to her about money. You remember your coworker having to go to the hospital last year, who said that the ambulance cost him almost $1,000. You wonder if that's what they're talking about.",
             "You don't have insurance. $1,000 is nearly a month's work.",
             "What do you do?"
         ],
         "decisions": [
             {
-                "text": "Get in the ambulence",
-                "name": "Ride in Ambulence",
+                "text": "Get in the ambulance",
+                "name": "Ride in Ambulance",
                 "pid": "6"
             },
             {
@@ -87,8 +87,8 @@
         ],
         "decisions": [
             {
-                "text": "Get in the ambulence",
-                "name": "Ride in Ambulence",
+                "text": "Get in the ambulance",
+                "name": "Ride in Ambulance",
                 "pid": "6"
             },
             {
@@ -102,7 +102,7 @@
     },
     {
         "id": "6",
-        "name": "Ride in Ambulence",
+        "name": "Ride in Ambulance",
         "paragraphs": [
             "On your way to the hospital, you can barely understand what is going on around you. People are trying to poke a needle into your arm, and shine lights into your eyes, and the noise of the sirens fills you with more and more anxiety.",
             "You close your eyes and try to focus on your breathing."
@@ -133,7 +133,7 @@
         "id": "8",
         "name": "HHS",
         "paragraphs": [
-            "Over the last ten years, you've been employed by a horse trainer, traveling with him and the other horsekeepers between Florida and New York. They provided you with work and free housing. Though the hours are long, and the pay is minimal, you are so thankful to be here. You had been able to send your grandmother money every month, even saving up for a phone to call and check in on her everyday. Since her passing, three years ago, you took extra time to reminisce in the memories that you shared.",
+            "Over the last ten years, you've been employed by a horse trainer, traveling with him and the other horse keepers between Florida and New York. They provided you with work and free housing. Though the hours are long, and the pay is minimal, you are so thankful to be here. You had been able to send your grandmother money every month, even saving up for a phone to call and check in on her everyday. Since her passing, three years ago, you took extra time to reminisce in the memories that you shared.",
             "Today, you say a small prayer for her during your midday break. Then, you join your coworkers in the cafeteria, thankful to be shielded from the Floridian humidity. After a meal of rice, beans, pork, tomato salsa, tortillas, and a slice of birthday cake, you start to feel a little nauseous. Your vision starts to get a little blurry, and you feel like you're going to pass out. You tell one of your friends that you don't feel so good. You think that you may need to go to the hospital, but you worry how your documentation status might affect calling 9-1-1.",
             "What do you do?"
         ],
@@ -250,7 +250,7 @@
         "name": "Wait 3 Months",
         "paragraphs": [
             "On your first day at the Backstretch in New York that Spring, three months since your first hospitalization, you walk into the free clinic. A friendly, Spanish-speaking doctor sees you, and asks you what's been going on.",
-            "You tell him about your vision and the dull ache in your hands and feet. He performs a physical exam on you, and helps you realize that you've lost the sense of vibration in your feet. He also gives you an eye exam, and tells you that you should be seeing an opthamologist - an eye specialist.",
+            "You tell him about your vision and the dull ache in your hands and feet. He performs a physical exam on you, and helps you realize that you've lost the sense of vibration in your feet. He also gives you an eye exam, and tells you that you should be seeing an ophthalmologist - an eye specialist.",
             "Then he asks you about your medications. You tell him that you're not sure what you should be taking, though other doctors have told you that you should be taking something. He prescribes some medications, and sends them to Walmart. He asks you to pick up the medications, and see him the next week.",
             "Just then, things with work start to pick up, though. Your horse trainer is demanding longer hours of you, and your friend with a car stayed down in Florida, so you'll have to walk the two miles to Walmart.",
             "What do you do?"
@@ -275,7 +275,7 @@
         "name": "Appt at Local Clinic",
         "paragraphs": [
             "You go to the local clinic, and though the doctor there does not speak Spanish, she seems nice enough. She gives you prescriptions for a few medications which she sends to CVS pharmacy, and tells you through an interpreter how you're supposed to take them. Then, she gives you a handout with instructions on how to change your diet, as well as an outline of how to take your medicines.",
-            "Eventhough the handout is written in Spanish, you can't read it. Embarrassed to tell the doctor that you never went to school past fifth grade, you take the handout anyways.",
+            "Even though the handout is written in Spanish, you can't read it. Embarrassed to tell the doctor that you never went to school past fifth grade, you take the handout anyways.",
             "What do you do?"
         ],
         "decisions": [
@@ -351,7 +351,7 @@
         "paragraphs": [
             "You pay for your medications, but because they have to be delivered to you within the detention facility, they won't come for another three weeks.",
             "Furious, the doctor on site brings in some of the medications that she wants you to take, and asks you to come to the detention clinic everyday before meals and before bed to take your medications.",
-            "You thank her for her kindness. However, you forget to go before your night-time cell curfew a few days in a row. One day, you ask one of the CBP officers if it's okay that you go to the clinic late. He tells you that because you were attempting to defy him, you will lose your recreational priviledges for the next three weeks."
+            "You thank her for her kindness. However, you forget to go before your night-time cell curfew a few days in a row. One day, you ask one of the CBP officers if it's okay that you go to the clinic late. He tells you that because you were attempting to defy him, you will lose your recreational privileges for the next three weeks."
         ],
         "decisions": [],
         "images": [],
@@ -431,7 +431,7 @@
         "name": "Doc pays for meds",
         "paragraphs": [
             "The doctor on site brings in the medications that she wants you to take, and asks you to come to the detention clinic everyday before meals and before bed so that she can show you how to administer your injections and which medications to take until you get used to it.",
-            "You thank her for her kindness. However, you forget to go before your night-time cell-curfew a few days in a row. One day, you ask one of the CBP officers if it's okay that you go late. He tells you that because you were attempting to defy him, you will lose your recreational priviledges for the next three weeks."
+            "You thank her for her kindness. However, you forget to go before your night-time cell-curfew a few days in a row. One day, you ask one of the CBP officers if it's okay that you go late. He tells you that because you were attempting to defy him, you will lose your recreational privileges for the next three weeks."
         ],
         "decisions": [],
         "images": [],
@@ -495,7 +495,7 @@
         "id": "25",
         "name": "Walmart now!",
         "paragraphs": [
-            "You go to Walmart later that evening, but when you come back with your medications, you are so tired that you sleep through your morning alarms. You're late to your morning horsewalking duties, which start at 3am, and your trainer is upset.",
+            "You go to Walmart later that evening, but when you come back with your medications, you are so tired that you sleep through your morning alarms. You're late to your morning horse walking duties, which start at 3am, and your trainer is upset.",
             "This is your first warning, he says, if it happens again, he may have to reduce your pay.",
             "Angry at the doctor for making you get your medications so urgently, you decide not to go see him until the end of the week."
         ],
@@ -564,7 +564,7 @@
         "id": "29",
         "name": "Give up",
         "paragraphs": [
-            "Discouraged from staying ontop of your medications, you ask your physician if there are other ways in which you can control your blood sugar. She talks to you about the importance of exercise and eating healthy meals full of vegetables, but emphasizes that she knows those things are extra difficult while living in detention.",
+            "Discouraged from staying on top of your medications, you ask your physician if there are other ways in which you can control your blood sugar. She talks to you about the importance of exercise and eating healthy meals full of vegetables, but emphasizes that she knows those things are extra difficult while living in detention.",
             "You try your best, but you have limited food options and restricted outside time. After a few months, you end up in the hospital again. This time, though, you go into a coma and you do not wake up. Time of death 5:15pm."
         ],
         "decisions": [],
@@ -575,7 +575,7 @@
         "id": "30",
         "name": "Poor medication adherence 2",
         "paragraphs": [
-            "You take your medications as best you can, but it's difficult to keep up with it, especially given the rigid schedule of detention. Ontop of that, one day, you are late to roll call because of your nighttime medicines, and one of the CBP officers decides to punish you with solitary confinement.",
+            "You take your medications as best you can, but it's difficult to keep up with it, especially given the rigid schedule of detention. On top of that, one day, you are late to roll call because of your nighttime medicines, and one of the CBP officers decides to punish you with solitary confinement.",
             "Despite your medications being brought to you while in solitary confinement, you grow dejected and disappointed.",
             "After seven days of loneliness and a lack of motivation to take care of your health, you end up in the hospital with severe dehydration again.",
             "Although this time, you go into a coma and you do not wake up. Time of death 5:15pm."
