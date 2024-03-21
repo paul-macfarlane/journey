@@ -262,7 +262,8 @@
             },
             {
                 "text": "Walk & hitch-hike",
-                "name": "Walk & Hitch-Hike 2"
+                "name": "Walk & Hitch-Hike 2",
+                "pid": "31"
             }
         ],
         "images": [],
