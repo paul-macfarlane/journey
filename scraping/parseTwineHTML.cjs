@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 const inputDir = "./twineHTML";
-const outputDir = "../src/data/cases";
+const outputDir = "../src/data/raw-cases";
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
