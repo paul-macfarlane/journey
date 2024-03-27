@@ -7,8 +7,8 @@ import os
 csv_file_path = 'replace_images.csv'
 df = pd.read_csv(csv_file_path)
 
-json_directory_path = '..src/data/raw-cases'
-output_directory_path = '..src/data/cases'
+json_directory_path = '../src/data/raw-cases'
+output_directory_path = '../src/data/cases'
 
 os.makedirs(output_directory_path, exist_ok=True)
 

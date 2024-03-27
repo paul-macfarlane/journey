@@ -76,7 +76,7 @@ def process_files(src_dir, dest_dir):
             else:
                 copy2(src_file_path, dest_file_path)
 
-src_directory = '..dist'
-dest_directory = '..local'
+src_directory = '../dist'
+dest_directory = '../local'
 
 process_files(src_directory, dest_directory)
