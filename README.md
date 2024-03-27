@@ -35,13 +35,13 @@ The [./scraping/parseTwineHTML.cjs](./scraping/parseTwineHTML.cjs) script is the
 
 As of right now there are more steps needed to get the data into a useable format. First, the raw case data will sometimes have decisions with a value of "*", which needs to be removed manually. The script for parsing twine probably just needs to be fixed to resolve that.
 
-Then, the raw case data needs to have the images array of each page replaced with a new href and caption for citation. That is done automatically via the [replace_images.py](replace_images.py) script.
+Then, the raw case data needs to have the images array of each page replaced with a new href and caption for citation. That is done automatically via the [replace_images.py](scripts/replace_images.py) script.
 
 From here, the data is now usable and the app can be built for deployment using `npm run build` and run locally using `npm start`. This GitHub repo is setup to deploy to netlify on push to the main branch, so the site will be updated automatically.
 
 However, there is 1 final piece, which is allowing the app to be used locally without running the dev server. This is needed because the Academic Journal that is submitted to requires the ability to open the app on their local component and not on the web.
 
-To support this, first make sure the app is built locally using `npm run build`. Then run the script [build_local.py](build_local.py) which will copy the built app to the [local](local) directory, but with paths adjusted so anyone can download the directory and use the app locally.
+To support this, first make sure the app is built locally using `npm run build`. Then run the script [build_local.py](scripts/build_local.py) which will copy the built app to the [local](local) directory, but with paths adjusted so anyone can download the directory and use the app locally.
 
 ## Running Locally
 
