@@ -6,9 +6,15 @@
 
 export interface ImageData {
   src: string;
+  caption: string;
   alt: string;
   width?: number;
   height?: number;
+}
+
+export interface JourneyImage {
+  src: string;
+  caption: string;
 }
 
 export interface JourneyCardData {

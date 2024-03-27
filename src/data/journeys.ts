@@ -1,4 +1,4 @@
-import { type JourneyPageData, type JourneyLayoutDecisionData } from '../types'
+import { type JourneyPageData, type JourneyLayoutDecisionData, type JourneyImage } from "../types";
 
 export function toJourneyPageData (caseNumber: number, data: any): JourneyPageData[] {
   const caseName = `case-${caseNumber}`;
@@ -15,9 +15,10 @@ export function toJourneyPageData (caseNumber: number, data: any): JourneyPageDa
         href: `${baseHref}/${decision.pid}`,
         buttonText: decision.text,
       })),
-      images: data.images.map((image: string) => {
+      images: data.images.map(({ src, caption }: JourneyImage) => {
         return {
-          src: image,
+          src,
+          caption,
         };
       }),
       isStart: index === 0
