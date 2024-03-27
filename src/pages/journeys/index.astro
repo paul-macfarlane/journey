@@ -5,8 +5,6 @@ import type { JourneyCardData, JourneyPageData } from "src/types";
 import { toJourneyPageData } from "src/data/journeys";
 import ChevronUp from "@components/icons/ChevronUp.astro";
 import ChevronDown from "@components/icons/ChevronDown.astro";
-import { Image } from "astro:assets";
-import referencesQR from "../../assets/references.png";
 
 const caseData = await Astro.glob("../../data/cases/*.json");
 
@@ -42,16 +40,16 @@ const journeys: JourneyCardData[] = journeyPageData
 
     <div
       id="hide-description"
-      class="flex hidden flex-col gap-6 text-lg lg:gap-16"
+      class="flex hidden max-w-[100vw] flex-col gap-6 text-[14px] lg:max-w-5xl lg:gap-16 lg:text-lg"
     >
       <div class="flex justify-center gap-2">
-        <p>Hide description</p>
+        <p class="text-lg">Hide description</p>
         <button id="hide-description-toggle">
           <ChevronUp width={18} height={16} />
         </button>
       </div>
 
-      <div class="flex flex-col items-start gap-4">
+      <div class="flex flex-col items-start gap-4 p-4">
         <p class="font-bold">Description:</p>
         <p>
           Migrants at the U.S.-Mexican border suffer from some of the most
@@ -110,12 +108,272 @@ const journeys: JourneyCardData[] = journeyPageData
         </ol>
 
         <p class="font-bold">References:</p>
-        <Image
-          height={140}
-          width={140}
-          src={referencesQR}
-          alt="QR Code for references"
-        />
+
+        <ol
+          class="max-w-[100vw] list-decimal p-2 text-[10px] lg:max-w-5xl lg:text-lg"
+        >
+          <li>Allison P. Detainee Handbook. Undocumented Press; 2022.</li>
+          <li>
+            American Psychiatric Association. Mental Health Facts on Refugees,
+            Asylum-seekers, & Survivors of Forced Displacement. Psychiatry.com.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.psychiatry.org/File%20Library/Psychiatrists/Cultural-Competency/Mental-Health-Disparities/Mental-Health-Facts-for-Refugees.pdf"
+            >
+              https://www.psychiatry.org/File%20Library/Psychiatrists/Cultural-Competency/Mental-Health-Disparities/Mental-Health-Facts-for-Refugees.pdf
+            </a>. Accessed April 18, 2023.
+          </li>
+          <li>
+            Blackburn PH. Ahead of Kentucky Derby, shortage of migrant workers
+            looms for trainers. Border Report Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.borderreport.com/immigration/ahead-of-kentucky-derby-shortage-of-migrant-workers-looms-for-trainers/"
+            >
+              https://www.borderreport.com/immigration/ahead-of-kentucky-derby-shortage-of-migrant-workers-looms-for-trainers/
+            </a>. Updated August 30, 2020. Accessed March 17, 2024.
+          </li>
+          <li>
+            CBS News Miami. CBS Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.cbsnews.com/miami/video/immigration-bill-moving-in-florida-legislature/"
+            >
+              https://www.cbsnews.com/miami/video/immigration-bill-moving-in-florida-legislature/
+            </a>. Updated April 26, 2023. Accessed March 17, 2024.
+          </li>
+          <li>
+            Dias I. ICE Quietly Lowers (Already Low) Standards at Some Immigrant
+            Detention Facilities. Texas Observer Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.texasobserver.org/ice-immigrant-detention-low-standards/"
+            >
+              https://www.texasobserver.org/ice-immigrant-detention-low-standards/
+            </a>. Updated January 21, 2020. Accessed March 17, 2024.
+          </li>
+          <li>
+            Dobbins J, Goodman JD, Jordan M. Truck Carrying Dead Migrants Passed
+            through U.S. Checkpoint. New York Times Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.nytimes.com/2022/06/29/us/texas-migrants-deaths-truck.html#:~:text=Officials%20said%252"
+            >
+              https://www.nytimes.com/2022/06/29/us/texas-migrants-deaths-truck.html#:~:text=Officials%20said%252
+            </a>. Updated June 29, 2022. Accessed September 9, 2023.
+          </li>
+          <li>
+            Dreier H, Luce K. Alone and Exploited, Migrant Children Work Brutal
+            Jobs Across the U.S. New York Times Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.nytimes.com/2023/02/25/us/unaccompanied-migrant-child-workers-exploitation.html"
+            >
+              https://www.nytimes.com/2023/02/25/us/unaccompanied-migrant-child-workers-exploitation.html
+            </a>. Updated February 28, 2023. Accessed March 17, 2024.
+          </li>
+          <li>
+            Fowler LA. Lawmakers push for inspections at Tacoma's ICE detention
+            center. KNKX Public Radio Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.knkx.org/social-justice/2023-04-27/lawmakers-push-for-inspections-at-tacomas-ice-detention-center"
+            >
+              https://www.knkx.org/social-justice/2023-04-27/lawmakers-push-for-inspections-at-tacomas-ice-detention-center
+            </a>. Updated April 27, 2023. Accessed March 17, 2024.
+          </li>
+          <li>
+            Garcia UJ. Eagle Pass Residents Sour on Texas Gov. Greg Abbott’s
+            Operation Lone Star. Texas Tribune Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.texastribune.org/2023/08/07/texas-border-eagle-pass-abbott-operation-lone-star/"
+            >
+              https://www.texastribune.org/2023/08/07/texas-border-eagle-pass-abbott-operation-lone-star/
+            </a>. Updated August 7, 2023. Accessed September 9, 2023.
+          </li>
+          <li>
+            Gramlich J. Migrant encounters at the U.S.-Mexico border hit a
+            record high at the end of 2023. Pew Research Center Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.pewresearch.org/short-reads/2024/02/15/migrant-encounters-at-the-us-mexico-border-hit-a-record-high-at-the-end-of-2023/"
+            >
+              https://www.pewresearch.org/short-reads/2024/02/15/migrant-encounters-at-the-us-mexico-border-hit-a-record-high-at-the-end-of-2023/
+            </a>. Updated February 15, 2024. Accessed March 17, 2024.
+          </li>
+          <li>
+            Gerber M. Trauma-Informed Healthcare Approaches: A Guide for Primary
+            Care. Springer; 2019.
+          </li>
+          <li>
+            Jordan M. A Squalid Border Camp Finally Closed. Now Another One Has
+            Opened. NYT Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.nytimes.com/2021/08/25/us/migrant-camp-reynosa-remain-in-mexico.html"
+            >
+              https://www.nytimes.com/2021/08/25/us/migrant-camp-reynosa-remain-in-mexico.html
+            </a>. Updated August 25, 2021. Accessed March 17, 2024.
+          </li>
+          <li>
+            Kilgannon C. Far from Winner’s Circle, Saratoga Track Workers Fear
+            Deportation. NYT Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.nytimes.com/2017/08/22/nyregion/far-from-winners-circle-saratoga-track-workers-fear-deportation.html"
+            >
+              https://www.nytimes.com/2017/08/22/nyregion/far-from-winners-circle-saratoga-track-workers-fear-deportation.html
+            </a>. Updated August 22, 2017. Accessed March 17, 2024.
+          </li>
+          <li>
+            Kitroeff N, Cegarra A. Aboard ‘the Beast’ on a Journey to America.
+            NYT Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.nytimes.com/2023/05/10/world/americas/migrants-beast-train-mexico.html"
+              >https://www.nytimes.com/2023/05/10/world/americas/migrants-beast-train-mexico.html
+            </a>. Updated May 10, 2023. Accessed March 17, 2024.
+          </li>
+          <li>
+            Mass JH, Takei C. Forget About Calling A Lawyer Or Anyone at All if
+            You’re in an Immigration Detention Facility. ACLU Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.aclu.org/news/immigrants-rights/forget-about-calling-lawyer-or-anyone-all-if"
+            >
+              https://www.aclu.org/news/immigrants-rights/forget-about-calling-lawyer-or-anyone-all-if
+            </a>. Updated June 14, 2016. Accessed March 17, 2024.
+          </li>
+          <li class="inline">
+            Migrant Death Toll near El Paso Hit Record High as Heat Waves
+            Scorched the Southern Border. Democracy Now! Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.democracynow.org/2023/8/31/headlines/migrant_death_toll_near_el_paso_hit_record_high_as_heat_waves_scorched_the_southern_border"
+            >
+              https://www.democracynow.org/2023/8/31/headlines/'
+              migrant_death_toll_near_el_paso_hit_record
+              _high_as_heat_waves_scorched_the_southern_border
+            </a>. Updated August 31, 2023. Accessed March 17, 2024.
+          </li>
+          <li>
+            Miroff N. The Border Wall Trump Called Unclimbable Is Taking a Grim
+            Toll. The Washington Post Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.washingtonpost.com/national-security/2022/04/29/trump-border-wall-injuries-deaths/"
+            >
+              https://www.washingtonpost.com/national-security/2022/04/29/trump-border-wall-injuries-deaths/
+            </a>. Updated April 29, 2022. Accessed March 17, 2024.
+          </li>
+          <li>
+            Ockerman E. After ICE arrests in Saratoga Springs, some migrant
+            workers fear showing up for racing season. Washington Post Web site.
+
+
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.washingtonpost.com/national/after-ice-arrests-in-saratoga-springs-some-migrant-workers-fear-showing-up-for-racing-season/2017/08/25/a0cb3a9a-7c45-11e7-a669-b400c5c7e1cc_story.html"
+            >
+              https://www.washingtonpost.com/national/after-ice-arrests-in-saratoga-springs-some-migrant-workers-fear-showing-up-for-racing-season/2017/08/25/a0cb3a9a-7c45-11e7-a669-b400c5c7e1cc_story.html
+            </a>. Updated August 25, 2017. Accessed March 17, 2024.
+          </li>
+          <li>
+            Palnati M. Moments of Live. VOICES Blog Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://sienaamcvoices.wordpress.com/2021/01/21/moments-of-love/"
+            >
+              https://sienaamcvoices.wordpress.com/2021/01/21/moments-of-love/
+            </a>. Updated January 21, 2021. Accessed March 17, 2024.
+          </li>
+          <li>
+            Pauly M. A Judge Says Thousands of Detainees May Sue a Prison
+            Company for Using Them as a “Captive Labor Force.” Mother Jones Web
+            site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.motherjones.com/criminal-justice/2019/12/immigration-detainee-geo-forced-labor-lawsuit/"
+            >
+              https://www.motherjones.com/criminal-justice/2019/12/immigration-detainee-geo-forced-labor-lawsuit/
+            </a>. Updated December 5, 2019. Accessed March 17, 2024.
+          </li>
+          <li>
+            Reuters. In photos: US-Mexico border views in Biden era. Daily Sabah
+            Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.dailysabah.com/gallery/in-photos-us-mexico-border-views-in-biden-era/images?gallery_image=36292"
+            >
+              https://www.dailysabah.com/gallery/in-photos-us-mexico-border-views-in-biden-era/images?gallery_image=36292
+            </a>. Updated February 10, 2021. Accessed March 17, 2024.
+          </li>
+          <li>
+            Romo V. A Deadly Mexico Immigration Center Fire Shows Just a Sliver
+            of the Abuse Migrants See. NPR Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.npr.org/2023/03/30/1166947456/ciudad-juarez-detention-fire-conditions-migrants-treatment"
+            >
+              https://www.npr.org/2023/03/30/1166947456/ciudad-juarez-detention-fire-conditions-migrants-treatment
+            </a>. Updated March 21, 2023. Accessed September 9, 2023
+          </li>
+          <li>
+            Urbina I. Using Jailed Migrants as a Pool of Cheap Labor. NYT Web
+            site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.nytimes.com/2014/05/25/us/using-jailed-migrants-as-a-pool-of-cheap-labor.html"
+            >
+              https://www.nytimes.com/2014/05/25/us/using-jailed-migrants-as-a-pool-of-cheap-labor.html
+            </a>. Updated May 24, 2014. Accessed March 17, 2024.
+          </li>
+          <li>
+            Woodman S. Ice Contractor Says It Doesn't Use Silitary Confinement.
+            Photos of its Isolation Cells Reveal Otherwise. The Intercent Web
+            site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://theintercept.com/2018/03/22/corecivic-solitary-confinement-ice-detention/"
+            >
+              https://theintercept.com/2018/03/22/corecivic-solitary-confinement-ice-detention/
+            </a>. Updated March 22, 2018. Accessed March 17, 2024.
+          </li>
+          <li>
+            Zaragovia V. Florida bill would require patients to share their
+            immigration status. WLRN Web site.
+            <a
+              class="text-blue-400"
+              target="_blank"
+              href="https://www.wlrn.org/health/2023-04-28/florida-bill-immigration-status"
+            >
+              https://www.wlrn.org/health/2023-04-28/florida-bill-immigration-status
+            </a>. Updated April 28, 2023. Accessed March 17, 2024.
+          </li>
+        </ol>
       </div>
     </div>
 
