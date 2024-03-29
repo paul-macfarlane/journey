@@ -16,7 +16,7 @@ modifications_by_case = df.groupby('Case').apply(lambda x: x[['Page', 'New Image
 
 def apply_modifications(case, modifications):
     json_file_path = os.path.join(json_directory_path, f"{case}.json")
-    output_file_path = os.path.join(output_directory_path, f"{case}_modified.json")  # Change to ensure original is not overwritten
+    output_file_path = os.path.join(output_directory_path, f"{case}.json")  # Change to ensure original is not overwritten
 
     if not os.path.exists(json_file_path):
         print(f"JSON file for {case} not found.")
