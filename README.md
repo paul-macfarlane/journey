@@ -2,7 +2,7 @@
 
 This is a personal project to help my Girlfriend out with her Trauma Informed Care project for Medical School.
 
-Hosted at https://paul-macfarlane-journey.netlify.app/
+~~Hosted at https://paul-macfarlane-journey.netlify.app/~~ (temporarily taken down as this project is being submitted to an academic journey that doesn't want this to be public
 
 ## Description
 
