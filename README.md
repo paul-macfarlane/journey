@@ -63,6 +63,13 @@ To support this, first make sure the app is built locally using `npm run build`.
 script [build_local.py](scripts/build_local.py) which will copy the built app to the [local](local) directory, but with
 paths adjusted so anyone can download the directory and use the app locally.
 
+```shell
+cd ./scripts
+pipenv shell
+pipenv install
+python3 build_local.py
+```
+
 ## Running Locally
 
 Make sure Node is installed on your machine. You can then run
