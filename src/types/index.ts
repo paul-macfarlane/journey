@@ -1,8 +1,8 @@
-/** 
+/**
  * Type definitions for the whole project.
  * Only created a separate file because these needed to be imported from typescript files
  * and it doesn't seem like you can import types from .astro files
-*/
+ */
 
 export interface ImageData {
   src: string;
@@ -33,7 +33,7 @@ export interface JourneyLayoutData {
   title: string;
   paragraphs?: string[];
   nextHref?: string;
-  nextName?: string
+  nextName?: string;
   decisions?: JourneyLayoutDecisionData[];
   images?: ImageData[];
 }

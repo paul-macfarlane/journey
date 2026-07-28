@@ -2,6 +2,10 @@
 dist/
 # generated types
 .astro/
+# generated case data (parseTwineHTML.cjs / replace_images.py own the formatting,
+# both write 4-space indent — reformatting these makes regeneration a no-op diff)
+src/data/raw-cases/
+src/data/cases/
 
 # dependencies
 node_modules/

@@ -34,15 +34,36 @@ const filenames = fs.readdirSync(inputDir);
     const dom = new JSDOM(htmlDecoded);
     const document = dom.window.document;
 
-    // Create a mapping of passage names to their pids
+    // Create a mapping of passage names to their pids. Links in the Twine source
+    // don't always punctuate the target name the same way the passage does
+    // (e.g. "Walk & Hitch-Hike 2" linking to "Walk & Hitch Hike 2"), so keep a
+    // second index keyed on a normalized name to fall back on.
     const nameToPidMapping = {};
+    const normalizedNameToPidMapping = {};
+    const normalizeName = (name) =>
+      name.toLowerCase().replace(/[^a-z0-9]/g, "");
+
     Array.from(document.querySelectorAll("tw-passagedata")).forEach(
       (passage) => {
         const pid = passage.getAttribute("pid");
         const name = passage.getAttribute("name");
         nameToPidMapping[name] = pid;
+        normalizedNameToPidMapping[normalizeName(name)] = pid;
       },
     );
+
+    /** Resolve a link target to a pid, warning when it matches no passage. */
+    const resolvePid = (name) => {
+      if (name === undefined) return undefined;
+      const pid =
+        nameToPidMapping[name] ?? normalizedNameToPidMapping[normalizeName(name)];
+      if (pid === undefined) {
+        console.warn(
+          `[${filename}] link target "${name}" matches no passage; pid left empty`,
+        );
+      }
+      return pid;
+    };
 
     const passages = Array.from(
       document.querySelectorAll("tw-passagedata"),
@@ -68,7 +89,7 @@ const filenames = fs.readdirSync(inputDir);
       if (clickGotoMatch) {
         clickGoto = {
           name: clickGotoMatch[1],
-          pid: nameToPidMapping[clickGotoMatch[1]],
+          pid: resolvePid(clickGotoMatch[1]),
         };
         passage.textContent = passage.textContent
           .replace(clickGotoMatch[0], "")
@@ -92,16 +113,18 @@ const filenames = fs.readdirSync(inputDir);
         decisions.push({
           text: text,
           name: decisionName,
-          pid: nameToPidMapping[decisionName],
+          pid: resolvePid(decisionName),
         });
         content = content.replace(decisionRaw, "").trim();
       });
 
-      // Split paragraphs on newlines
+      // Split paragraphs on newlines. Decisions are usually authored as a Twine
+      // bullet list ("* [[Stay->...]]"), so removing the link above leaves the
+      // bare list marker behind — drop any line that is only markers.
       const paragraphs = content
         .split("\n")
         .map((p) => p.trim())
-        .filter((p) => p);
+        .filter((p) => p && !/^[*\-•\s]+$/.test(p));
 
       return {
         id: pid,

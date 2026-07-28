@@ -1,9 +1,16 @@
-import { type JourneyPageData, type JourneyLayoutDecisionData, type JourneyImage } from "../types";
+import {
+  type JourneyPageData,
+  type JourneyLayoutDecisionData,
+  type JourneyImage,
+} from "../types";
 
-export function toJourneyPageData (caseNumber: number, data: any): JourneyPageData[] {
+export function toJourneyPageData(
+  caseNumber: number,
+  data: any,
+): JourneyPageData[] {
   const caseName = `case-${caseNumber}`;
   const baseHref = `/journeys/${caseName}`;
-  
+
   return data.map((data, index): JourneyPageData => {
     return {
       path: `${caseName}/${data.id}`,
@@ -21,7 +28,7 @@ export function toJourneyPageData (caseNumber: number, data: any): JourneyPageDa
           caption,
         };
       }),
-      isStart: index === 0
+      isStart: index === 0,
     };
   });
 }

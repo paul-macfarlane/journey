@@ -7,7 +7,13 @@ import { toJourneyPageData } from "src/data/journeys";
  * Create dynamic routes for each journey page.
  */
 export async function getStaticPaths() {
-  const caseData = await Astro.glob("../../data/cases/*.json");
+  const caseModules = import.meta.glob<{ default: any[] }>(
+    "../../data/cases/*.json",
+    { eager: true },
+  );
+  const caseData = Object.keys(caseModules)
+    .sort()
+    .map((path) => caseModules[path]);
 
   const journeyPageData: JourneyPageData[] = [];
   caseData.forEach((caseFile, i) => {

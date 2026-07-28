@@ -6,7 +6,13 @@ import { toJourneyPageData } from "src/data/journeys";
 import ChevronUp from "@components/icons/ChevronUp.astro";
 import ChevronDown from "@components/icons/ChevronDown.astro";
 
-const caseData = await Astro.glob("../../data/cases/*.json");
+const caseModules = import.meta.glob<{ default: any[] }>(
+  "../../data/cases/*.json",
+  { eager: true },
+);
+const caseData = Object.keys(caseModules)
+  .sort()
+  .map((path) => caseModules[path]);
 
 const journeyPageData: JourneyPageData[] = [];
 caseData.forEach((caseFile, i) => {
@@ -285,7 +291,6 @@ const journeys: JourneyCardData[] = journeyPageData
           <li>
             Ockerman E. After ICE arrests in Saratoga Springs, some migrant
             workers fear showing up for racing season. Washington Post Web site.
-
 
             <a
               class="text-blue-400"

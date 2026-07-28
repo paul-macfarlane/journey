@@ -44,11 +44,11 @@ The [./scraping/parseTwineHTML.cjs](./scraping/parseTwineHTML.cjs) script is the
 format that can be used by the app by placing it in [./src/data/raw-cases](./src/data/raw-cases), where each file is a
 different case.
 
-As of right now there are more steps needed to get the data into a useable format. First, the raw case data will
-sometimes have decisions with a value of "*", which needs to be removed manually. The script for parsing twine probably
-just needs to be fixed to resolve that.
+The parsing script now strips the leftover "*" list markers that Twine leaves behind after a decision link is removed,
+so the raw case data no longer needs to be cleaned up by hand. It also warns if a decision links to a passage name that
+doesn't exist, rather than silently emitting an empty pid.
 
-Then, the raw case data needs to have the images array of each page replaced with a new href and caption for citation.
+The raw case data still needs to have the images array of each page replaced with a new href and caption for citation.
 That is done automatically via the [replace_images.py](scripts/replace_images.py) script.
 
 From here, the data is now usable and the app can be built for deployment using `npm run build` and run locally
@@ -72,7 +72,7 @@ python3 build_local.py
 
 ## Running Locally
 
-Make sure Node is installed on your machine. You can then run
+Make sure Node is installed on your machine. Astro 7 requires **Node 22.12 or newer** (see `.nvmrc`). You can then run
 
 ```shell
 npm i

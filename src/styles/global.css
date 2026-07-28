@@ -1,5 +1,10 @@
 /* Global styles, use sparingly. Favor tailwind utility classes instead */
 
+@import "tailwindcss";
+
+/* Replaces the v3 `darkMode: "class"` config: dark: applies under html.dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
   font-family: Georgia, sans-serif;
 
