@@ -4,28 +4,69 @@ import "@styles/global.css";
 
 interface Props {
   title: string;
+  description?: string;
+  /** `prose` holds a comfortable reading measure; `wide` suits grids and reference lists. */
+  width?: "prose" | "wide";
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Journey is an empathy-based learning tool that houses Trauma Informed Care cases regarding vulnerable populations.",
+  width = "prose",
+} = Astro.props;
+
+const pageTitle = `${title} · Journey`;
+const measure = width === "prose" ? "max-w-[44rem]" : "max-w-4xl";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- TODO: make favicon <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-    <meta name="viewport" content="width=device-width" />
-    <title>{`Journey - ${title}`}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:site_name" content="Journey" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary" />
+
+    <script is:inline>
+      // Resolve the theme before first paint so dark-mode users never see a white flash.
+      (() => {
+        const stored =
+          typeof localStorage !== "undefined"
+            ? localStorage.getItem("theme")
+            : null;
+        const theme =
+          stored ??
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+
+        document.documentElement.classList.toggle("dark", theme === "dark");
+        localStorage.setItem("theme", theme);
+      })();
+    </script>
   </head>
 
-  <body>
-    <div class="flex flex-col space-y-14 lg:space-y-20">
-      <div>
-        <Navbar />
-      </div>
+  <body class="bg-paper text-ink min-h-dvh antialiased">
+    <a
+      href="#main"
+      class="border-rule bg-surface sr-only rounded-md border px-4 py-2 text-sm focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50"
+    >
+      Skip to content
+    </a>
 
-      <div class="p-4">
-        <slot />
-      </div>
-    </div>
+    <Navbar />
+
+    <main
+      id="main"
+      class={`mx-auto w-full px-5 pt-24 pb-24 sm:px-6 lg:pt-28 lg:pb-32 ${measure}`}
+    >
+      <slot />
+    </main>
   </body>
 </html>

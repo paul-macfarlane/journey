@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "build:local": "astro build && cd scripts && pipenv sync && pipenv run python build_local.py",
     "preview": "astro preview",
     "astro": "astro",
     "prettier": "prettier --write src/**/*",

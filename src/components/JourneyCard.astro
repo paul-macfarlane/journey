@@ -1,18 +1,36 @@
 ---
 import type { JourneyCardData } from "src/types";
-import LinkButton from "./LinkButton.astro";
+import ArrowRight from "./icons/ArrowRight.astro";
 
 interface Props extends JourneyCardData {}
 
 const { title, description, buttonText, href } = Astro.props;
 ---
 
-<div
-  class="flex min-w-[300px] flex-col items-center gap-2 rounded border border-black px-6 py-4 lg:gap-6 lg:px-10 lg:py-8 dark:border-white"
+<a
+  {href}
+  class="group border-rule bg-surface hover:border-rule-strong hover:bg-hover flex flex-col gap-3 rounded-lg border px-5 py-4 no-underline transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-6"
 >
-  <p>{title}</p>
+  <span class="flex min-w-0 flex-col gap-1">
+    <span
+      class="text-ink font-serif text-[1.0625rem] font-semibold tracking-[-0.01em]"
+    >
+      {title}
+    </span>
+    {
+      description && (
+        <span class="text-muted text-sm leading-relaxed">{description}</span>
+      )
+    }
+  </span>
 
-  {description && <p class="text-lg lg:text-2xl">{description}</p>}
-
-  <LinkButton variant="primary" text={buttonText} href={href} />
-</div>
+  <span
+    class="text-accent inline-flex shrink-0 items-center gap-1.5 text-sm font-medium"
+  >
+    {buttonText}
+    <ArrowRight
+      size={15}
+      class="transition-transform group-hover:translate-x-0.5"
+    />
+  </span>
+</a>

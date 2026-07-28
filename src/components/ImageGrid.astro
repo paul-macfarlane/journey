@@ -10,12 +10,24 @@ const { images } = Astro.props;
 
 {
   images.length > 0 && (
-    <div class="grid place-content-center gap-6 lg:grid-flow-col lg:gap-8">
+    <div class="grid gap-6 sm:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
       {images.map(({ src, alt, width, height, caption }) => (
-        <div class="flex flex-col items-center gap-2">
-          <img {src} {alt} {width} {height} />
-          {caption && <p class="text-xs dark:text-slate-200">{caption}</p>}
-        </div>
+        <figure class="m-0 flex flex-col gap-2.5">
+          <img
+            {src}
+            {alt}
+            {width}
+            {height}
+            loading="lazy"
+            decoding="async"
+            class="border-rule bg-hover w-full rounded-lg border object-cover"
+          />
+          {caption && (
+            <figcaption class="text-faint font-sans text-[0.6875rem] leading-relaxed">
+              {caption}
+            </figcaption>
+          )}
+        </figure>
       ))}
     </div>
   )

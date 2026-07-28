@@ -4,6 +4,7 @@ import ThemeToggleIcon from "./icons/ThemeToggleIcon.astro";
 import XIcon from "./icons/XIcon.astro";
 import HomeIcon from "./icons/HomeIcon.astro";
 import MapIcon from "./icons/MapIcon.astro";
+import JourneyMark from "./icons/JourneyMark.astro";
 
 // can replace this with a React/Preact/Svelte component to better handle the user interactivity, but that also might be overkill
 
@@ -12,146 +13,165 @@ const routes = [
     name: "Home",
     path: "/",
     exact: true,
+    Icon: HomeIcon,
   },
   {
     name: "Journeys",
     path: "/journeys",
     exact: false,
+    Icon: MapIcon,
   },
 ];
 
 const currentPath = Astro.url.pathname;
+
+const isActive = (path: string, exact: boolean) =>
+  exact ? currentPath === path : currentPath.startsWith(path);
+
+const iconButton =
+  "inline-flex h-9 w-9 items-center justify-center rounded-md text-muted transition-colors hover:bg-hover hover:text-ink";
 ---
 
-<div
-  class="fixed top-0 left-0 z-10 flex w-full items-center justify-between border-b border-black bg-white px-4 dark:border-white dark:bg-black"
+<header
+  class="border-rule bg-paper/85 fixed inset-x-0 top-0 z-30 border-b backdrop-blur-md"
 >
-  <button id="hamburger" class="lg:hidden">
-    <HamburgerIcon />
-  </button>
+  <div class="mx-auto flex h-14 max-w-4xl items-center gap-2 px-3 sm:px-6">
+    <button
+      id="hamburger"
+      type="button"
+      class={`${iconButton} lg:hidden`}
+      aria-label="Open menu"
+      aria-controls="drawer"
+      aria-expanded="false"
+    >
+      <HamburgerIcon />
+    </button>
 
-  <p
-    class="w-full py-2 text-center text-xl underline underline-offset-8 lg:w-auto lg:py-0 lg:text-left lg:text-3xl"
-  >
-    Journey
-  </p>
+    <a
+      href="/"
+      class="flex items-center gap-2.5 rounded-md py-1 no-underline"
+      aria-label="Journey, home"
+    >
+      <span class="text-accent"><JourneyMark size={21} /></span>
+      <span class="text-ink text-[0.9375rem] font-semibold tracking-[-0.01em]"
+        >Journey</span
+      >
+    </a>
 
-  <div class="hidden h-full items-center text-3xl lg:flex">
+    <nav aria-label="Main" class="ml-auto hidden items-center gap-1 lg:flex">
+      {
+        routes.map(({ name, path, exact }) => (
+          <a
+            href={path}
+            aria-current={isActive(path, exact) ? "page" : undefined}
+            class={`rounded-md px-3 py-1.5 text-sm no-underline transition-colors ${
+              isActive(path, exact)
+                ? "bg-hover text-ink font-medium"
+                : "text-muted hover:bg-hover hover:text-ink"
+            }`}
+          >
+            {name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <button
+      id="themeToggle"
+      type="button"
+      class={`${iconButton} ml-auto lg:ml-1`}
+      aria-label="Toggle dark mode"
+    >
+      <ThemeToggleIcon />
+    </button>
+  </div>
+</header>
+
+<div
+  id="drawer"
+  class="border-rule bg-surface fixed top-0 left-0 z-50 h-full w-[17rem] max-w-[85%] -translate-x-full border-r transition-transform duration-300 ease-in-out lg:hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Menu"
+>
+  <div class="border-rule flex h-14 items-center justify-between border-b px-3">
+    <span class="flex items-center gap-2.5 pl-1">
+      <span class="text-accent"><JourneyMark size={21} /></span>
+      <span class="text-[0.9375rem] font-semibold tracking-[-0.01em]"
+        >Journey</span
+      >
+    </span>
+    <button
+      id="drawer-close"
+      type="button"
+      class={iconButton}
+      aria-label="Close menu"
+    >
+      <XIcon />
+    </button>
+  </div>
+
+  <nav aria-label="Main" class="flex flex-col gap-1 p-3">
     {
-      routes.map(({ name, path, exact }) => (
+      routes.map(({ name, path, exact, Icon }) => (
         <a
           href={path}
-          class={`flex items-center rounded p-4 ${
-            (!exact && currentPath.startsWith(path)) ||
-            (exact && currentPath === path)
-              ? "bg-gray-200 dark:bg-gray-500"
-              : "hover:bg-gray-400 dark:hover:bg-gray-700"
+          aria-current={isActive(path, exact) ? "page" : undefined}
+          class={`flex items-center gap-3 rounded-md px-3 py-2.5 text-[0.9375rem] no-underline ${
+            isActive(path, exact)
+              ? "bg-hover text-ink font-medium"
+              : "text-muted"
           }`}
         >
+          <Icon size={18} />
           {name}
         </a>
       ))
     }
-  </div>
-
-  <button id="themeToggle">
-    <ThemeToggleIcon />
-  </button>
-</div>
-
-<div
-  id="drawer"
-  class="fixed top-0 left-0 z-20 h-full w-4/5 -translate-x-full transform bg-white p-4 transition-transform duration-300 ease-in-out lg:hidden dark:bg-black"
->
-  <div class="flex flex-col gap-4">
-    <div class="flex justify-between">
-      <p class="w-full py-2 text-xl underline underline-offset-8">Journey</p>
-      <button id="drawer-close" class="rounded">
-        <XIcon />
-      </button>
-    </div>
-
-    <a href="/" class="flex items-center justify-start gap-4 py-2">
-      <HomeIcon />
-      <p class="text-lg">Home</p>
-    </a>
-
-    <a href="/journeys" class="flex items-center justify-start gap-4 py-2">
-      <MapIcon />
-      <p class="text-lg">Journeys</p>
-    </a>
-  </div>
+  </nav>
 </div>
 
 <div
   id="overlay"
-  class="invisible fixed top-0 left-0 z-10 h-full w-full bg-black opacity-20 lg:hidden dark:bg-white"
+  class="invisible fixed inset-0 z-40 bg-stone-900/30 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 lg:hidden"
 >
 </div>
 
-<style>
-  .blur-overlay {
-    backdrop-filter: blur(5px);
-  }
-</style>
-
 <script is:inline>
-  const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  })();
-
-  if (theme === "light") {
-    document.documentElement.classList.remove("dark");
-  } else {
-    document.documentElement.classList.add("dark");
-  }
-
-  window.localStorage.setItem("theme", theme);
-
-  const handleToggleClick = () => {
-    const element = document.documentElement;
-    element.classList.toggle("dark");
-
-    const isDark = element.classList.contains("dark");
+  // The theme is resolved before first paint in BaseLayout's <head>; this only flips it.
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
-  };
-
-  document
-    .getElementById("themeToggle")
-    .addEventListener("click", handleToggleClick);
+  });
 
   const hamburger = document.getElementById("hamburger");
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
   const drawerClose = document.getElementById("drawer-close");
 
-  const handleHamburgerClick = () => {
-    if (
-      drawer.style.transform === "" ||
-      drawer.style.transform === "translateX(-100%)"
-    ) {
-      drawer.style.transform = "translateX(0)";
-      overlay.style.visibility = "visible";
-      overlay.classList.add("blur-overlay");
+  const setDrawerOpen = (open) => {
+    drawer.classList.toggle("-translate-x-full", !open);
+    overlay.classList.toggle("invisible", !open);
+    overlay.classList.toggle("opacity-0", !open);
+    hamburger.setAttribute("aria-expanded", String(open));
+    if (open) {
+      drawerClose.focus();
     } else {
-      handleClose();
+      hamburger.focus();
     }
   };
 
-  hamburger.addEventListener("click", handleHamburgerClick);
-
-  const handleClose = () => {
-    drawer.style.transform = "translateX(-100%)";
-    overlay.style.visibility = "hidden";
-    overlay.classList.remove("blur-overlay");
-  };
-
-  overlay.addEventListener("click", handleClose);
-  drawerClose.addEventListener("click", handleClose);
+  hamburger.addEventListener("click", () =>
+    setDrawerOpen(hamburger.getAttribute("aria-expanded") !== "true"),
+  );
+  overlay.addEventListener("click", () => setDrawerOpen(false));
+  drawerClose.addEventListener("click", () => setDrawerOpen(false));
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      hamburger.getAttribute("aria-expanded") === "true"
+    ) {
+      setDrawerOpen(false);
+    }
+  });
 </script>

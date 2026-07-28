@@ -1,0 +1,41 @@
+---
+import type { JourneyLayoutDecisionData } from "src/types";
+import ArrowRight from "./icons/ArrowRight.astro";
+
+interface Props {
+  decisions: JourneyLayoutDecisionData[];
+}
+
+const { decisions } = Astro.props;
+---
+
+<section
+  aria-labelledby="decision-heading"
+  class="border-rule bg-surface rounded-lg border p-4 sm:p-5"
+>
+  <h2
+    id="decision-heading"
+    class="text-muted mb-3 font-sans text-[0.6875rem] font-semibold tracking-[0.14em] uppercase"
+  >
+    Your decision
+  </h2>
+
+  <ul class="flex flex-col gap-2">
+    {
+      decisions.map(({ href, buttonText }) => (
+        <li>
+          <a
+            {href}
+            class="group border-rule text-ink hover:border-accent hover:bg-accent-wash flex items-center justify-between gap-4 rounded-md border px-4 py-3 font-sans text-[0.9375rem] leading-6 no-underline transition-colors"
+          >
+            <span>{buttonText}</span>
+            <ArrowRight
+              class="text-faint group-hover:text-accent shrink-0 transition-colors"
+              size={16}
+            />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

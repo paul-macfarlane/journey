@@ -2,18 +2,45 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import LinkButton from "@components/LinkButton.astro";
 import ImageGrid from "@components/ImageGrid.astro";
+import DecisionList from "@components/DecisionList.astro";
 import type { JourneyLayoutData } from "src/types";
 
 interface Props extends JourneyLayoutData {}
 
-const { title, paragraphs, nextHref, decisions, images } = Astro.props;
+const { title, caseNumber, paragraphs, nextHref, decisions, images } =
+  Astro.props;
+
+const hasDecisions = Boolean(decisions?.length);
 ---
 
 <BaseLayout {title}>
-  <div class="space-y-6 pb-6 text-xl lg:space-y-10 lg:pb-10 lg:text-3xl">
+  <article class="space-y-8 lg:space-y-10">
+    <header class="space-y-2">
+      {
+        caseNumber && (
+          <p class="text-accent font-sans text-[0.6875rem] font-semibold tracking-[0.14em] uppercase">
+            Case {caseNumber}
+          </p>
+        )
+      }
+      <h1
+        class="font-serif text-[1.625rem] leading-tight font-semibold tracking-[-0.01em] text-balance lg:text-[2rem]"
+      >
+        {title}
+      </h1>
+    </header>
+
     <slot name="before-paragraphs" />
 
-    {paragraphs?.map((paragraph) => <p set:html={paragraph} />)}
+    {
+      paragraphs && paragraphs.length > 0 && (
+        <div class="narrative space-y-5 lg:space-y-6">
+          {paragraphs.map((paragraph) => (
+            <p set:html={paragraph} />
+          ))}
+        </div>
+      )
+    }
 
     <slot name="before-images" />
 
@@ -21,37 +48,25 @@ const { title, paragraphs, nextHref, decisions, images } = Astro.props;
 
     <slot name="before-decisions" />
 
-    <div class="flex flex-col items-center gap-6 lg:gap-10">
-      {
-        decisions &&
-          decisions.map(({ href, buttonText: text }) => (
-            <LinkButton variant="primary" {text} {href} />
-          ))
-      }
-    </div>
+    {hasDecisions && <DecisionList decisions={decisions!} />}
 
     <slot name="before-buttons" />
 
-    <div class="flex justify-between">
-      <div id="layout-back" class="shadow-lg">
-        <LinkButton variant="secondary" text="Back" />
-      </div>
+    <nav
+      aria-label="Case navigation"
+      class="border-rule flex items-center justify-between gap-4 border-t pt-6"
+    >
+      <LinkButton id="layout-back" variant="secondary" text="Back" />
 
-      {
-        nextHref && (
-          <div class="shadow-lg">
-            <LinkButton variant="primary" text="Next" href={nextHref} />
-          </div>
-        )
-      }
-    </div>
+      {nextHref && <LinkButton variant="primary" text="Next" href={nextHref} />}
+    </nav>
 
     <slot name="after-buttons" />
-  </div>
+  </article>
 </BaseLayout>
 
 <script is:inline>
-  document.getElementById("layout-back").addEventListener("click", function () {
-    window.history.back();
-  });
+  document
+    .getElementById("layout-back")
+    .addEventListener("click", () => window.history.back());
 </script>

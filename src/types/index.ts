@@ -31,6 +31,8 @@ export interface JourneyLayoutDecisionData {
 
 export interface JourneyLayoutData {
   title: string;
+  /** Which case this page belongs to, shown as an eyebrow above the page title. */
+  caseNumber?: number;
   paragraphs?: string[];
   nextHref?: string;
   nextName?: string;

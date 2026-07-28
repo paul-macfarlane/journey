@@ -33,7 +33,15 @@ export async function getStaticPaths() {
 
 interface Props extends JourneyPageData {}
 
-const { title, nextHref, paragraphs, decisions, images } = Astro.props;
+const { title, caseNumber, nextHref, paragraphs, decisions, images } =
+  Astro.props;
 ---
 
-<JourneyLayout {title} {nextHref} {paragraphs} {decisions} {images} />
+<JourneyLayout
+  {title}
+  {caseNumber}
+  {nextHref}
+  {paragraphs}
+  {decisions}
+  {images}
+/>

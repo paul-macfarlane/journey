@@ -11,10 +11,12 @@ const { journeys } = Astro.props;
 
 {
   journeys.length > 0 && (
-    <div class="grid gap-6 lg:gap-8">
+    <ul class="grid list-none gap-3 p-0">
       {journeys.map(({ title, description, buttonText, href }) => (
-        <JourneyCard {title} {description} {buttonText} {href} />
+        <li>
+          <JourneyCard {title} {description} {buttonText} {href} />
+        </li>
       ))}
-    </div>
+    </ul>
   )
 }

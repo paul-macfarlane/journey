@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import os
 from pathlib import Path
-from shutil import copy2
+from shutil import copy2, rmtree
 
 # this script is used to convert all the links in the app to local links so that the app can be run locally by opening the index.html file
 
@@ -60,6 +60,8 @@ def process_files(src_dir, dest_dir):
     and copies them to the destination directory using BeautifulSoup.
     """
     base_path = Path(src_dir)
+    html_count = 0
+    asset_count = 0
     for root, dirs, files in os.walk(src_dir):
         for name in files:
             src_file_path = Path(root) / name
@@ -73,10 +75,28 @@ def process_files(src_dir, dest_dir):
                 modified_content = make_href_and_src_relative(content, src_file_path, base_path)
                 with open(dest_file_path, 'w', encoding='utf-8') as f:
                     f.write(modified_content)
+                html_count += 1
             else:
                 copy2(src_file_path, dest_file_path)
+                asset_count += 1
 
-src_directory = '../dist'
-dest_directory = '../local'
+    return html_count, asset_count
 
-process_files(src_directory, dest_directory)
+# Resolve against this file rather than the shell's cwd, so the script can be run
+# from anywhere (including `npm run build:local` at the repo root).
+repo_root = Path(__file__).resolve().parent.parent
+src_directory = repo_root / 'dist'
+dest_directory = repo_root / 'local'
+
+if not src_directory.is_dir():
+    raise SystemExit(
+        f"No build found at {src_directory}. Run `npm run build` first."
+    )
+
+# Start clean; otherwise assets from earlier builds (which are content-hashed)
+# pile up in local/ and get shipped alongside the current ones.
+if dest_directory.exists():
+    rmtree(dest_directory)
+
+html_count, asset_count = process_files(src_directory, dest_directory)
+print(f"Wrote {html_count} pages and {asset_count} assets to {dest_directory}")

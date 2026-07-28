@@ -1,9 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import JourneyCardGrid from "@components/JourneyCardGrid.astro";
-import type { JourneyCardData, JourneyPageData } from "src/types";
-import { toJourneyPageData } from "src/data/journeys";
-import ChevronUp from "@components/icons/ChevronUp.astro";
+import type { JourneyCardData } from "src/types";
+import { toCaseGoal, toJourneyPageData } from "src/data/journeys";
 import ChevronDown from "@components/icons/ChevronDown.astro";
 
 const caseModules = import.meta.glob<{ default: any[] }>(
@@ -14,50 +13,58 @@ const caseData = Object.keys(caseModules)
   .sort()
   .map((path) => caseModules[path]);
 
-const journeyPageData: JourneyPageData[] = [];
-caseData.forEach((caseFile, i) => {
-  const caseData = toJourneyPageData(i + 1, [
+const journeys: JourneyCardData[] = caseData.map((caseFile, index) => {
+  const startPage =
     caseFile.default.find((page) => page.name === "Preface") ??
-      caseFile.default[0],
-  ]);
+    caseFile.default[0];
+  const [pageData] = toJourneyPageData(index + 1, [startPage]);
+  const goal = toCaseGoal(startPage.paragraphs);
 
-  journeyPageData.push(...caseData);
-});
-
-const journeys: JourneyCardData[] = journeyPageData
-  .filter(({ isStart }) => isStart)
-  .map((pageData, index) => ({
+  return {
     title: `Case ${index + 1}`,
+    description: goal && `Goal: ${goal}`,
     buttonText: "Start",
     href: `/journeys/${pageData.path}`,
-  }));
+  };
+});
 ---
 
 <BaseLayout title="Journeys">
-  <div class="flex flex-col items-center gap-6 text-xl lg:gap-16 lg:text-3xl">
-    <p>Refugee and Migrant Cases</p>
+  <div class="space-y-8 lg:space-y-10">
+    <header class="space-y-3">
+      <h1
+        class="font-serif text-[1.75rem] leading-tight font-semibold tracking-[-0.015em] lg:text-[2.125rem]"
+      >
+        Refugee and Migrant Cases
+      </h1>
 
-    <div id="read-description" class="flex gap-2 text-lg">
-      <p>Read description</p>
-      <button id="show-description-toggle">
-        <ChevronDown width={18} height={16} />
+      <button
+        id="description-toggle"
+        type="button"
+        class="text-accent hover:text-accent-hover inline-flex items-center gap-1.5 rounded-md text-sm font-medium transition-colors"
+        aria-expanded="false"
+        aria-controls="description-panel"
+      >
+        <span id="description-toggle-label">Read description</span>
+        <ChevronDown
+          size={15}
+          class="transition-transform duration-200 [[aria-expanded='true']_&]:rotate-180"
+        />
       </button>
-    </div>
+    </header>
 
     <div
-      id="hide-description"
-      class="flex hidden max-w-[100vw] flex-col gap-6 text-[14px] lg:max-w-5xl lg:gap-16 lg:text-lg"
+      id="description-panel"
+      hidden
+      class="border-rule bg-surface space-y-6 rounded-lg border p-5 sm:p-6"
     >
-      <div class="flex justify-center gap-2">
-        <p class="text-lg">Hide description</p>
-        <button id="hide-description-toggle">
-          <ChevronUp width={18} height={16} />
-        </button>
-      </div>
-
-      <div class="flex flex-col items-start gap-4 p-4">
-        <p class="font-bold">Description:</p>
-        <p>
+      <div class="space-y-3">
+        <h2
+          class="text-muted font-sans text-[0.6875rem] font-semibold tracking-[0.14em] uppercase"
+        >
+          Description
+        </h2>
+        <p class="narrative">
           Migrants at the U.S.-Mexican border suffer from some of the most
           insidious health crises imaginable. This year alone, an underestimated
           136 people died in the desert on the U.S. side of the border from
@@ -95,9 +102,15 @@ const journeys: JourneyCardData[] = journeyPageData
           with dignity, and advocate for them beyond the confines of the
           doctor’s office.
         </p>
+      </div>
 
-        <p class="font-bold">Learning Objectives:</p>
-        <ol class="ml-4 list-decimal">
+      <div class="border-rule space-y-3 border-t pt-6">
+        <h2
+          class="text-muted font-sans text-[0.6875rem] font-semibold tracking-[0.14em] uppercase"
+        >
+          Learning objectives
+        </h2>
+        <ol class="narrative marker:text-faint ml-5 list-decimal space-y-2">
           <li>
             Dispel societal myths about the origins of displaced peoples and
             highlight the contributions that they make to our society.
@@ -112,19 +125,26 @@ const journeys: JourneyCardData[] = journeyPageData
             responsibility to provide culturally humble care for this community.
           </li>
         </ol>
+      </div>
 
-        <p class="font-bold">References:</p>
+      <div class="border-rule space-y-3 border-t pt-6">
+        <h2
+          class="text-muted font-sans text-[0.6875rem] font-semibold tracking-[0.14em] uppercase"
+        >
+          References
+        </h2>
 
         <ol
-          class="max-w-[100vw] list-decimal p-2 text-[10px] lg:max-w-5xl lg:text-lg"
+          class="text-muted marker:text-faint ml-5 list-decimal space-y-2.5 text-[0.8125rem] leading-relaxed break-words"
         >
           <li>Allison P. Detainee Handbook. Undocumented Press; 2022.</li>
           <li>
             American Psychiatric Association. Mental Health Facts on Refugees,
             Asylum-seekers, & Survivors of Forced Displacement. Psychiatry.com.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.psychiatry.org/File%20Library/Psychiatrists/Cultural-Competency/Mental-Health-Disparities/Mental-Health-Facts-for-Refugees.pdf"
             >
               https://www.psychiatry.org/File%20Library/Psychiatrists/Cultural-Competency/Mental-Health-Disparities/Mental-Health-Facts-for-Refugees.pdf
@@ -134,8 +154,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Blackburn PH. Ahead of Kentucky Derby, shortage of migrant workers
             looms for trainers. Border Report Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.borderreport.com/immigration/ahead-of-kentucky-derby-shortage-of-migrant-workers-looms-for-trainers/"
             >
               https://www.borderreport.com/immigration/ahead-of-kentucky-derby-shortage-of-migrant-workers-looms-for-trainers/
@@ -144,8 +165,9 @@ const journeys: JourneyCardData[] = journeyPageData
           <li>
             CBS News Miami. CBS Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.cbsnews.com/miami/video/immigration-bill-moving-in-florida-legislature/"
             >
               https://www.cbsnews.com/miami/video/immigration-bill-moving-in-florida-legislature/
@@ -155,8 +177,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Dias I. ICE Quietly Lowers (Already Low) Standards at Some Immigrant
             Detention Facilities. Texas Observer Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.texasobserver.org/ice-immigrant-detention-low-standards/"
             >
               https://www.texasobserver.org/ice-immigrant-detention-low-standards/
@@ -166,8 +189,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Dobbins J, Goodman JD, Jordan M. Truck Carrying Dead Migrants Passed
             through U.S. Checkpoint. New York Times Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.nytimes.com/2022/06/29/us/texas-migrants-deaths-truck.html#:~:text=Officials%20said%252"
             >
               https://www.nytimes.com/2022/06/29/us/texas-migrants-deaths-truck.html#:~:text=Officials%20said%252
@@ -177,8 +201,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Dreier H, Luce K. Alone and Exploited, Migrant Children Work Brutal
             Jobs Across the U.S. New York Times Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.nytimes.com/2023/02/25/us/unaccompanied-migrant-child-workers-exploitation.html"
             >
               https://www.nytimes.com/2023/02/25/us/unaccompanied-migrant-child-workers-exploitation.html
@@ -188,8 +213,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Fowler LA. Lawmakers push for inspections at Tacoma's ICE detention
             center. KNKX Public Radio Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.knkx.org/social-justice/2023-04-27/lawmakers-push-for-inspections-at-tacomas-ice-detention-center"
             >
               https://www.knkx.org/social-justice/2023-04-27/lawmakers-push-for-inspections-at-tacomas-ice-detention-center
@@ -199,8 +225,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Garcia UJ. Eagle Pass Residents Sour on Texas Gov. Greg Abbott’s
             Operation Lone Star. Texas Tribune Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.texastribune.org/2023/08/07/texas-border-eagle-pass-abbott-operation-lone-star/"
             >
               https://www.texastribune.org/2023/08/07/texas-border-eagle-pass-abbott-operation-lone-star/
@@ -210,8 +237,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Gramlich J. Migrant encounters at the U.S.-Mexico border hit a
             record high at the end of 2023. Pew Research Center Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.pewresearch.org/short-reads/2024/02/15/migrant-encounters-at-the-us-mexico-border-hit-a-record-high-at-the-end-of-2023/"
             >
               https://www.pewresearch.org/short-reads/2024/02/15/migrant-encounters-at-the-us-mexico-border-hit-a-record-high-at-the-end-of-2023/
@@ -225,8 +253,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Jordan M. A Squalid Border Camp Finally Closed. Now Another One Has
             Opened. NYT Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.nytimes.com/2021/08/25/us/migrant-camp-reynosa-remain-in-mexico.html"
             >
               https://www.nytimes.com/2021/08/25/us/migrant-camp-reynosa-remain-in-mexico.html
@@ -236,8 +265,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Kilgannon C. Far from Winner’s Circle, Saratoga Track Workers Fear
             Deportation. NYT Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.nytimes.com/2017/08/22/nyregion/far-from-winners-circle-saratoga-track-workers-fear-deportation.html"
             >
               https://www.nytimes.com/2017/08/22/nyregion/far-from-winners-circle-saratoga-track-workers-fear-deportation.html
@@ -247,8 +277,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Kitroeff N, Cegarra A. Aboard ‘the Beast’ on a Journey to America.
             NYT Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.nytimes.com/2023/05/10/world/americas/migrants-beast-train-mexico.html"
               >https://www.nytimes.com/2023/05/10/world/americas/migrants-beast-train-mexico.html
             </a>. Updated May 10, 2023. Accessed March 17, 2024.
@@ -257,19 +288,21 @@ const journeys: JourneyCardData[] = journeyPageData
             Mass JH, Takei C. Forget About Calling A Lawyer Or Anyone at All if
             You’re in an Immigration Detention Facility. ACLU Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.aclu.org/news/immigrants-rights/forget-about-calling-lawyer-or-anyone-all-if"
             >
               https://www.aclu.org/news/immigrants-rights/forget-about-calling-lawyer-or-anyone-all-if
             </a>. Updated June 14, 2016. Accessed March 17, 2024.
           </li>
-          <li class="inline">
+          <li>
             Migrant Death Toll near El Paso Hit Record High as Heat Waves
             Scorched the Southern Border. Democracy Now! Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.democracynow.org/2023/8/31/headlines/migrant_death_toll_near_el_paso_hit_record_high_as_heat_waves_scorched_the_southern_border"
             >
               https://www.democracynow.org/2023/8/31/headlines/'
@@ -281,8 +314,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Miroff N. The Border Wall Trump Called Unclimbable Is Taking a Grim
             Toll. The Washington Post Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.washingtonpost.com/national-security/2022/04/29/trump-border-wall-injuries-deaths/"
             >
               https://www.washingtonpost.com/national-security/2022/04/29/trump-border-wall-injuries-deaths/
@@ -293,8 +327,9 @@ const journeys: JourneyCardData[] = journeyPageData
             workers fear showing up for racing season. Washington Post Web site.
 
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.washingtonpost.com/national/after-ice-arrests-in-saratoga-springs-some-migrant-workers-fear-showing-up-for-racing-season/2017/08/25/a0cb3a9a-7c45-11e7-a669-b400c5c7e1cc_story.html"
             >
               https://www.washingtonpost.com/national/after-ice-arrests-in-saratoga-springs-some-migrant-workers-fear-showing-up-for-racing-season/2017/08/25/a0cb3a9a-7c45-11e7-a669-b400c5c7e1cc_story.html
@@ -303,8 +338,9 @@ const journeys: JourneyCardData[] = journeyPageData
           <li>
             Palnati M. Moments of Live. VOICES Blog Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://sienaamcvoices.wordpress.com/2021/01/21/moments-of-love/"
             >
               https://sienaamcvoices.wordpress.com/2021/01/21/moments-of-love/
@@ -315,8 +351,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Company for Using Them as a “Captive Labor Force.” Mother Jones Web
             site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.motherjones.com/criminal-justice/2019/12/immigration-detainee-geo-forced-labor-lawsuit/"
             >
               https://www.motherjones.com/criminal-justice/2019/12/immigration-detainee-geo-forced-labor-lawsuit/
@@ -326,8 +363,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Reuters. In photos: US-Mexico border views in Biden era. Daily Sabah
             Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.dailysabah.com/gallery/in-photos-us-mexico-border-views-in-biden-era/images?gallery_image=36292"
             >
               https://www.dailysabah.com/gallery/in-photos-us-mexico-border-views-in-biden-era/images?gallery_image=36292
@@ -337,8 +375,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Romo V. A Deadly Mexico Immigration Center Fire Shows Just a Sliver
             of the Abuse Migrants See. NPR Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.npr.org/2023/03/30/1166947456/ciudad-juarez-detention-fire-conditions-migrants-treatment"
             >
               https://www.npr.org/2023/03/30/1166947456/ciudad-juarez-detention-fire-conditions-migrants-treatment
@@ -348,8 +387,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Urbina I. Using Jailed Migrants as a Pool of Cheap Labor. NYT Web
             site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.nytimes.com/2014/05/25/us/using-jailed-migrants-as-a-pool-of-cheap-labor.html"
             >
               https://www.nytimes.com/2014/05/25/us/using-jailed-migrants-as-a-pool-of-cheap-labor.html
@@ -360,8 +400,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Photos of its Isolation Cells Reveal Otherwise. The Intercent Web
             site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://theintercept.com/2018/03/22/corecivic-solitary-confinement-ice-detention/"
             >
               https://theintercept.com/2018/03/22/corecivic-solitary-confinement-ice-detention/
@@ -371,8 +412,9 @@ const journeys: JourneyCardData[] = journeyPageData
             Zaragovia V. Florida bill would require patients to share their
             immigration status. WLRN Web site.
             <a
-              class="text-blue-400"
+              class="text-accent decoration-rule-strong hover:decoration-accent underline underline-offset-2"
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.wlrn.org/health/2023-04-28/florida-bill-immigration-status"
             >
               https://www.wlrn.org/health/2023-04-28/florida-bill-immigration-status
@@ -387,22 +429,14 @@ const journeys: JourneyCardData[] = journeyPageData
 </BaseLayout>
 
 <script is:inline>
-  const showDescriptionToggle = document.querySelector(
-    "#show-description-toggle",
-  );
-  const hideDescriptionToggle = document.querySelector(
-    "#hide-description-toggle",
-  );
-  const readDescription = document.querySelector("#read-description");
-  const hideDescription = document.querySelector("#hide-description");
+  const toggle = document.getElementById("description-toggle");
+  const label = document.getElementById("description-toggle-label");
+  const panel = document.getElementById("description-panel");
 
-  showDescriptionToggle.addEventListener("click", () => {
-    readDescription.classList.add("hidden");
-    hideDescription.classList.remove("hidden");
-  });
-
-  hideDescriptionToggle.addEventListener("click", () => {
-    readDescription.classList.remove("hidden");
-    hideDescription.classList.add("hidden");
+  toggle.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(open));
+    panel.hidden = !open;
+    label.textContent = open ? "Hide description" : "Read description";
   });
 </script>

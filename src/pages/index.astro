@@ -4,26 +4,35 @@ import LinkButton from "@components/LinkButton.astro";
 ---
 
 <BaseLayout title="Home">
-  <div class="flex flex-col gap-6 text-xl lg:gap-16 lg:text-3xl">
-    <p>
-      Welcome! Journey is an empathy-based learning tool that houses Trauma
-      Informed Care cases regarding vulnerable populations.
-    </p>
+  <div class="space-y-8 lg:space-y-10">
+    <header class="space-y-3">
+      <h1
+        class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.02em] lg:text-[2.5rem]"
+      >
+        Journey
+      </h1>
+      <p class="text-muted max-w-[36rem] text-[1.0625rem] leading-relaxed">
+        Welcome! Journey is an empathy-based learning tool that houses Trauma
+        Informed Care cases regarding vulnerable populations.
+      </p>
+    </header>
 
-    <p>
-      The Trauma-informed approach to healthcare recognizes the impact of
-      adverse experiences and social determinants of health on physical and
-      mental wellbeing. Health does not start inside the doctor's office. These
-      cases are meant to challenge us to put ourselves in the shoes of our
-      patients and better understand the barriers that they face when seeking
-      healthcare or managing adverse health conditions.
-    </p>
+    <div class="narrative border-rule space-y-5 border-t pt-8 lg:space-y-6">
+      <p>
+        The Trauma-informed approach to healthcare recognizes the impact of
+        adverse experiences and social determinants of health on physical and
+        mental wellbeing. Health does not start inside the doctor's office.
+        These cases are meant to challenge us to put ourselves in the shoes of
+        our patients and better understand the barriers that they face when
+        seeking healthcare or managing adverse health conditions.
+      </p>
 
-    <p>
-      By using this tool, we hope to empower healthcare providers to craft
-      inclusive healthcare solutions for our patients who belong to these
-      populations.
-    </p>
+      <p>
+        By using this tool, we hope to empower healthcare providers to craft
+        inclusive healthcare solutions for our patients who belong to these
+        populations.
+      </p>
+    </div>
 
     <LinkButton variant="primary" href="/journeys" text="View all Journeys" />
   </div>

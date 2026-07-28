@@ -1,28 +1,41 @@
 ---
 interface Props {
-  variant: "primary" | "secondary";
-  href: string;
+  variant?: "primary" | "secondary";
+  /** Omit to render a real <button> instead of a link. */
+  href?: string;
   text: string;
+  id?: string;
+  class?: string;
 }
 
-const { variant, href, text } = Astro.props;
+const {
+  variant = "primary",
+  href,
+  text,
+  id,
+  class: className = "",
+} = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center gap-2 rounded-md border px-4 py-2 font-sans text-[0.9375rem] leading-6 font-medium no-underline transition-colors";
+
+const variants = {
+  primary: "border-transparent bg-accent text-on-accent hover:bg-accent-hover",
+  secondary:
+    "border-rule-strong bg-surface text-ink hover:border-rule-strong hover:bg-hover",
+};
+
+const classes = `${base} ${variants[variant]} ${className}`;
 ---
 
-<a
-  class={`self-center rounded px-4 py-2 
-  ${
-    // this is one area where I do miss react classnames :(
-    variant === "primary"
-      ? "bg-black text-white hover:bg-gray-700 dark:bg-white dark:text-black dark:hover:bg-gray-300"
-      : ""
-  }
-  ${
-    variant === "secondary"
-      ? "border border-black bg-white hover:bg-gray-300 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-700"
-      : ""
-  }
-  `}
-  {href}
->
-  {text}
-</a>
+{
+  href ? (
+    <a class={classes} {href} {id}>
+      {text}
+    </a>
+  ) : (
+    <button type="button" class={classes} {id}>
+      {text}
+    </button>
+  )
+}

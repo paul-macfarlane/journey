@@ -2,7 +2,7 @@
 
 This is a personal project to help my Girlfriend out with her Trauma Informed Care project for Medical School.
 
-Hosted at https://paul-macfarlane-journey.netlify.app/
+Hosted at https://journey-stories.netlify.app/
 
 ## Description
 
@@ -59,16 +59,30 @@ However, there is 1 final piece, which is allowing the app to be used locally wi
 needed because the Academic Journal that is submitted to requires the ability to open the app on their local component
 and not on the web.
 
-To support this, first make sure the app is built locally using `npm run build`. Then run the
-script [build_local.py](scripts/build_local.py) which will copy the built app to the [local](local) directory, but with
-paths adjusted so anyone can download the directory and use the app locally.
+To support this, [build_local.py](scripts/build_local.py) copies the built app to the [local](local) directory with
+every path rewritten to be relative, so anyone can download that directory and open `local/index.html` straight from
+their file system.
+
+The whole thing is one command from the repo root:
+
+```shell
+npm run build:local
+```
+
+That builds the site, installs the pinned Python dependencies from [scripts/Pipfile.lock](scripts/Pipfile.lock), and
+runs the script. It requires [pipenv](https://pipenv.pypa.io/) on your `PATH` (`pip install --user pipenv`) and the
+Python version named in the Pipfile.
+
+To run the script on its own against an existing `dist/`:
 
 ```shell
 cd ./scripts
-pipenv shell
-pipenv install
-python3 build_local.py
+pipenv sync
+pipenv run python build_local.py
 ```
+
+The script wipes `local/` before writing so that content-hashed assets from earlier builds don't accumulate, and it
+resolves `dist/` and `local/` relative to its own location rather than your shell's working directory.
 
 ## Running Locally
 

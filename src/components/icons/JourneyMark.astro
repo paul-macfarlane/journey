@@ -1,0 +1,25 @@
+---
+interface Props {
+  size?: number;
+}
+
+const { size = 22 } = Astro.props;
+---
+
+<!-- Origin (filled) to destination (open), joined by the route between them. -->
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2.2"
+  stroke-linecap="round"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M8.9 15.4Q9.7 9.7 15.4 8.9"></path>
+  <circle cx="5.9" cy="18.4" r="2.9" fill="currentColor" stroke="none"></circle>
+  <circle cx="18.4" cy="5.9" r="2.6"></circle>
+</svg>

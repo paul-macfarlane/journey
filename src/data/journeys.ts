@@ -15,6 +15,7 @@ export function toJourneyPageData(
     return {
       path: `${caseName}/${data.id}`,
       title: data.name,
+      caseNumber,
       paragraphs: data.paragraphs,
       nextHref: data.next ? `${baseHref}/${data.next.pid}` : undefined,
       nextName: data.next ? data.next.name : undefined,
@@ -31,4 +32,26 @@ export function toJourneyPageData(
       isStart: index === 0,
     };
   });
+}
+
+/**
+ * Every case opens with a Preface that states what the reader is being asked to
+ * do — "Your GOAL as you put yourself in the character's shoes, is to ...". That
+ * sentence is the case's own summary, so the journeys index reuses it on the
+ * cards rather than restating each case by hand.
+ *
+ * Returns undefined when a Preface is worded differently, in which case the card
+ * simply shows no summary.
+ */
+export function toCaseGoal(paragraphs?: string[]): string | undefined {
+  const goal = paragraphs
+    ?.map((paragraph) => paragraph.match(/Your GOAL[^.]*?\bis to\s+([^.]+)/i))
+    .find(Boolean)?.[1]
+    .trim();
+
+  if (!goal) {
+    return undefined;
+  }
+
+  return `${goal[0].toUpperCase()}${goal.slice(1)}.`;
 }
